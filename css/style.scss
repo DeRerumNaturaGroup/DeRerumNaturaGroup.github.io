@@ -1,0 +1,64 @@
+/*-- scss:defaults --*/
+/*-- fonts --*/
+$presentation-heading-font: 'EB Garamond SC12', serif;
+$mainFont: 'EB Garamond Reg', sans-serif;
+$font-family-monospace: 'Ubuntu Mono';
+
+$presentation-font-size-root: 45px;
+$presentation-h1-font-size:	1.8em;
+$presentation-h2-font-size:	1.2em;
+$presentation-h3-font-size:	1.1em;
+$presentation-h4-font-size:	1em;
+
+
+$headings-font-family: 'EB Garamond';
+
+// $navbar-bg: SteelBlue;
+$navbar-bg: #C83737;
+// $link-color: rgb(8, 40, 216);
+$link-color: #428e49;
+$code-block-bg: #eeeeeb;
+
+/*-- scss:rules --*/
+
+.navbar-brand {
+    font-family: "EB Garamond SC08", sans-serif;
+    font-size:rem; /* Adjust size as needed */
+    font-variant: small-caps;/* Adjust weight as needed */
+}
+
+body {
+    font-family: 'EB Garamond Reg', sans-serif !important;
+    font-weight: normal;  
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'EB Garamond SC08';
+    font-variant: small-caps;
+    color: #C83737; 
+
+}
+
+h2 {
+    font-family: 'EB Garamond It';
+    font-style: italic;
+    color: #C83737; 
+}
+
+
+
+h4 {
+    text-align: center;
+}
+
+
+// Text decoration
+s {
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 6px;
+    // text-decoration-style: wavy;
+  }
+  

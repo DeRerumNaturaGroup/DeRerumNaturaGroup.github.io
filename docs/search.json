@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Many-Body Physics",
+    "section": "",
+    "text": "Resources\nWhether by your own free will or through some immutable chain of events (or both, see ‘Compatibilism’), you have arrived on the website of the Computational Materials Group at GIK Institute.\nIf this is a mistake you can rectify it immediately. Though if you ask us, we think that in the words of T.S. Eliot:\n\n“This is your real destination.”\n\nSo stay here and take a look.\nBut please note that the website is still under development. Apart from an overview of the group’s activities, other resources related to the group will also be posted here."
+  },
+  {
+    "objectID": "C0TimeSeriesandGIS/home_timeseriesandGIS.html",
+    "href": "C0TimeSeriesandGIS/home_timeseriesandGIS.html",
+    "title": "Time Series and GIS",
+    "section": "",
+    "text": "Source"
+  },
+  {
+    "objectID": "C0TimeSeriesandGIS/home_timeseriesandGIS.html#time-series-in-r",
+    "href": "C0TimeSeriesandGIS/home_timeseriesandGIS.html#time-series-in-r",
+    "title": "Time Series and GIS",
+    "section": "",
+    "text": "Source"
+  },
+  {
+    "objectID": "C0TimeSeriesandGIS/home_timeseriesandGIS.html#gis-in-r",
+    "href": "C0TimeSeriesandGIS/home_timeseriesandGIS.html#gis-in-r",
+    "title": "Time Series and GIS",
+    "section": "GIS in R",
+    "text": "GIS in R\n\n\nPackages to know\n\n\nsf, stars, terra"
+  },
+  {
+    "objectID": "C0TimeSeriesandGIS/GIS/01gis.html",
+    "href": "C0TimeSeriesandGIS/GIS/01gis.html",
+    "title": "Basic tasks in GIS using R",
+    "section": "",
+    "text": "Test"
+  },
+  {
+    "objectID": "C0publications/home_calculusI.html",
+    "href": "C0publications/home_calculusI.html",
+    "title": "Calculus I",
+    "section": "",
+    "text": "This is the home page for calculus I (MT-101). All assignments, announcements, and other relevant materials will be posted here."
+  },
+  {
+    "objectID": "C0resources/home_resources.html",
+    "href": "C0resources/home_resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "ABS"
+  },
+  {
+    "objectID": "C0research/research.html#codes",
+    "href": "C0research/research.html#codes",
+    "title": "Research",
+    "section": "Codes",
+    "text": "Codes\n\nAsliGheo\nJHR"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

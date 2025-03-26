@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: DRN Group
+  search: 
+    location: navbar
+    type: overlay
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: people.qmd
+        text: People
+      - href: about.qmd
+        text: About
+  sidebar:
+    style: floating
+    search: true
+    logo: _figs/logo.png
+    logo-alt: Mysteries of physics, mathematics, and life
+    contents:
+      - section: "Resources"
+        contents:
+          - href: C0resources/home_resources/QE/QE.qmd
+            text: Espresso
+      - text: "About"
+        href: "about.qmd"
+format:
+  html:
+    toc: true
+    theme: [css/style.scss]
+    css: [css/buttons.css, css/tabs.css, css/callouts.css, css/fonts-ebgaramond.css]
+    include-in-header:
+      file: scripts/scripts.js
+      
