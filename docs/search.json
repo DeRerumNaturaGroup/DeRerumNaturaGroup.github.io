@@ -61,5 +61,40 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "C0DFT/main.html",
+    "href": "C0DFT/main.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "project: type: book\nbook: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters: - index.qmd - 1_introduction.qmd - 2_theoretical_fundamentals.qmd - 3_ks_equations.qmd - 4_xc_functionals.qmd - 5_scf_calculation.qmd - 6_geometry_optimization.qmd - 7_band_structure.qmd - 8_dos_and_pdos.qmd - 9_practical_examples.qmd - references.qmd bibliography: bibliography.bib format: html: theme: cosmo toc: true pdf: documentclass: book"
+  },
+  {
+    "objectID": "docs/C0stochastic/brownian.html",
+    "href": "docs/C0stochastic/brownian.html",
+    "title": "Brownian Motion",
+    "section": "",
+    "text": "flowchart LR\n    markdown[\"`Random walk\"]\n    newLines[\"`Line1\n    Line 2\n    Line 3`\"]\n    markdown --&gt; newLines"
+  },
+  {
+    "objectID": "docs/C0stochastic/brownian.html#brownian-motion-as-a-markov-process",
+    "href": "docs/C0stochastic/brownian.html#brownian-motion-as-a-markov-process",
+    "title": "Brownian Motion",
+    "section": "Brownian motion as a markov process",
+    "text": "Brownian motion as a markov process\n\\({X(t), t \\geq 0}\\).\n\nMarkov property: Prediction of process $X(s+t) with known information about \\(X(r), r \\leq s\\) depends only on X(s)"
+  },
+  {
+    "objectID": "docs/C0stochastic/brownian.html#filtration",
+    "href": "docs/C0stochastic/brownian.html#filtration",
+    "title": "Brownian Motion",
+    "section": "Filtration",
+    "text": "Filtration\nDescribes the past of a process \\(X\\).\n\\[\nF_t = \\sigma {X(s), s \\in [0,t]}\n\\]"
+  },
+  {
+    "objectID": "docs/C0stochastic/brownian.html#resources",
+    "href": "docs/C0stochastic/brownian.html#resources",
+    "title": "Brownian Motion",
+    "section": "Resources",
+    "text": "Resources\n\nOliver Ibe’s Markov processes for stochastic modeling"
   }
 ]
