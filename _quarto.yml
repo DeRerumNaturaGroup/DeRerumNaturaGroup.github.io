@@ -12,6 +12,10 @@ website:
         text: Home
       - href: research.qmd
         text: Research
+      - text: Guides
+        menu:
+        - href: C0DFT/home_DFT.qmd
+          text: DFT Tutorials
       - href: publications.qmd
         text: Publications
       - href: people.qmd
@@ -26,7 +30,7 @@ website:
     contents:
       - section: "Resources"
         contents:
-          - href: C0resources/home_resources/QE/QE.qmd
+          - href: C0resources/QE/QE.qmd
             text: Espresso
       - text: "About"
         href: "about.qmd"
