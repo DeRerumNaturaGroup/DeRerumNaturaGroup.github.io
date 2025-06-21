@@ -25,11 +25,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
+    "text": "About this site"
   },
   {
     "objectID": "C0DFT/home_DFT.html",
@@ -57,12 +53,7 @@
     "href": "C0resources/QE/QE.html",
     "title": "DRN Group",
     "section": "",
-    "text": "Test",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Espresso"
-    ]
+    "text": "Test"
   },
   {
     "objectID": "publications.html",

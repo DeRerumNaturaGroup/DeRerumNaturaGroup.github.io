@@ -14,7 +14,8 @@ $presentation-h4-font-size:	1em;
 $headings-font-family: 'EB Garamond';
 
 // $navbar-bg: SteelBlue;
-$navbar-bg: #C83737;
+//$navbar-bg: #F6AE2D;
+$navbar-bg: #c83737;
 // $link-color: rgb(8, 40, 216);
 $link-color: #428e49;
 $code-block-bg: #eeeeeb;
@@ -36,14 +37,16 @@ body {
 h1 {
     font-family: 'EB Garamond SC08';
     font-variant: small-caps;
-    color: #C83737; 
-
+    color: #a47111; 
+    font-size: 1.5em;
+    font-weight: normal;
 }
 
 h2 {
     font-family: 'EB Garamond It';
-    font-style: italic;
-    color: #C83737; 
+    color: #a47111; 
+    font-weight: normal;  
+    font-size: 1.2em;
 }
 
 

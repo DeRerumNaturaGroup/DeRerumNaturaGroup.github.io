@@ -1,13 +1,11 @@
 project:
   type: website
   output-dir: docs
-execute:
-  freeze: false
-  python: env/Scripts/python.exe
-  kernel: env
-interactive: true
+filters:
+  - pandoc-ext/diagram
 website:
   title: DRN Group
+  reader-mode: true
   search: 
     location: navbar
     type: overlay
@@ -46,7 +44,17 @@ format:
     execute:
       enabled: true
     theme: [css/style.scss]
-    css: [css/buttons.css, css/tabs.css, css/callouts.css, css/fonts-ebgaramond.css]
+    css: [css/buttons.css, 
+          css/tabs.css,
+          css/callouts.css,
+          css/fonts-ebgaramond.css, 
+          css/fonts-hand.css, 
+          css/shapes.css, 
+          css/leaders.css]
     include-in-header:
-      file: scripts/scripts.js
+      - file: scripts/scripts.js
+      - file: scripts/leader-line-master/my-lines.js
+    include-after-body: 
+      - text: |
+          <script src="/scripts/leader-line-master/leader-line.min.js"></script> 
       
