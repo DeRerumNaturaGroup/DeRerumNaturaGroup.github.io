@@ -1,0 +1,86 @@
+<!-- ---
+title: "SCF Calculation"
+format: html
+--- -->
+
+## Self-Consistent Field (SCF)
+
+SCF calculations solve many one particle Schrodinger like KS equation (eq. num) for a given system. This problem is called *self consistent* because Hartee and exchange-correlation potential in KS equation require the electron density which require wave function $\psi$ to obtain the solution to the equation. Or simple, a wavefunction $\psi_i$ is dependent on all the other solutions $\psi_j$ describing the electronic states. Therefore, SCF calculation is an itterative process and solve the equations numerically.
+
+Practically, nuclear potential is calculated by giving the atomic site coordinates and $V_H$ and $V_XC$ are calculated using the initial guess of electron density. This way, the total potential is calculated which is used by KS equations to calculate wavefunction and then obtain the electron density. The process is repeated until the value of electron density converges to obtain the ground state energy. Flow chart below shows the cyclic process of SCF calculations.
+
+
+![SCF Flow Diagram](figs_DFT/KS-method.png){width=60%}
+
+
+## Calculations
+
+SCF calculations give the total energy of the system to obtain the ground state properties of material. But prior to scf calculations, relaxation calculation is necessary to remove the strains on the system and optimize the atomic positions as well as unit cell. QE uses BFGS algorithm (**Do i need to explain BFGS theorem?**) to optimize the atomic positions through *relax* and cell parameters through *vc-relax* calculation. It is itterative process similar to scf calculations where BFGS algorithm obtain the values of atomic positions and then energy is calculated through SCF calculation and forces are calculated using Hellmann‐Feynman theorem. The cycle stops when the energy and forces values achieve convergence criteris provided in the input file. Sample files of relax, vc-relax and scf calculation can be found at:
+
+- relax.in
+- vc-relax.in
+
+- [scf.in](inputfiles/scfin.qmd)
+
+## Run Calculations
+QE uses pw.x code to run the above calculations. The difference is only in the input files.
+
+```bash
+mpirun -np 4 pw.x < scf.in > scf.out 
+```
+
+## Convergence in SCF calculations
+explanation
+
+
+
+```{python}
+import plotly.graph_objects as go
+import numpy as np
+
+# SCF iteration data
+iterations = np.arange(1, 21)
+energies = -50 + np.exp(-0.3 * iterations)
+
+# Create frames (one per iteration step)
+frames = [
+    go.Frame(
+        data=[go.Scatter(x=iterations[:k], y=energies[:k], mode='lines+markers')],
+        name=str(k)
+    )
+    for k in range(1, 21)
+]
+
+# Initial plot with only first point
+fig = go.Figure(
+    data=[go.Scatter(x=iterations[:1], y=energies[:1], mode='lines+markers')],
+    layout=go.Layout(
+        title="SCF Energy Convergence",
+        xaxis_title="Iteration",
+        yaxis_title="Total Energy (a.u.)",
+        sliders=[{
+            "steps": [{
+                "method": "animate",
+                "args": [[str(k)]],
+                "label": str(k)
+            } for k in range(1, 21)]
+        }]
+    ),
+    frames=frames
+)
+
+fig.show()
+
+```
+
+
+## Before You Run It
+
+### Use *space_group* to employ symmetry and reduce computational cost
+
+fjekf
+
+### 
+
+## Exercise Questions
+- **Write the**

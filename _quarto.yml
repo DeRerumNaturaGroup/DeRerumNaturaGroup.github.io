@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: docs
+execute:
+  freeze: false
+  python: env/Scripts/python.exe
+  kernel: env
+interactive: true
 website:
   title: DRN Group
   search: 
@@ -37,6 +42,9 @@ website:
 format:
   html:
     toc: true
+    code-fold: true
+    execute:
+      enabled: true
     theme: [css/style.scss]
     css: [css/buttons.css, css/tabs.css, css/callouts.css, css/fonts-ebgaramond.css]
     include-in-header:

@@ -23,6 +23,14 @@ book:
     - 8_dos_and_pdos.qmd
     - 9_practical_examples.qmd
     - references.qmd
+
+
+## DFT Lectures
+
+- [Self-consistent Field (SCF) Calculation](lectures/scf.qmd)
+
+<!-- - [Kohn-Sham Equations](ks_equation.qmd) -->
+
 bibliography: bibliography.bib
 format:
   html:

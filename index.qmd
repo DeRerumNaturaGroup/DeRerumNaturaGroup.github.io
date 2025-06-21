@@ -2,9 +2,8 @@
 title: "Many-Body Physics"
 ---
 
+
 [Resources](C0resources/home_resources.qmd)
-
-
 
 Whether by your own free will or through some immutable chain of events (or both, see ['Compatibilism'](https://plato.stanford.edu/entries/compatibilism/)), you have arrived on the website of the Computational Materials Group at GIK Institute.
 
