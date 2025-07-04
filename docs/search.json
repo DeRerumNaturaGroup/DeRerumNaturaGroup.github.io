@@ -32,14 +32,14 @@
     "href": "C0DFT/home_DFT.html",
     "title": "DFT",
     "section": "",
-    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters: - index.qmd - 1_introduction.qmd - 2_theoretical_fundamentals.qmd - 3_ks_equations.qmd - 4_xc_functionals.qmd - 5_scf_calculation.qmd - 6_geometry_optimization.qmd - 7_band_structure.qmd - 8_dos_and_pdos.qmd - 9_practical_examples.qmd - references.qmd"
+    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:\n\nindex.qmd\n1_introduction.qmd\n2_theoretical_fundamentals.qmd\n3_ks_equations.qmd\n4_xc_functionals.qmd\n5_scf_calculation.qmd\n6_geometry_optimization.qmd\n7_band_structure.qmd\n8_dos_and_pdos.qmd\n9_practical_examples.qmd\nreferences.qmd"
   },
   {
     "objectID": "C0DFT/home_DFT.html#abc",
     "href": "C0DFT/home_DFT.html#abc",
     "title": "DFT",
     "section": "",
-    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters: - index.qmd - 1_introduction.qmd - 2_theoretical_fundamentals.qmd - 3_ks_equations.qmd - 4_xc_functionals.qmd - 5_scf_calculation.qmd - 6_geometry_optimization.qmd - 7_band_structure.qmd - 8_dos_and_pdos.qmd - 9_practical_examples.qmd - references.qmd"
+    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:\n\nindex.qmd\n1_introduction.qmd\n2_theoretical_fundamentals.qmd\n3_ks_equations.qmd\n4_xc_functionals.qmd\n5_scf_calculation.qmd\n6_geometry_optimization.qmd\n7_band_structure.qmd\n8_dos_and_pdos.qmd\n9_practical_examples.qmd\nreferences.qmd"
   },
   {
     "objectID": "C0research/research.html#codes",
@@ -137,14 +137,14 @@
     "href": "C0DFT/lectures/scf.html#convergence-in-scf-calculations",
     "title": "DRN Group",
     "section": "Convergence in SCF calculations",
-    "text": "Convergence in SCF calculations\nexplanation\n\n\nCode\nimport plotly.graph_objects as go\nimport numpy as np\n\n# SCF iteration data\niterations = np.arange(1, 21)\nenergies = -50 + np.exp(-0.3 * iterations)\n\n# Create frames (one per iteration step)\nframes = [\n    go.Frame(\n        data=[go.Scatter(x=iterations[:k], y=energies[:k], mode='lines+markers')],\n        name=str(k)\n    )\n    for k in range(1, 21)\n]\n\n# Initial plot with only first point\nfig = go.Figure(\n    data=[go.Scatter(x=iterations[:1], y=energies[:1], mode='lines+markers')],\n    layout=go.Layout(\n        title=\"SCF Energy Convergence\",\n        xaxis_title=\"Iteration\",\n        yaxis_title=\"Total Energy (a.u.)\",\n        sliders=[{\n            \"steps\": [{\n                \"method\": \"animate\",\n                \"args\": [[str(k)]],\n                \"label\": str(k)\n            } for k in range(1, 21)]\n        }]\n    ),\n    frames=frames\n)\n\nfig.show()"
+    "text": "Convergence in SCF calculations\nConvergence test should be perform on energ cutoff and k-mesh after structure relaxation as shown below in graph to obtain the correct parameters. For this purpose, perform multiple scf calculations for different values.\nThe energy cutoff determines how many plane waves are to be used for calculations which is directly related to the accuracy of results. However, it is to keep in mind that higher energy cutoff increases the computational cost. Mostly pseudopotential files provide the estimated energy cutoff but it is still recommended to perform convergence test. Ultrasoft pseudopotentials suggest low energy cutoff while it is larger for norm conserving pseudopotentials.\nk-mesh convergence can be performed by changing the k points in the input file of QE. There are six values: first 3 values are number of k-points and the last 3 values represent lattice shifting in each direction which can take value either 0 or 1.\n\n\nCode\nimport plotly.graph_objects as go\nimport numpy as np\n\n# SCF iteration data\niterations = np.arange(1, 21)\nenergies = -50 + np.exp(-0.3 * iterations)\n\n# Create frames (one per iteration step)\nframes = [\n    go.Frame(\n        data=[go.Scatter(x=iterations[:k], y=energies[:k], mode='lines+markers')],\n        name=str(k)\n    )\n    for k in range(1, 21)\n]\n\n# Initial plot with only first point\nfig = go.Figure(\n    data=[go.Scatter(x=iterations[:1], y=energies[:1], mode='lines+markers')],\n    layout=go.Layout(\n        title=\"SCF Energy Convergence\",\n        xaxis_title=\"Iteration\",\n        yaxis_title=\"Total Energy (a.u.)\",\n        sliders=[{\n            \"steps\": [{\n                \"method\": \"animate\",\n                \"args\": [[str(k)]],\n                \"label\": str(k)\n            } for k in range(1, 21)]\n        }]\n    ),\n    frames=frames\n)\n\nfig.show()"
   },
   {
     "objectID": "C0DFT/lectures/scf.html#run-calculations",
     "href": "C0DFT/lectures/scf.html#run-calculations",
     "title": "DRN Group",
     "section": "Run Calculations",
-    "text": "Run Calculations\nQE uses pw.x code to run the above calculations. The difference is only in the input files.\nmpirun -np 4 pw.x &lt; scf.in &gt; scf.out"
+    "text": "Run Calculations\nQE uses pw.x code to run the above calculations. The difference is only in the input files. First run relx/vcrelax and obtain the corresponding optimized atomicc positions and cell parameters. Then perform convergence test and finaly perform the SCF calculation with optimized parameters.\nmpirun -np 4 pw.x &lt; relax.in &gt; relax.out\nmpirun -np 4 pw.x &lt; vcrelax.in &gt; vcrelax.out\nmpirun -np 4 pw.x &lt; scf.in &gt; scf.out"
   },
   {
     "objectID": "C0DFT/lectures/scf.html#exercise-questions",
@@ -165,6 +165,55 @@
     "href": "C0DFT/lectures/scf.html#before-you-run-it",
     "title": "DRN Group",
     "section": "Before You Run It",
-    "text": "Before You Run It\n\nUse space_group to employ symmetry and reduce computational cost\nfjekf"
+    "text": "Before You Run It\n\n\nHow to restart scf calculation?\n\n\ncan use restart option\n\n\n\n\nWhen to use relax and vc-relax?\n\n\nanswer\n\n\n\n\nUse space_group to employ symmetry and reduce computational cost\n\n\nanswer\n\n\n\n\nWhen to use k-points shifting?\n\n\nBook- page 40 onwards\n\n\n\n\nAny rule for selecting k-points?\n\n\nBook- page 40 onwards\n\n\n\n\nHow to check convergence?\n\n\nnswer"
+  },
+  {
+    "objectID": "C0DFT/lectures/tips&tricks/scftips.html",
+    "href": "C0DFT/lectures/tips&tricks/scftips.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Use space_group to employ symmetry and reduce computational cost\nfjekf"
+  },
+  {
+    "objectID": "C0DFT/lectures/tips&tricks/scftips.html#how-to-restart-scf-calculation",
+    "href": "C0DFT/lectures/tips&tricks/scftips.html#how-to-restart-scf-calculation",
+    "title": "DRN Group",
+    "section": "How to restart scf calculation?",
+    "text": "How to restart scf calculation?\nCan use restart option."
+  },
+  {
+    "objectID": "C0DFT/lectures/tipsandtricks/scftips.html",
+    "href": "C0DFT/lectures/tipsandtricks/scftips.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "How to restart scf calculation?\n\n\ncan use restart option\n\n\n\n\nWhen to use relax and vc-relax?\n\n\nanswer\n\n\n\n\nUse space_group to employ symmetry and reduce computational cost\n\n\nanswer\n\n\n\n\nWhen to use k-points shifting?\n\n\nBook- page 40 onwards\n\n\n\n\nAny rule for selecting k-points?\n\n\nBook- page 40 onwards\n\n\n\n\nHow to check convergence?\n\n\nnswer\n\n\n\n\nHow to set convergence criteria for relax and vcrelax calculation?\n\n\n\netot_conv_thr\nforc_conv_thr\npress_conv_thr"
+  },
+  {
+    "objectID": "C0DFT/lectures/tipsandtricks/scftips.html#how-to-restart-scf-calculation",
+    "href": "C0DFT/lectures/tipsandtricks/scftips.html#how-to-restart-scf-calculation",
+    "title": "DRN Group",
+    "section": "How to restart scf calculation?",
+    "text": "How to restart scf calculation?\nCan use restart option."
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#how-to-restart-scf-calculation",
+    "href": "C0DFT/lectures/scf.html#how-to-restart-scf-calculation",
+    "title": "DRN Group",
+    "section": "How to restart scf calculation?",
+    "text": "How to restart scf calculation?\nCan use restart option."
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#output-plotting-and-interpretation",
+    "href": "C0DFT/lectures/scf.html#output-plotting-and-interpretation",
+    "title": "DRN Group",
+    "section": "Output plotting and interpretation",
+    "text": "Output plotting and interpretation\n\nexplanation of relax.out\nexplanation of vcrelax\nexplanation of scf"
+  },
+  {
+    "objectID": "C0DFT/leaderlines/workflow.html",
+    "href": "C0DFT/leaderlines/workflow.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Structure Generation\n\n\n1\n\n\nSoftware: Vesta\n\n\n\nBulk Pristine Supercell\nDefective Supercells Point defects by substituting lead with 3d TMs\n\n\n\nCalculations\n\n\n2\n\n\nSoftware: QE\n\n\nRelaxation\n\n\nCode: pw.x (vc-relax)\n\n\nSCF Calculation\n\n\nCode: pw.x (scf)\n\n\nData Handling and Analysis\n\n\n3\n\n\nSoftware: Doped\n\n\n\nPhase Diagrams\nChemical Potential Diagrams\n\n\n\nDefect Formation Energies\n\n\nCharge Transition Levels\n\n\n–&gt;"
   }
 ]

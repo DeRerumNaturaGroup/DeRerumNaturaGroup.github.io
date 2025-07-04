@@ -1,3 +1,56 @@
+.step {
+  width: 8em;
+  height: 6em;
+  border: 2px solid #000;
+  text-align: center;
+  /* line-height: 2.5; */
+  font-size: 1.25em;
+  position: absolute;
+  padding: 0.75em;
+  /* border-top: 15px solid transparent; */
+	/* border-left: 20px solid #555; */
+}
+
+.folded-tr-box {
+  position: absolute;
+  width: 8em;
+  height: 4em;
+  background-color: #f0f0f0;
+  border: transparent;
+  text-align: center;
+  line-height: 80px;
+  font-weight: bold;
+  clip-path: polygon(
+    0 0,              /* top-left */
+    calc(100% - 20px) 0, /* top-right (inset fold) */
+    100% 20px,        /* fold angle */
+    100% 100%,        /* bottom-right */
+    0 100%            /* bottom-left */
+  );
+}
+
+.folded-tl-box {
+  position: absolute;
+  width: 3em;
+  height: 2.75em;
+  background-color: #f0f0f0;
+  border: none;
+  text-align: center;
+  line-height: 3em;
+  font-weight: bold;
+  font-size: 1em;
+  clip-path: polygon(
+    12px 0,         /* top after fold */
+    100% 0,         /* top-right */
+    100% 100%,      /* bottom-right */
+    0 100%,         /* bottom-left */
+    0 20px          /* fold angle */
+  );
+  /* optional styling for realism */
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+
 .anchor, .anchor-text, .anchor100-line, .anchor80-line, .anchor60, .anchor40 {
   position: relative;
   background-color: #c8bdb6fd;

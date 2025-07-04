@@ -1,0 +1,99 @@
+
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+How to restart scf calculation?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+can use restart option
+
+:::
+::::
+
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+When to use relax and vc-relax?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+answer
+
+:::
+::::
+
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+Use *space_group* to employ symmetry and reduce computational cost
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+answer
+
+:::
+::::
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+When to use k-points shifting?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+Book- page 40 onwards
+
+:::
+::::
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+Any rule for selecting k-points?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+Book- page 40 onwards
+
+:::
+::::
+
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+How to check convergence?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+nswer
+
+:::
+::::
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+How to set convergence criteria for relax and vcrelax calculation?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+- etot_conv_thr
+-  forc_conv_thr
+
+
+-  press_conv_thr
+
+:::
+::::

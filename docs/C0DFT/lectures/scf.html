@@ -72,7 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f50a645118203b5755938133c52e3972.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c9104324d57570105713b7b411eead8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-de45926840a58a2c7d5746dfea9f6687.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -170,6 +170,90 @@ function openCity(evt, cityName) {
 
 
 
+
+<script>
+
+//Draws leader between 'from' and 'to' on 'stage'. Uses existing objects if ids exist, otherwise creates them according to given style parameter.
+
+//lineOptions to stylize.
+
+//Issues. May need to create id via html if container is to keep equations.
+
+function drawLeader({
+
+  
+
+  containerId = 'stage',
+
+  from = { id: 'from', text: '', className: '', style: {} },
+
+  to = { id: 'to', text: '', className: '', style: {} },
+
+  lineOptions = {}
+
+}) {
+
+  // Creates 'from' and 'to' in 'containerId'. Ignores creation if ids already exist and draws a leaderline between them.
+
+  window.addEventListener('load', () => {
+
+    const container = document.getElementById(containerId);
+
+    const elements = { from, to };
+
+    const createdDivs = {};
+
+
+
+    for (const key in elements) {
+
+      const { id, text, className, style } = elements[key];
+
+      let el = document.getElementById(id);
+
+
+
+      if (!el || !container.contains(el)) {
+
+        el = document.createElement('div');
+
+        el.id = id;
+
+        el.textContent = text;
+
+        el.className = className || 'anchor80-line';
+
+        Object.assign(el.style, {
+
+          position: 'relative',
+
+          ...style
+
+        });
+
+        container.appendChild(el);
+
+      }
+
+
+
+      createdDivs[key] = el;
+
+    }
+
+
+
+    new LeaderLine(createdDivs.from, createdDivs.to, lineOptions);
+
+  });
+
+}
+
+
+
+</script>
+
+
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -204,6 +288,9 @@ window.Quarto = {
 <link rel="stylesheet" href="../../css/tabs.css">
 <link rel="stylesheet" href="../../css/callouts.css">
 <link rel="stylesheet" href="../../css/fonts-ebgaramond.css">
+<link rel="stylesheet" href="../../css/fonts-hand.css">
+<link rel="stylesheet" href="../../css/shapes.css">
+<link rel="stylesheet" href="../../css/leaders.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -257,6 +344,11 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -327,11 +419,8 @@ window.Quarto = {
   <li><a href="#calculations" id="toc-calculations" class="nav-link" data-scroll-target="#calculations">Calculations</a></li>
   <li><a href="#run-calculations" id="toc-run-calculations" class="nav-link" data-scroll-target="#run-calculations">Run Calculations</a></li>
   <li><a href="#convergence-in-scf-calculations" id="toc-convergence-in-scf-calculations" class="nav-link" data-scroll-target="#convergence-in-scf-calculations">Convergence in SCF calculations</a></li>
-  <li><a href="#before-you-run-it" id="toc-before-you-run-it" class="nav-link" data-scroll-target="#before-you-run-it">Before You Run It</a>
-  <ul class="collapse">
-  <li><a href="#use-space_group-to-employ-symmetry-and-reduce-computational-cost" id="toc-use-space_group-to-employ-symmetry-and-reduce-computational-cost" class="nav-link" data-scroll-target="#use-space_group-to-employ-symmetry-and-reduce-computational-cost">Use <em>space_group</em> to employ symmetry and reduce computational cost</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
-  </ul></li>
+  <li><a href="#before-you-run-it" id="toc-before-you-run-it" class="nav-link" data-scroll-target="#before-you-run-it">Before You Run It</a></li>
+  <li><a href="#output-plotting-and-interpretation" id="toc-output-plotting-and-interpretation" class="nav-link" data-scroll-target="#output-plotting-and-interpretation">Output plotting and interpretation</a></li>
   <li><a href="#exercise-questions" id="toc-exercise-questions" class="nav-link" data-scroll-target="#exercise-questions">Exercise Questions</a></li>
   </ul>
 </nav>
@@ -368,13 +457,17 @@ format: html
 </section>
 <section id="run-calculations" class="level2">
 <h2 class="anchored" data-anchor-id="run-calculations">Run Calculations</h2>
-<p>QE uses pw.x code to run the above calculations. The difference is only in the input files.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mpirun</span> <span class="at">-np</span> 4 pw.x <span class="op">&lt;</span> scf.in <span class="op">&gt;</span> scf.out </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>QE uses pw.x code to run the above calculations. The difference is only in the input files. First run relx/vcrelax and obtain the corresponding optimized atomicc positions and cell parameters. Then perform convergence test and finaly perform the SCF calculation with optimized parameters.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mpirun</span> <span class="at">-np</span> 4 pw.x <span class="op">&lt;</span> relax.in <span class="op">&gt;</span> relax.out</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">mpirun</span> <span class="at">-np</span> 4 pw.x <span class="op">&lt;</span> vcrelax.in <span class="op">&gt;</span> vcrelax.out</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mpirun</span> <span class="at">-np</span> 4 pw.x <span class="op">&lt;</span> scf.in <span class="op">&gt;</span> scf.out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="convergence-in-scf-calculations" class="level2">
 <h2 class="anchored" data-anchor-id="convergence-in-scf-calculations">Convergence in SCF calculations</h2>
-<p>explanation</p>
-<div id="a64c56ff" class="cell" data-execution_count="1">
+<p>Convergence test should be perform on <em>energ cutoff</em> and <em>k-mesh</em> after structure relaxation as shown below in graph to obtain the correct parameters. For this purpose, perform multiple scf calculations for different values.</p>
+<p>The energy cutoff determines how many plane waves are to be used for calculations which is directly related to the accuracy of results. However, it is to keep in mind that higher energy cutoff increases the computational cost. Mostly pseudopotential files provide the estimated energy cutoff but it is still recommended to perform convergence test. Ultrasoft pseudopotentials suggest low energy cutoff while it is larger for norm conserving pseudopotentials.</p>
+<p><em>k-mesh</em> convergence can be performed by changing the k points in the input file of QE. There are six values: first 3 values are number of k-points and the last 3 values represent lattice shifting in each direction which can take value either 0 or 1.</p>
+<div id="80de4662" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
@@ -423,11 +516,11 @@ format: html
 </div>
 <div class="cell-output cell-output-display">
 <div>            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>                <div id="e828e068-f78f-475d-b8f5-068627a3b435" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("e828e068-f78f-475d-b8f5-068627a3b435")) {                    Plotly.newPlot(                        "e828e068-f78f-475d-b8f5-068627a3b435",                        [{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQ=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMA="},"type":"scatter"}],                        {"sliders":[{"steps":[{"args":[["1"]],"label":"1","method":"animate"},{"args":[["2"]],"label":"2","method":"animate"},{"args":[["3"]],"label":"3","method":"animate"},{"args":[["4"]],"label":"4","method":"animate"},{"args":[["5"]],"label":"5","method":"animate"},{"args":[["6"]],"label":"6","method":"animate"},{"args":[["7"]],"label":"7","method":"animate"},{"args":[["8"]],"label":"8","method":"animate"},{"args":[["9"]],"label":"9","method":"animate"},{"args":[["10"]],"label":"10","method":"animate"},{"args":[["11"]],"label":"11","method":"animate"},{"args":[["12"]],"label":"12","method":"animate"},{"args":[["13"]],"label":"13","method":"animate"},{"args":[["14"]],"label":"14","method":"animate"},{"args":[["15"]],"label":"15","method":"animate"},{"args":[["16"]],"label":"16","method":"animate"},{"args":[["17"]],"label":"17","method":"animate"},{"args":[["18"]],"label":"18","method":"animate"},{"args":[["19"]],"label":"19","method":"animate"},{"args":[["20"]],"label":"20","method":"animate"}]}],"title":{"text":"SCF Energy Convergence"},"xaxis":{"title":{"text":"Iteration"}},"yaxis":{"title":{"text":"Total Energy (a.u.)"}},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}}},                        {"responsive": true}                    ).then(function(){
-                            Plotly.addFrames('e828e068-f78f-475d-b8f5-068627a3b435', [{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQ=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMA="},"type":"scatter"}],"name":"1"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQI="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwA=="},"type":"scatter"}],"name":"2"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQID"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA"},"type":"scatter"}],"name":"3"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBA=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMA="},"type":"scatter"}],"name":"4"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAU="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwA=="},"type":"scatter"}],"name":"5"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUG"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA"},"type":"scatter"}],"name":"6"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBw=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMA="},"type":"scatter"}],"name":"7"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwg="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwA=="},"type":"scatter"}],"name":"8"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJ"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jA"},"type":"scatter"}],"name":"9"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCg=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMA="},"type":"scatter"}],"name":"10"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgs="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwA=="},"type":"scatter"}],"name":"11"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsM"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjA"},"type":"scatter"}],"name":"12"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMA="},"type":"scatter"}],"name":"13"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwA=="},"type":"scatter"}],"name":"14"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4P"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA"},"type":"scatter"}],"name":"15"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEA=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMA="},"type":"scatter"}],"name":"16"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBE="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwA=="},"type":"scatter"}],"name":"17"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBES"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwOdHLABs\u002f0jA"},"type":"scatter"}],"name":"18"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBESEw=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwOdHLABs\u002f0jAsOQBXJL\u002fSMA="},"type":"scatter"}],"name":"19"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBESExQ="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwOdHLABs\u002f0jAsOQBXJL\u002fSMCxO7jGrv9IwA=="},"type":"scatter"}],"name":"20"}]);
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>                <div id="58c7c245-347b-4475-b8b6-6c79e4c288ec" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("58c7c245-347b-4475-b8b6-6c79e4c288ec")) {                    Plotly.newPlot(                        "58c7c245-347b-4475-b8b6-6c79e4c288ec",                        [{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQ=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMA="},"type":"scatter"}],                        {"sliders":[{"steps":[{"args":[["1"]],"label":"1","method":"animate"},{"args":[["2"]],"label":"2","method":"animate"},{"args":[["3"]],"label":"3","method":"animate"},{"args":[["4"]],"label":"4","method":"animate"},{"args":[["5"]],"label":"5","method":"animate"},{"args":[["6"]],"label":"6","method":"animate"},{"args":[["7"]],"label":"7","method":"animate"},{"args":[["8"]],"label":"8","method":"animate"},{"args":[["9"]],"label":"9","method":"animate"},{"args":[["10"]],"label":"10","method":"animate"},{"args":[["11"]],"label":"11","method":"animate"},{"args":[["12"]],"label":"12","method":"animate"},{"args":[["13"]],"label":"13","method":"animate"},{"args":[["14"]],"label":"14","method":"animate"},{"args":[["15"]],"label":"15","method":"animate"},{"args":[["16"]],"label":"16","method":"animate"},{"args":[["17"]],"label":"17","method":"animate"},{"args":[["18"]],"label":"18","method":"animate"},{"args":[["19"]],"label":"19","method":"animate"},{"args":[["20"]],"label":"20","method":"animate"}]}],"title":{"text":"SCF Energy Convergence"},"xaxis":{"title":{"text":"Iteration"}},"yaxis":{"title":{"text":"Total Energy (a.u.)"}},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}}},                        {"responsive": true}                    ).then(function(){
+                            Plotly.addFrames('58c7c245-347b-4475-b8b6-6c79e4c288ec', [{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQ=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMA="},"type":"scatter"}],"name":"1"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQI="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwA=="},"type":"scatter"}],"name":"2"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQID"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA"},"type":"scatter"}],"name":"3"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBA=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMA="},"type":"scatter"}],"name":"4"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAU="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwA=="},"type":"scatter"}],"name":"5"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUG"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA"},"type":"scatter"}],"name":"6"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBw=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMA="},"type":"scatter"}],"name":"7"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwg="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwA=="},"type":"scatter"}],"name":"8"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJ"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jA"},"type":"scatter"}],"name":"9"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCg=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMA="},"type":"scatter"}],"name":"10"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgs="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwA=="},"type":"scatter"}],"name":"11"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsM"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjA"},"type":"scatter"}],"name":"12"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMA="},"type":"scatter"}],"name":"13"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwA=="},"type":"scatter"}],"name":"14"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4P"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA"},"type":"scatter"}],"name":"15"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEA=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMA="},"type":"scatter"}],"name":"16"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBE="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwA=="},"type":"scatter"}],"name":"17"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBES"},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwOdHLABs\u002f0jA"},"type":"scatter"}],"name":"18"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBESEw=="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwOdHLABs\u002f0jAsOQBXJL\u002fSMA="},"type":"scatter"}],"name":"19"},{"data":[{"mode":"lines+markers","x":{"dtype":"i1","bdata":"AQIDBAUGBwgJCgsMDQ4PEBESExQ="},"y":{"dtype":"f8","bdata":"EPJY3iyhSMDsp1GKwLlIwCTvf4b1y0jA2gvTd3LZSMCktI14cONIwPaCbHzX6kjA97sGWVPwSMAgu6ZaY\u002fRIwABWTM9l90jAVMzMk6D5SMCQHpFpR\u002ftIwIrXAKiA\u002fEjAdyqKtmj9SMBX\u002fPufFP5IwKSW+\u002fqT\u002fkjA+cjgU\u002fL+SMDOccg4OP9IwOdHLABs\u002f0jAsOQBXJL\u002fSMCxO7jGrv9IwA=="},"type":"scatter"}],"name":"20"}]);
                         }).then(function(){
                             
-var gd = document.getElementById('e828e068-f78f-475d-b8f5-068627a3b435');
+var gd = document.getElementById('58c7c245-347b-4475-b8b6-6c79e4c288ec');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -455,13 +548,62 @@ if (outputEl) {{
 </section>
 <section id="before-you-run-it" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-run-it">Before You Run It</h2>
-<section id="use-space_group-to-employ-symmetry-and-reduce-computational-cost" class="level3">
-<h3 class="anchored" data-anchor-id="use-space_group-to-employ-symmetry-and-reduce-computational-cost">Use <em>space_group</em> to employ symmetry and reduce computational cost</h3>
-<p>fjekf</p>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>How to restart scf calculation?</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>can use restart option</p>
+</div>
+</div>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>When to use relax and vc-relax?</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>answer</p>
+</div>
+</div>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>Use <em>space_group</em> to employ symmetry and reduce computational cost</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>answer</p>
+</div>
+</div>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>When to use k-points shifting?</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>Book- page 40 onwards</p>
+</div>
+</div>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>Any rule for selecting k-points?</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>Book- page 40 onwards</p>
+</div>
+</div>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>How to check convergence?</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>nswer</p>
+</div>
+</div>
 </section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
-</section>
+<section id="output-plotting-and-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="output-plotting-and-interpretation">Output plotting and interpretation</h2>
+<ul>
+<li>explanation of relax.out</li>
+<li>explanation of vcrelax</li>
+<li>explanation of scf</li>
+</ul>
 </section>
 <section id="exercise-questions" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-questions">Exercise Questions</h2>
@@ -891,6 +1033,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script src="../../scripts/leader-line-master/leader-line.min.js"></script>
 
 
 

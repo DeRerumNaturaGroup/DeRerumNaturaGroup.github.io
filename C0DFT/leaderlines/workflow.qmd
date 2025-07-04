@@ -1,0 +1,95 @@
+---
+sidebar: false
+---
+
+<script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+
+
+::: {.step #step1 data-connect="step1A, step2" style="width: 12em; height: 4em; top: 5em; left: 3em;"}
+Structure Generation
+:::
+
+::: {.folded-tl-box style="top: 5em; left: 2.5em;"}
+1
+:::
+
+::: {.folded-tr-box style="top: 9.5em; left: 13em;"}
+Software: Vesta
+:::
+
+
+::: {.step #step1A style="line-height: 1.5; text-align: left; width: 12em; height: 9em; top: 14em; left: 3em;"}
+- Bulk Pristine Supercell
+- Defective Supercells
+    Point defects by substituting lead with 3d TMs
+:::
+
+
+::: {.step #step2 data-connect="step2A, step3" style="width: 12em; height: 4em; top: 5em; left: 19em;"}
+Calculations
+:::
+
+::: {.folded-tl-box style="top: 5em; left: 22.5em;"}
+2
+:::
+
+::: {.folded-tr-box style="top: 9.5em; left: 33em;"}
+Software: QE
+:::
+
+::: {.step #step2A data-connect="step2B" style="width: 10em; height: 3.75em; top: 15em; left: 20em;"}
+Relaxation
+:::
+
+::: {.folded-tr-box style="width: 9em; top: 22em; left: 32.5em;"}
+Code: pw.x 
+(vc-relax)
+:::
+
+::: {.step #step2B style="width: 10em; height: 3.75em; top: 25em; left: 20em;"}
+SCF Calculation
+:::
+
+::: {.folded-tr-box style="width: 9em; top: 34em; left: 32.5em;"}
+Code: pw.x (scf)
+:::
+
+::: {.step #step3 data-connect="step3A" style="width: 12em; height: 4em; top: 5em; left: 35em;"}
+Data Handling and Analysis
+:::
+
+::: {.folded-tl-box style="top: 5em; left: 42.5em;"}
+3
+:::
+
+::: {.folded-tr-box style="top: 9.5em; left: 54em;"}
+Software: Doped
+:::
+
+::: {.step #step3A data-connect="step3B" style="line-height: 1.5; width: 12em; height: 6em; top: 13em; left: 35em;"}
+- Phase Diagrams
+- Chemical Potential Diagrams
+:::
+
+
+::: {.step #step3B data-connect="step3C" style="width: 12em; height: 4em; top: 22em; left: 35em;"}
+Defect Formation Energies
+:::
+
+::: {.step #step3C style="width: 12em; height: 4em; top: 29em; left: 35em;"}
+Charge Transition Levels
+:::
+
+
+
+
+
+
+
+
+
+
+
+<!-- ::: {.step #step4 style="top: 300px; left: 300px;"}
+End
+::: --> -->

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DFT – DRN Group</title>
+<title>workflow – DRN Group</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f50a645118203b5755938133c52e3972.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-de45926840a58a2c7d5746dfea9f6687.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f50a645118203b5755938133c52e3972.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-de45926840a58a2c7d5746dfea9f6687.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -215,23 +215,75 @@ function drawLeader({
 
 
 
-<link rel="stylesheet" href="../css/buttons.css">
-<link rel="stylesheet" href="../css/tabs.css">
-<link rel="stylesheet" href="../css/callouts.css">
-<link rel="stylesheet" href="../css/fonts-ebgaramond.css">
-<link rel="stylesheet" href="../css/fonts-hand.css">
-<link rel="stylesheet" href="../css/shapes.css">
-<link rel="stylesheet" href="../css/leaders.css">
+<script>
+
+window.addEventListener('load', () => {
+
+  // Define your reusable line style
+
+  const flowLineStyle = {
+
+    color: '#e74c3c',
+
+    size: 4,
+
+    path: 'straight',
+
+    endPlug: 'arrow',
+
+    // dash: { len: 6, gap: 4 },
+
+    // startPlug: 'disc',
+
+    dropShadow: true
+
+  };
+
+
+
+  // Loop through all elements with `data-connect`
+
+  document.querySelectorAll('[data-connect]').forEach(el => {
+
+    const targets = el.dataset.connect.split(',');
+
+    targets.forEach(targetId => {
+
+      const target = document.getElementById(targetId.trim());
+
+      if (target) {
+
+        new LeaderLine(el, target, flowLineStyle);
+
+      }
+
+    });
+
+  });
+
+});
+
+</script>
+
+
+
+<link rel="stylesheet" href="../../css/buttons.css">
+<link rel="stylesheet" href="../../css/tabs.css">
+<link rel="stylesheet" href="../../css/callouts.css">
+<link rel="stylesheet" href="../../css/fonts-ebgaramond.css">
+<link rel="stylesheet" href="../../css/fonts-hand.css">
+<link rel="stylesheet" href="../../css/shapes.css">
+<link rel="stylesheet" href="../../css/leaders.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">DRN Group</span>
     </a>
   </div>
@@ -242,11 +294,11 @@ function drawLeader({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research.html"> 
+    <a class="nav-link" href="../../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -255,21 +307,21 @@ function drawLeader({
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-guides">    
         <li>
-    <a class="dropdown-item" href="../C0DFT/home_DFT.html">
+    <a class="dropdown-item" href="../../C0DFT/home_DFT.html">
  <span class="dropdown-text">DFT Tutorials</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../publications.html"> 
+    <a class="nav-link" href="../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../people.html"> 
+    <a class="nav-link" href="../../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -283,124 +335,84 @@ function drawLeader({
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">DFT</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../_figs/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Espresso</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#abc" id="toc-abc" class="nav-link active" data-scroll-target="#abc">abc</a></li>
-  <li><a href="#dft-lectures" id="toc-dft-lectures" class="nav-link" data-scroll-target="#dft-lectures">DFT Lectures</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">DFT</h1>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+<div id="step1" class="step" data-connect="step1A, step2" style="width: 12em; height: 4em; top: 5em; left: 3em;">
+<p>Structure Generation</p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="abc" class="level2">
-<h2 class="anchored" data-anchor-id="abc">abc</h2>
-<p>project: type: book</p>
-<p>XYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:</p>
+<div class="folded-tl-box" style="top: 5em; left: 2.5em;">
+<p>1</p>
+</div>
+<div class="folded-tr-box" style="top: 9.5em; left: 13em;">
+<p>Software: Vesta</p>
+</div>
+<div id="step1A" class="step" style="line-height: 1.5; text-align: left; width: 12em; height: 9em; top: 14em; left: 3em;">
 <ul>
-<li>index.qmd</li>
-<li>1_introduction.qmd</li>
-<li>2_theoretical_fundamentals.qmd</li>
-<li>3_ks_equations.qmd</li>
-<li>4_xc_functionals.qmd</li>
-<li>5_scf_calculation.qmd</li>
-<li>6_geometry_optimization.qmd</li>
-<li>7_band_structure.qmd</li>
-<li>8_dos_and_pdos.qmd</li>
-<li>9_practical_examples.qmd</li>
-<li>references.qmd</li>
+<li>Bulk Pristine Supercell</li>
+<li>Defective Supercells Point defects by substituting lead with 3d TMs</li>
 </ul>
-</section>
-<section id="dft-lectures" class="level2">
-<h2 class="anchored" data-anchor-id="dft-lectures">DFT Lectures</h2>
+</div>
+<div id="step2" class="step" data-connect="step2A, step3" style="width: 12em; height: 4em; top: 5em; left: 19em;">
+<p>Calculations</p>
+</div>
+<div class="folded-tl-box" style="top: 5em; left: 22.5em;">
+<p>2</p>
+</div>
+<div class="folded-tr-box" style="top: 9.5em; left: 33em;">
+<p>Software: QE</p>
+</div>
+<div id="step2A" class="step" data-connect="step2B" style="width: 10em; height: 3.75em; top: 15em; left: 20em;">
+<p>Relaxation</p>
+</div>
+<div class="folded-tr-box" style="width: 9em; top: 22em; left: 32.5em;">
+<p>Code: pw.x (vc-relax)</p>
+</div>
+<div id="step2B" class="step" style="width: 10em; height: 3.75em; top: 25em; left: 20em;">
+<p>SCF Calculation</p>
+</div>
+<div class="folded-tr-box" style="width: 9em; top: 34em; left: 32.5em;">
+<p>Code: pw.x (scf)</p>
+</div>
+<div id="step3" class="step" data-connect="step3A" style="width: 12em; height: 4em; top: 5em; left: 35em;">
+<p>Data Handling and Analysis</p>
+</div>
+<div class="folded-tl-box" style="top: 5em; left: 42.5em;">
+<p>3</p>
+</div>
+<div class="folded-tr-box" style="top: 9.5em; left: 54em;">
+<p>Software: Doped</p>
+</div>
+<div id="step3A" class="step" data-connect="step3B" style="line-height: 1.5; width: 12em; height: 6em; top: 13em; left: 35em;">
 <ul>
-<li><a href="../C0DFT/lectures/scf.html">Self-consistent Field (SCF) Calculation</a></li>
+<li>Phase Diagrams</li>
+<li>Chemical Potential Diagrams</li>
 </ul>
-<!-- - [Kohn-Sham Equations](ks_equation.qmd) -->
-<p>bibliography: bibliography.bib format: html: theme: cosmo toc: true pdf: documentclass: book</p>
+</div>
+<div id="step3B" class="step" data-connect="step3C" style="width: 12em; height: 4em; top: 22em; left: 35em;">
+<p>Defect Formation Energies</p>
+</div>
+<div id="step3C" class="step" style="width: 12em; height: 4em; top: 29em; left: 35em;">
+<p>Charge Transition Levels</p>
+</div>
+<!-- ::: {.step #step4 style="top: 300px; left: 300px;"}
+End
+::: -->
+<p>–&gt;</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -821,7 +833,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script src="../scripts/leader-line-master/leader-line.min.js"></script>
+<script src="../../scripts/leader-line-master/leader-line.min.js"></script>
 
 
 
