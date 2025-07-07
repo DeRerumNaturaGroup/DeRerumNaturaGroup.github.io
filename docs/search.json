@@ -1,0 +1,165 @@
+[
+  {
+    "objectID": "C0DFT/leaderlines/workflow.html",
+    "href": "C0DFT/leaderlines/workflow.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Structure Generation\n\n\n1\n\n\nSoftware: Vesta\n\n\n\nBulk Pristine Supercell\nDefective Supercells Point defects by substituting lead with 3d TMs\n\n\n\nCalculations\n\n\n2\n\n\nSoftware: QE\n\n\nRelaxation\n\n\nCode: pw.x (vc-relax)\n\n\nSCF Calculation\n\n\nCode: pw.x (scf)\n\n\nData Handling and Analysis\n\n\n3\n\n\nSoftware: Doped\n\n\n\nPhase Diagrams\nChemical Potential Diagrams\n\n\n\nDefect Formation Energies\n\n\nCharge Transition Levels\n\n\n–&gt;"
+  },
+  {
+    "objectID": "C0resources/home_resources.html",
+    "href": "C0resources/home_resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "ABS"
+  },
+  {
+    "objectID": "C0publications/home_calculusI.html",
+    "href": "C0publications/home_calculusI.html",
+    "title": "Calculus I",
+    "section": "",
+    "text": "This is the home page for calculus I (MT-101). All assignments, announcements, and other relevant materials will be posted here."
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html",
+    "href": "C0DFT/lectures/scf.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "SCF calculations solve many one particle Schrodinger like KS equation (eq. num) for a given system. This problem is called self consistent because Hartee and exchange-correlation potential in KS equation require the electron density which require wave function \\(\\psi\\) to obtain the solution to the equation. Or simple, a wavefunction \\(\\psi_i\\) is dependent on all the other solutions \\(\\psi_j\\) describing the electronic states. Therefore, SCF calculation is an itterative process and solve the equations numerically.\nPractically, nuclear potential is calculated by giving the atomic site coordinates and \\(V_H\\) and \\(V_XC\\) are calculated using the initial guess of electron density. This way, the total potential is calculated which is used by KS equations to calculate wavefunction and then obtain the electron density. The process is repeated until the value of electron density converges to obtain the ground state energy. Flow chart below shows the cyclic process of SCF calculations.\n\n\n\nSCF Flow Diagram"
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#self-consistent-field-scf",
+    "href": "C0DFT/lectures/scf.html#self-consistent-field-scf",
+    "title": "DRN Group",
+    "section": "",
+    "text": "SCF calculations solve many one particle Schrodinger like KS equation (eq. num) for a given system. This problem is called self consistent because Hartee and exchange-correlation potential in KS equation require the electron density which require wave function \\(\\psi\\) to obtain the solution to the equation. Or simple, a wavefunction \\(\\psi_i\\) is dependent on all the other solutions \\(\\psi_j\\) describing the electronic states. Therefore, SCF calculation is an itterative process and solve the equations numerically.\nPractically, nuclear potential is calculated by giving the atomic site coordinates and \\(V_H\\) and \\(V_XC\\) are calculated using the initial guess of electron density. This way, the total potential is calculated which is used by KS equations to calculate wavefunction and then obtain the electron density. The process is repeated until the value of electron density converges to obtain the ground state energy. Flow chart below shows the cyclic process of SCF calculations.\n\n\n\nSCF Flow Diagram"
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#calculations",
+    "href": "C0DFT/lectures/scf.html#calculations",
+    "title": "DRN Group",
+    "section": "Calculations",
+    "text": "Calculations\nSCF calculations give the total energy of the system to obtain the ground state properties of material. But prior to scf calculations, relaxation calculation is necessary to remove the strains on the system and optimize the atomic positions as well as unit cell. QE uses BFGS algorithm (Do i need to explain BFGS theorem?) to optimize the atomic positions through relax and cell parameters through vc-relax calculation. It is itterative process similar to scf calculations where BFGS algorithm obtain the values of atomic positions and then energy is calculated through SCF calculation and forces are calculated using Hellmann‐Feynman theorem. The cycle stops when the energy and forces values achieve convergence criteris provided in the input file. Sample files of relax, vc-relax and scf calculation can be found at:\n\nrelax.in\nvc-relax.in\nscf.in"
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#run-calculations",
+    "href": "C0DFT/lectures/scf.html#run-calculations",
+    "title": "DRN Group",
+    "section": "Run Calculations",
+    "text": "Run Calculations\nQE uses pw.x code to run the above calculations. The difference is only in the input files. First run relx/vcrelax and obtain the corresponding optimized atomicc positions and cell parameters. Then perform convergence test and finaly perform the SCF calculation with optimized parameters.\nmpirun -np 4 pw.x &lt; relax.in &gt; relax.out\nmpirun -np 4 pw.x &lt; vcrelax.in &gt; vcrelax.out\nmpirun -np 4 pw.x &lt; scf.in &gt; scf.out"
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#convergence-in-scf-calculations",
+    "href": "C0DFT/lectures/scf.html#convergence-in-scf-calculations",
+    "title": "DRN Group",
+    "section": "Convergence in SCF calculations",
+    "text": "Convergence in SCF calculations\nConvergence test should be perform on energ cutoff and k-mesh after structure relaxation as shown below in graph to obtain the correct parameters. For this purpose, perform multiple scf calculations for different values.\nThe energy cutoff determines how many plane waves are to be used for calculations which is directly related to the accuracy of results. However, it is to keep in mind that higher energy cutoff increases the computational cost. Mostly pseudopotential files provide the estimated energy cutoff but it is still recommended to perform convergence test. Ultrasoft pseudopotentials suggest low energy cutoff while it is larger for norm conserving pseudopotentials.\nk-mesh convergence can be performed by changing the k points in the input file of QE. There are six values: first 3 values are number of k-points and the last 3 values represent lattice shifting in each direction which can take value either 0 or 1.\n\n\nCode\nimport plotly.graph_objects as go\nimport numpy as np\n\n# SCF iteration data\niterations = np.arange(1, 21)\nenergies = -50 + np.exp(-0.3 * iterations)\n\n# Create frames (one per iteration step)\nframes = [\n    go.Frame(\n        data=[go.Scatter(x=iterations[:k], y=energies[:k], mode='lines+markers')],\n        name=str(k)\n    )\n    for k in range(1, 21)\n]\n\n# Initial plot with only first point\nfig = go.Figure(\n    data=[go.Scatter(x=iterations[:1], y=energies[:1], mode='lines+markers')],\n    layout=go.Layout(\n        title=\"SCF Energy Convergence\",\n        xaxis_title=\"Iteration\",\n        yaxis_title=\"Total Energy (a.u.)\",\n        sliders=[{\n            \"steps\": [{\n                \"method\": \"animate\",\n                \"args\": [[str(k)]],\n                \"label\": str(k)\n            } for k in range(1, 21)]\n        }]\n    ),\n    frames=frames\n)\n\nfig.show()"
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#before-you-run-it",
+    "href": "C0DFT/lectures/scf.html#before-you-run-it",
+    "title": "DRN Group",
+    "section": "Before You Run It",
+    "text": "Before You Run It\n\n\nHow to restart scf calculation?\n\n\ncan use restart option\n\n\n\n\nWhen to use relax and vc-relax?\n\n\nanswer\n\n\n\n\nUse space_group to employ symmetry and reduce computational cost\n\n\nanswer\n\n\n\n\nWhen to use k-points shifting?\n\n\nBook- page 40 onwards\n\n\n\n\nAny rule for selecting k-points?\n\n\nBook- page 40 onwards\n\n\n\n\nHow to check convergence?\n\n\nnswer"
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#output-plotting-and-interpretation",
+    "href": "C0DFT/lectures/scf.html#output-plotting-and-interpretation",
+    "title": "DRN Group",
+    "section": "Output plotting and interpretation",
+    "text": "Output plotting and interpretation\n\nexplanation of relax.out\nexplanation of vcrelax\nexplanation of scf"
+  },
+  {
+    "objectID": "C0DFT/lectures/scf.html#exercise-questions",
+    "href": "C0DFT/lectures/scf.html#exercise-questions",
+    "title": "DRN Group",
+    "section": "Exercise Questions",
+    "text": "Exercise Questions\n\nWrite the"
+  },
+  {
+    "objectID": "C0DFT/lectures/KS-states.html",
+    "href": "C0DFT/lectures/KS-states.html",
+    "title": "Kohn-Sham States and the Number of Electrons",
+    "section": "",
+    "text": "If you open the header of an espresso pw.x output file, you might see:\n     number of electrons       =        44.00\n     number of Kohn-Sham states=           26\nWell, what are these?\nIn understanding electronic structure calculations using density functional theory (DFT), it’s useful to imagine a familiar situation: a family going on a picnic.\n\n\n\nThe number of KS States is like the rows of seats on a bus and the number of electrons are akin to the people riding out to picnic.\n\n\nThe number of valence electrons in a material is like the number of family members who are actually going on the picnic. These are the people who will participate in activities, contribute to the experience, and need to be accounted for in the logistics. Similarly, valence electrons are those that participate in bonding and electronic behavior, and are the focus of most DFT calculations.\nHowever, in organizing a real trip, one often brings more than just the family. There may be a hired guide to navigate, porters to carry supplies, or someone skilled in negotiation for dealing with vendors. This expanded group represents the total number of electrons in a DFT calculation. It includes both the valence electrons and any additional electrons that the pseudopotential has chosen to treat explicitly—perhaps semicore states or shallow core levels that are important for accuracy in certain elements.\nTo transport this group, a bus is needed. The Kohn–Sham states correspond to the rows of seats on the bus. In a non-spin-polarized system, each row can seat two people: one with spin up and one with spin down. Therefore, the number of rows ideally needs to be at least half the number of electrons. But planning conservatively, we often include more rows than necessary—not everyone likes to share a seat, and we may want to observe what other passengers (electronic states) are doing even if they are not part of the initial group. These extra rows represent the unoccupied Kohn–Sham states, which are important for understanding conduction bands, optical transitions, and other excited-state properties.\nThis analogy helps clarify why the number of Kohn–Sham states is not the same as the number of electrons, and why pseudopotentials and spin considerations affect how many orbitals the DFT calculation must solve for.\nWhile the picnic bus analogy helps build intuition about valence electrons, total electrons, and Kohn–Sham states in DFT, it necessarily simplifies a number of important physical and computational subtleties and its limitations must always be at the back of our mind:\n\nFirst, the analogy treats Kohn–Sham states as fixed seats, suggesting a discrete, localized picture. In reality, Kohn–Sham orbitals are continuous wavefunctions—often delocalized over an entire crystal in the form of Bloch states. They are not static slots that electrons occupy, but mathematical solutions to a differential equation that describe how electron density is distributed in space.\nSecond, the analogy implies that electrons either fully occupy or do not occupy Kohn–Sham states, like passengers sitting in seats. This works for insulators and simple semiconductors, but breaks down in metals or finite-temperature systems where fractional occupations are common. In such cases, the occupancy of a state is not binary, but smoothly distributed around the Fermi level according to the Fermi–Dirac distribution.\nThird, unoccupied Kohn–Sham states are portrayed as empty rows included just in case they’re needed. However, these states are not merely optional extras—they are integral to predicting important physical properties, such as optical absorption spectra, band gaps, and excited-state behavior. They must be computed carefully and with the same rigor as occupied states.\nFourth, the treatment of spin in the analogy is simplified. While saying that “some people prefer not to share a row” illustrates the difference between spin-polarized and non-spin-polarized calculations, it glosses over more subtle aspects of spin, such as antiferromagnetic ordering, spin splitting, and spin–orbit coupling. These effects can lead to highly nontrivial behavior in the electronic structure, which cannot be captured by the seating metaphor.\nFinally, while the role of the pseudopotential is likened to choosing who goes on the trip, the analogy omits the fact that pseudopotentials also encode how valence electrons interact with the frozen core. This interaction affects transferability, scattering properties, and the accuracy of calculated forces—factors that are invisible in the analogy."
+  },
+  {
+    "objectID": "C0DFT/lectures/inputfiles/scfin.html",
+    "href": "C0DFT/lectures/inputfiles/scfin.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "&CONTROL\n  calculation = 'scf', !fe fn \n  prefix = 'si',\n  outdir = './tmp/',\n  pseudo_dir = './pseudo/',\n  verbosity = 'high',\n  tprnfor = .true.,\n  tstress = .true.,\n/\n\n&SYSTEM\n  ibrav = 2,\n  celldm(1) = 10.2,\n  nat = 2,\n  ntyp = 1,\n  ecutwfc = 40.0,\n  ecutrho = 320.0,\n/\n\n&ELECTRONS\n  conv_thr = 1.0d-8,\n  mixing_beta = 0.7,\n/\n\nATOMIC_SPECIES\n  Si  28.0855  Si.pz-vbc.UPF\n\nATOMIC_POSITIONS crystal\n  Si 0.00 0.00 0.00\n  Si 0.25 0.25 0.25\n\nK_POINTS automatic\n  6 6 6  1 1 1"
+  },
+  {
+    "objectID": "C0DFT/home_DFT.html",
+    "href": "C0DFT/home_DFT.html",
+    "title": "DFT",
+    "section": "",
+    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:\n\nindex.qmd\n1_introduction.qmd\n2_theoretical_fundamentals.qmd\n3_ks_equations.qmd\n4_xc_functionals.qmd\n5_scf_calculation.qmd\n6_geometry_optimization.qmd\n7_band_structure.qmd\n8_dos_and_pdos.qmd\n9_practical_examples.qmd\nreferences.qmd"
+  },
+  {
+    "objectID": "C0DFT/home_DFT.html#abc",
+    "href": "C0DFT/home_DFT.html#abc",
+    "title": "DFT",
+    "section": "",
+    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:\n\nindex.qmd\n1_introduction.qmd\n2_theoretical_fundamentals.qmd\n3_ks_equations.qmd\n4_xc_functionals.qmd\n5_scf_calculation.qmd\n6_geometry_optimization.qmd\n7_band_structure.qmd\n8_dos_and_pdos.qmd\n9_practical_examples.qmd\nreferences.qmd"
+  },
+  {
+    "objectID": "C0DFT/home_DFT.html#dft-lectures",
+    "href": "C0DFT/home_DFT.html#dft-lectures",
+    "title": "DFT",
+    "section": "DFT Lectures",
+    "text": "DFT Lectures\n\nSelf-consistent Field (SCF) Calculation\n\n\nbibliography: bibliography.bib format: html: theme: cosmo toc: true pdf: documentclass: book"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "C0DFT/lectures/tipsandtricks/scftips.html",
+    "href": "C0DFT/lectures/tipsandtricks/scftips.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "How to restart scf calculation?\n\n\ncan use restart option\n\n\n\n\nWhen to use relax and vc-relax?\n\n\nanswer\n\n\n\n\nUse space_group to employ symmetry and reduce computational cost\n\n\nanswer\n\n\n\n\nWhen to use k-points shifting?\n\n\nBook- page 40 onwards\n\n\n\n\nAny rule for selecting k-points?\n\n\nBook- page 40 onwards\n\n\n\n\nHow to check convergence?\n\n\nnswer\n\n\n\n\nHow to set convergence criteria for relax and vcrelax calculation?\n\n\n\netot_conv_thr\nforc_conv_thr\npress_conv_thr"
+  },
+  {
+    "objectID": "C0research/research.html#codes",
+    "href": "C0research/research.html#codes",
+    "title": "Research",
+    "section": "Codes",
+    "text": "Codes\n\nAsliGheo\nJHR"
+  },
+  {
+    "objectID": "C0resources/QE/QE.html",
+    "href": "C0resources/QE/QE.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Test",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Espresso"
+    ]
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "abc"
+  },
+  {
+    "objectID": "C0DFT/leaderlines/TB_workflow.html",
+    "href": "C0DFT/leaderlines/TB_workflow.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "DFT Bands & DOS\n\n\nQuantum Espresso\n\n\n\n\n\nRelaxation\nConvergence\nSCF\n\n\n\n\nNSCF\nBands\nDOS\n\n\n\n\nWannier Bands & TB Parameters\n\n\nWannier90\n\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\npythTB\n\n\n\nTB Model\nredTB\n\n\n\n\nThermoelectric Properties\n\n\nBoltzWann\n\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
+  }
+]

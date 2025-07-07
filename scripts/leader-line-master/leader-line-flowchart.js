@@ -1,26 +1,76 @@
 
+// <script>
+// window.addEventListener('load', () => {
+//   // Define your reusable line style
+//   const flowLineStyle = {
+//     color: '#e74c3c',
+//     size: 4,
+//     path: 'fluid',
+//     endPlug: 'arrow',
+//     // dash: { len: 6, gap: 4 },
+//     // startPlug: 'disc',
+//     dropShadow: true
+//   };
+
+//   // Loop through all elements with `data-connect`
+//   document.querySelectorAll('[data-connect]').forEach(el => {
+//     const targets = el.dataset.connect.split(',');
+//     targets.forEach(targetId => {
+//       const target = document.getElementById(targetId.trim());
+//       if (target) {
+//         new LeaderLine(el, target, flowLineStyle);
+//       }
+//     });
+//   });
+// });
+// </script>
+
+
 <script>
 window.addEventListener('load', () => {
-  // Define your reusable line style
   const flowLineStyle = {
     color: '#e74c3c',
     size: 4,
-    path: 'straight',
+    path: 'fluid',
     endPlug: 'arrow',
-    // dash: { len: 6, gap: 4 },
-    // startPlug: 'disc',
     dropShadow: true
   };
 
-  // Loop through all elements with `data-connect`
   document.querySelectorAll('[data-connect]').forEach(el => {
-    const targets = el.dataset.connect.split(',');
+    const targets = el.dataset.connect.split(',').map(t => t.trim());
+
+    // Parse per-connection labels (format: "step2A: Label Text; step3A: Other Label")
+    const labelMap = {};
+    if (el.dataset.label) {
+      el.dataset.label.split(';').forEach(pair => {
+        const [key, value] = pair.split(':').map(s => s.trim());
+        if (key && value) {
+          labelMap[key] = value;
+        }
+      });
+    }
+
     targets.forEach(targetId => {
-      const target = document.getElementById(targetId.trim());
+      const target = document.getElementById(targetId);
       if (target) {
-        new LeaderLine(el, target, flowLineStyle);
+        const options = { ...flowLineStyle };
+
+        const labelText = labelMap[targetId];
+        if (labelText) {
+          options.middleLabel = LeaderLine.pathLabel(labelText, {
+            fontSize: '18px',
+            color: 'black',
+            backgroundColor: 'rgba(255,255,255,0.85)',
+            padding: 4
+          });
+        }
+
+        new LeaderLine(el, target, options);
       }
     });
   });
 });
 </script>
+
+
+
