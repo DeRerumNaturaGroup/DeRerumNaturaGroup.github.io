@@ -2,14 +2,14 @@
 title: ""
 ---
 
-The name De Rerum Natura—Latin for On the Nature of Things—is a tribute to the ancient poem by Lucretius that sought to explain the workings of the natural world through reason and observation. Our group carries that spirit forward into the computational age, exploring matter and mechanism through the lens of modern simulation and data.
+The name De Rerum Natura—Latin for On the Nature of Things—comes from the ancient poem by Lucretius that sought to explain the workings of the natural world through reason and observation. 
 
-We are concerned with the nature of things—albeit in the computational realm. Our work lies at the intersection of physics, chemistry, and data science, where we explore the fundamental behavior of materials through first-principles simulations, high-throughput workflows, and machine learning.
+We too are concerned with the nature of things—albeit in the computational realm, exploring matter and mechanism through the lens of modern simulation and data.
+
+Our work lies at the intersection of physics, chemistry, and data science, where we explore the fundamental behavior of materials through first-principles simulations, high-throughput workflows, and machine learning.
 
 We believe that by simulating matter at the atomic scale, we can uncover the organizing principles behind functionality—be it conductivity, porosity, catalytic activity, or stability—and channel that understanding toward real-world applications. Whether developing algorithms for defect prediction or designing generative models for new quantum materials, our goal is to push the frontiers of materials discovery by combining deep physical insight with modern computational tools.
 
 Rooted in open science and driven by curiosity, we contribute not just to knowledge, but to the software and datasets that make that knowledge accessible.
-
-
 
 

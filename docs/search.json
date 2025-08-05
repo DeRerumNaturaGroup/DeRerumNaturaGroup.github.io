@@ -161,5 +161,26 @@
     "title": "DRN Group",
     "section": "",
     "text": "DFT Bands & DOS\n\n\nQuantum Espresso\n\n\n\n\n\nRelaxation\nConvergence\nSCF\n\n\n\n\nNSCF\nBands\nDOS\n\n\n\n\nWannier Bands & TB Parameters\n\n\nWannier90\n\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\npythTB\n\n\n\nTB Model\nredTB\n\n\n\n\nThermoelectric Properties\n\n\nBoltzWann\n\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "The name De Rerum Natura—Latin for On the Nature of Things—comes from the ancient poem by Lucretius that sought to explain the workings of the natural world through reason and observation.\nWe too are concerned with the nature of things—albeit in the computational realm, exploring matter and mechanism through the lens of modern simulation and data.\nOur work lies at the intersection of physics, chemistry, and data science, where we explore the fundamental behavior of materials through first-principles simulations, high-throughput workflows, and machine learning.\nWe believe that by simulating matter at the atomic scale, we can uncover the organizing principles behind functionality—be it conductivity, porosity, catalytic activity, or stability—and channel that understanding toward real-world applications. Whether developing algorithms for defect prediction or designing generative models for new quantum materials, our goal is to push the frontiers of materials discovery by combining deep physical insight with modern computational tools.\nRooted in open science and driven by curiosity, we contribute not just to knowledge, but to the software and datasets that make that knowledge accessible."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Listing Example",
+    "section": "",
+    "text": "Research\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutli-Exciton Generation\n\n1 min\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "C0research/meg.html",
+    "href": "C0research/meg.html",
+    "title": "Mutli-Exciton Generation",
+    "section": "",
+    "text": "Elephant\n\n\nTest"
   }
 ]

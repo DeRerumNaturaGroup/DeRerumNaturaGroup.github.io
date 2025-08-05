@@ -1,0 +1,12 @@
+---
+title: "Listing Example"
+listing:
+  contents: C0research
+  type: grid
+  categories: true
+  image-placeholder: _figs/logo.png
+  fields: [image, date, title, author, reading-time]
+  sort:
+  - "date"
+  - "title desc"
+---
