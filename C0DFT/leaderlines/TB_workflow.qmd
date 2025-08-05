@@ -5,11 +5,11 @@ sidebar: false
 <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
 
 
-::: {.step #step1 style="border: transparent; width: 12em; height: 4em; top: 5em; left: 6em;color: #006699;"}
+<!-- ::: {.step #step1 style="border: transparent; width: 12em; height: 4em; top: 5em; left: 6em;color: #006699;"}
 DFT Bands & DOS
-:::
+::: -->
 
-::: {.step #step-s1 style="border: transparent; width: 9em; height: 4em; top: 11em; font-size: 1.5em;left: 1.75em;transform: rotate(270deg);color: #006699;"}
+::: {.step #step-s1 style="border: transparent; width: 9em; height: 4em; top: 9em; font-size: 1.5em;left: 1.75em;transform: rotate(270deg);color: #006699;"}
 Quantum Espresso
 :::
 
@@ -24,31 +24,40 @@ Software: Vesta
 ::: -->
 
 
-::: {.step #step1A data-connect="step1B, step2A" data-label="step2A: Bloch States" style="line-height: 1.5; text-align: left; width: 9em; height: 6em; top: 7.5em; left: 8em;"}
+::: {.step #step1A data-connect="step1B, step2A" data-label="step2A: Bloch States" style="line-height: 1.5; text-align: left; width: 12em; height: 13.5em; top: 5em; left: 8em;"}
+::: {.step-title style = "background-color: #006699;"}
+DFT Bands & DOS
+:::
 - Relaxation
 - Convergence
 - SCF
-:::
-
-::: {.step #step1B style="line-height: 1.5; text-align: left; width: 9em; height: 6em; top: 16em; left: 8em;"}
 - NSCF
 - Bands
 - DOS
 :::
 
+<!-- ::: {.step #step1B style="line-height: 1.5; text-align: left; width: 9em; height: 6em; top: 16em; left: 8em;"}
+- NSCF
+- Bands
+- DOS
+::: -->
+
 <!-- ======================= -->
 
 
-::: {.step #step2 style="border: transparent; width: 12em; height: 4em; top: 12em; left: 19em; color:#cc0099"}
+<!-- ::: {.step #step2 style="border: transparent; width: 12em; height: 4em; top: 12em; left: 19em; color:#cc0099"}
 Wannier Bands & TB Parameters
-:::
+::: -->
 
-::: {.step #step-s2 style="border: transparent; width: 9em; height: 4em; top: 13.5em; font-size: 1.5em;left: 20.5em;transform: rotate(90deg);color:#cc0099"}
+::: {.step #step-s2 style="border: transparent; width: 9em; height: 4em; top: 14.5em; font-size: 1.5em;left: 30.5em;transform: rotate(90deg);color:#996600"}
 Wannier90
 :::
 
 
-::: {.step #step2A data-connect="step2B, step3" data-label="step3: MLWFs"style="line-height: 1.5; text-align: left; width: 9em; height: 6em; top: 16em; left: 21em;"}
+::: {.step #step2A data-connect="step2B, step3A" data-label="step3A: MLWFs"style="line-height: 1.5; text-align: left; width: 18em; height: 9em; top: 14em; left: 24em;"}
+::: {.step-title style = "background-color:#996600"}
+Wannier Bands & TB Parameters
+:::
 - wannier90 -pp
 - pw2wannier90
 - wannier90
@@ -58,27 +67,34 @@ Wannier90
 
 
 
-::: {.step #step-s3 style="border: transparent; width: 9em; height: 2.5em; top: 21.25em; font-size: 1.5em;left: 5.25em;transform: rotate(270deg); color: #006600"}
-pythTB
+::: {.step #step-s3 style="border: transparent; width: 9em; height: 2.5em; top: 25.25em; font-size: 1.5em;left: 8.75em;transform: rotate(270deg); color: #336600"}
+
+PythTB
 :::
 
-::: {.step #step2B data-connect="step2B" style="line-height: 1.5; text-align: left; width: 9em; height: 4em; top: 25em; left: 13em;"}
-- TB Model
+::: {.step #step2B data-connect="step2B" style="line-height: 1.5; text-align: left; width: 12em; height: 7em; top: 27em; left: 17em;"}
+::: {.step-title style = "background-color: #336600;"}
+Tight Binding Model
+:::
+- TB 
 - redTB
 :::
 
 <!-- =========================== -->
 
 
-::: {.step #step3 style="border: transparent; width: 12em; height: 4em; top: 28em; left: 23.5em; color: #ff6600"}
+<!-- ::: {.step #step3 style="border: transparent; width: 12em; height: 4em; top: 28em; left: 23.5em; color: #ff6600"}
 Thermoelectric Properties
-:::
+::: -->
 
-::: {.step #step-s3 style="border: transparent; width: 9em; height: 2.5em; top: 28em; font-size: 1.5em;left: 24.5em;transform: rotate(90deg); color: #ff6600"}
+::: {.step #step-s3 style="border: transparent; width: 9em; height: 2.5em; top: 30.75em; font-size: 1.5em;left: 34.5em;transform: rotate(90deg); color: #660033"}
 BoltzWann
 :::
 
-::: {.step #step3A style="line-height: 1.5; text-align: left; width: 9em; height: 10em; top: 30em; left: 25em;"}
+::: {.step #step3A style="line-height: 1.5; text-align: left; width: 13em; height: 8.5em; top: 33em; left: 33em;"}
+::: {.step-title style = "background-color: #660033"}
+Thermoelectric Properties
+:::
 - Electrical Conductivity
 - Thermal Conductivity
 - Seebeck Coefficient

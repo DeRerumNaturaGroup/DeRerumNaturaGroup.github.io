@@ -160,6 +160,34 @@
     "href": "C0DFT/leaderlines/TB_workflow.html",
     "title": "DRN Group",
     "section": "",
-    "text": "DFT Bands & DOS\n\n\nQuantum Espresso\n\n\n\n\n\nRelaxation\nConvergence\nSCF\n\n\n\n\nNSCF\nBands\nDOS\n\n\n\n\nWannier Bands & TB Parameters\n\n\nWannier90\n\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\npythTB\n\n\n\nTB Model\nredTB\n\n\n\n\nThermoelectric Properties\n\n\nBoltzWann\n\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
+    "text": "Quantum Espresso\n\n\n\n\n\nDFT Bands & DOS\n\n\nRelaxation\nConvergence\nSCF\nNSCF\nBands\nDOS\n\n\n\n\n\n\nWannier90\n\n\n\nWannier Bands & TB Parameters\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\nPythTB\n\n\n\nTight Binding Model\n\n\nTB\nredTB\n\n\n\n\n\nBoltzWann\n\n\n\nThermoelectric Properties\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Many-Body Physics",
+    "section": "",
+    "text": "Resources\nWhether by your own free will or through some immutable chain of events (or both, see ‘Compatibilism’), you have arrived on the website of the Computational Materials Group at GIK Institute.\nIf this is a mistake you can rectify it immediately. Though if you ask us, we think that in the words of T.S. Eliot:\n\n“This is your real destination.”\n\nSo stay here and take a look.\nBut please note that the website is still under development. Apart from an overview of the group’s activities, other resources related to the group will also be posted here."
+  },
+  {
+    "objectID": "C0DFT/codes_installations/LAMMPS_GPU.html",
+    "href": "C0DFT/codes_installations/LAMMPS_GPU.html",
+    "title": "LAMMPS GPU Installation",
+    "section": "",
+    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+  },
+  {
+    "objectID": "C0DFT/codes_installations/LAMMPS_GPU.html#environment-setup",
+    "href": "C0DFT/codes_installations/LAMMPS_GPU.html#environment-setup",
+    "title": "LAMMPS GPU Installation",
+    "section": "",
+    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+  },
+  {
+    "objectID": "C0DFT/codes_installations/LAMMPS_GPU.html#lammps-installation",
+    "href": "C0DFT/codes_installations/LAMMPS_GPU.html#lammps-installation",
+    "title": "LAMMPS GPU Installation",
+    "section": "LAMMPS Installation",
+    "text": "LAMMPS Installation\n\nStep 1\nInstall required dependencies:\nsudo apt update\nsudo apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev\nAlso install CUDA if it’s not installed. Check with:\nnvcc --version\nnvidia-smi\n\n\nStep 2\nClone and prepare the LAMMPS repository:\ngit clone https://github.com/lammps/lammps.git\ncd lammps\nmkdir build\ncd build\n\n\nStep 3 (Configure)\ncmake ../cmake \\\n  -D CMAKE_INSTALL_PREFIX=../lammps_gpu \\\n  -D BUILD_MPI=on \\\n  -D BUILD_OMP=on \\\n  -D PKG_KOKKOS=on \\\n  -D Kokkos_ENABLE_CUDA=on \\\n  -D Kokkos_ARCH_AMPERE80=on \\\n  -D CMAKE_C_COMPILER=mpicc \\\n  -D CMAKE_CXX_COMPILER=mpicxx\n\n\nStep 4 (Build and Install)\nmake -j$(nproc)\nmake install"
   }
 ]

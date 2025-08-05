@@ -1,0 +1,89 @@
+---
+title: "LAMMPS GPU Installation"
+toc: true
+---
+
+## Environment Setup
+
+### Step 1
+Download Miniforge installer:
+
+```bash
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+```
+
+### Step 2
+Run the installer:
+
+```bash
+bash Miniforge3-Linux-x86_64.sh
+```
+
+### Step 3
+Activate Miniforge:
+
+```bash
+source ~/miniforge3/bin/activate
+```
+
+### Step 4
+Create a new conda environment:
+
+```bash
+conda create -n md python=3.11
+```
+
+### Step 5
+Activate the environment:
+
+```bash
+conda activate md
+```
+
+## LAMMPS Installation
+
+### Step 1
+Install required dependencies:
+
+```bash
+sudo apt update
+sudo apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev
+```
+
+Also install CUDA if it's not installed. Check with:
+
+```bash
+nvcc --version
+nvidia-smi
+```
+
+### Step 2
+Clone and prepare the LAMMPS repository:
+
+```bash
+git clone https://github.com/lammps/lammps.git
+cd lammps
+mkdir build
+cd build
+```
+
+### Step 3 (Configure)
+
+```bash
+cmake ../cmake \
+  -D CMAKE_INSTALL_PREFIX=../lammps_gpu \
+  -D BUILD_MPI=on \
+  -D BUILD_OMP=on \
+  -D PKG_KOKKOS=on \
+  -D Kokkos_ENABLE_CUDA=on \
+  -D Kokkos_ARCH_AMPERE80=on \
+  -D CMAKE_C_COMPILER=mpicc \
+  -D CMAKE_CXX_COMPILER=mpicxx
+```
+
+### Step 4 (Build and Install)
+
+```bash
+make -j$(nproc)
+make install
+```

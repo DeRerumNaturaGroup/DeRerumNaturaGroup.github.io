@@ -29,8 +29,8 @@
 <script>
 window.addEventListener('load', () => {
   const flowLineStyle = {
-    color: '#e74c3c',
-    size: 4,
+    color: 'black',
+    size: 2.75,
     path: 'fluid',
     endPlug: 'arrow',
     dropShadow: true

@@ -12,6 +12,19 @@
 	/* border-left: 20px solid #555; */
 }
 
+.step-title {
+  background-color: #393A3f;      /* Orange band */
+  color: white;
+  font-weight: normal;
+  font-size: 1.2em;
+  /* padding: 0.05em 0.4em; */
+  line-height: 2.2;
+  margin: -0.79em -0.67em 0.5em -0.67em; 
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  text-align: center;
+}
+
 .folded-tr-box {
   position: absolute;
   width: 8em;
