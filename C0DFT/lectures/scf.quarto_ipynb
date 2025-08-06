@@ -45,7 +45,11 @@
         "\n",
         "*k-mesh* convergence can be performed by changing the k points in the input file of QE. There are six values: first 3 values are number of k-points and the last 3 values represent lattice shifting in each direction which can take value either 0 or 1.  \n"
       ],
+<<<<<<< HEAD
       "id": "e2c35bc1"
+=======
+      "id": "52efe857"
+>>>>>>> 7cb6051803577df5e8a70da1d75f73dbbbebdc75
     },
     {
       "cell_type": "code",
@@ -87,7 +91,11 @@
         "\n",
         "fig.show()"
       ],
+<<<<<<< HEAD
       "id": "0053c4ee",
+=======
+      "id": "380aaf32",
+>>>>>>> 7cb6051803577df5e8a70da1d75f73dbbbebdc75
       "execution_count": null,
       "outputs": []
     },
@@ -208,7 +216,11 @@
         "## Exercise Questions\n",
         "- **Write the**"
       ],
+<<<<<<< HEAD
       "id": "114d8d75"
+=======
+      "id": "bccdff58"
+>>>>>>> 7cb6051803577df5e8a70da1d75f73dbbbebdc75
     }
   ],
   "metadata": {
@@ -216,7 +228,11 @@
       "name": "python3",
       "language": "python",
       "display_name": "Python 3 (ipykernel)",
+<<<<<<< HEAD
       "path": "D:\\PhD\\DFT\\DeRerumNatura\\DeRerumNatura\\env\\share\\jupyter\\kernels\\python3"
+=======
+      "path": "/home/fahad/miniforge3/share/jupyter/kernels/python3"
+>>>>>>> 7cb6051803577df5e8a70da1d75f73dbbbebdc75
     }
   },
   "nbformat": 4,

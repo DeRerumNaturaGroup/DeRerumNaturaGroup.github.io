@@ -160,11 +160,16 @@
     "href": "C0DFT/leaderlines/TB_workflow.html",
     "title": "DRN Group",
     "section": "",
+<<<<<<< HEAD
     "text": "Quantum Espresso\n\n\n\n\n\nDFT Bands & DOS\n\n\nRelaxation\nConvergence\nSCF\nNSCF\nBands\nDOS\n\n\n\n\n\n\nWannier90\n\n\n\nWannier Bands & TB Parameters\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\nPythTB\n\n\n\nTight Binding Model\n\n\nTB\nredTB\n\n\n\n\n\nBoltzWann\n\n\n\nThermoelectric Properties\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
+=======
+    "text": "DFT Bands & DOS\n\n\nQuantum Espresso\n\n\n\n\n\nRelaxation\nConvergence\nSCF\n\n\n\n\nNSCF\nBands\nDOS\n\n\n\n\nWannier Bands & TB Parameters\n\n\nWannier90\n\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\npythTB\n\n\n\nTB Model\nredTB\n\n\n\n\nThermoelectric Properties\n\n\nBoltzWann\n\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
+>>>>>>> 7cb6051803577df5e8a70da1d75f73dbbbebdc75
   },
   {
     "objectID": "index.html",
     "href": "index.html",
+<<<<<<< HEAD
     "title": "Many-Body Physics",
     "section": "",
     "text": "Resources\nWhether by your own free will or through some immutable chain of events (or both, see ‘Compatibilism’), you have arrived on the website of the Computational Materials Group at GIK Institute.\nIf this is a mistake you can rectify it immediately. Though if you ask us, we think that in the words of T.S. Eliot:\n\n“This is your real destination.”\n\nSo stay here and take a look.\nBut please note that the website is still under development. Apart from an overview of the group’s activities, other resources related to the group will also be posted here."
@@ -189,5 +194,24 @@
     "title": "LAMMPS GPU Installation",
     "section": "LAMMPS Installation",
     "text": "LAMMPS Installation\n\nStep 1\nInstall required dependencies:\nsudo apt update\nsudo apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev\nAlso install CUDA if it’s not installed. Check with:\nnvcc --version\nnvidia-smi\n\n\nStep 2\nClone and prepare the LAMMPS repository:\ngit clone https://github.com/lammps/lammps.git\ncd lammps\nmkdir build\ncd build\n\n\nStep 3 (Configure)\ncmake ../cmake \\\n  -D CMAKE_INSTALL_PREFIX=../lammps_gpu \\\n  -D BUILD_MPI=on \\\n  -D BUILD_OMP=on \\\n  -D PKG_KOKKOS=on \\\n  -D Kokkos_ENABLE_CUDA=on \\\n  -D Kokkos_ARCH_AMPERE80=on \\\n  -D CMAKE_C_COMPILER=mpicc \\\n  -D CMAKE_CXX_COMPILER=mpicxx\n\n\nStep 4 (Build and Install)\nmake -j$(nproc)\nmake install"
+=======
+    "title": "Introduction",
+    "section": "",
+    "text": "De Rerum Natura—Latin for On the Nature of Things—takes its name from Lucretius’ ancient poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nWe too are concerned with the nature of things—albeit in the computational realm, exploring matter and mechanism through the lens of modern simulation and data, to uncover the mechanisms behind conductivity, porosity, catalytic activity, and beyond.\nOur work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible."
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Listing Example",
+    "section": "",
+    "text": "Research\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutli-Exciton Generation\n\n1 min\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "C0research/meg.html",
+    "href": "C0research/meg.html",
+    "title": "Mutli-Exciton Generation",
+    "section": "",
+    "text": "Elephant\n\n\nTest"
+>>>>>>> 7cb6051803577df5e8a70da1d75f73dbbbebdc75
   }
 ]
