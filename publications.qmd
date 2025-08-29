@@ -1,1 +1,5 @@
-abc
+---
+title: Publications
+---
+
+Coming soon.
