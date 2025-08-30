@@ -45,7 +45,7 @@
         "\n",
         "*k-mesh* convergence can be performed by changing the k points in the input file of QE. There are six values: first 3 values are number of k-points and the last 3 values represent lattice shifting in each direction which can take value either 0 or 1.  \n"
       ],
-      "id": "a4cbaaeb"
+      "id": "179fc1b4"
     },
     {
       "cell_type": "code",
@@ -87,7 +87,7 @@
         "\n",
         "fig.show()"
       ],
-      "id": "8b36c32d",
+      "id": "b67e80a2",
       "execution_count": null,
       "outputs": []
     },
@@ -208,7 +208,7 @@
         "## Exercise Questions\n",
         "- **Write the**"
       ],
-      "id": "59ee5806"
+      "id": "c7522377"
     }
   ],
   "metadata": {
