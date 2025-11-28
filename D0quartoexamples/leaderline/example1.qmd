@@ -1,0 +1,8 @@
+---
+title: Leaderlines
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 100px;">
+  <div id="start-element" style="width: 80px; height: 30px; background-color: lightblue;">Start</div>
+  <div id="end-element" style="width: 80px; height: 30px; background-color: lightcoral;">End</div>
+</div>

@@ -1,0 +1,101 @@
+---
+title: ""
+format:
+  revealjs:
+    width: 1920
+    height: 1080
+    include-in-header: 
+      - text: '<script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>'
+    css: [../../css/buttons.css, 
+    ../../css/tabs.css,
+    ../../css/callouts.css,
+    ../../css/fonts-ebgaramond.css, 
+    ../../css/fonts-hand.css, 
+    ../../css/shapes.css, 
+    ../../css/leaders.css]
+revealjs-plugins:
+  - leader-line
+---
+
+## 
+<!-- <div class="bbcbox"  id="box1" >
+<div class="bbcheader" id="nodeA4" style="">Kubo Formula</div>
+<div class="bbcbody" id="nodeA4" style="">Connects how time dependent perturbations may impact expectation values of operator $\hat A$</div>
+</div> -->
+
+
+:::{#box1 .bbcbox style="width:400px; height:200px; position:absolute; top:400px; left:0px; font-family: 'EB Garamond It';" }
+:::{#nodeA4 .bbcheader style="font-family: 'EB Garamond SC12';"}
+Kubo Formula
+:::
+:::{#nodeA41 .bbcbody style="font-family: 'EB Garamond Bd';"}
+Kubo Formula asdf asd …
+:::
+:::
+
+<!-- :::{#box2 style="width:200px; height:200px; background-color:green;position:absolute; top:200px; left:1200px;" }
+::: -->
+<!-- <div style="display: flex; justify-content: center; align-items: center; height: 100%; ">
+<div style="border-left: 2px solid gray; left: 600px; height: 800px;"></div>
+</div> -->
+
+<div style="
+  display: grid;
+  grid-template-columns: 30% auto;
+  height: 100%;
+">
+<div></div>
+<div style="border-left: 10px solid rgb(240, 240, 240); height: 1200px; margin: auto 0;"></div>
+</div>
+
+<!-- :::{#box2 .bbcbox style="width:600px; height:200px; position:absolute; top:400px; left:800px; font-family: 'EB Garamond It'; background-color: white; color: brown" } -->
+:::{#box2 .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; font-size: 2em; letter-spacing: 0.1em; width:600px; height:200px; position:absolute; top:400px; left:800px;"}
+Kubo Formula
+:::
+<!-- :::{#nodeA41 .bbcbody style="font-family: 'EB Garamond Bd';"}
+Kubo Formula asdf asd …
+:::
+::: -->
+
+
+:::{#box3 .bbcbox style="width:400px; height:200px; position:absolute; top:0px; left:800px; font-family: 'EB Garamond It';" }
+:::{#nodeA4 .bbcheader style="font-family: 'EB Garamond SC12';"}
+Kubo Formula
+:::
+:::{#nodeA41 .bbcbody style="font-family: 'EB Garamond Bd';"}
+Kubo Formula asdf asd …
+:::
+:::
+
+:::{#box4 .bbcbox style="width:400px; height:200px; position:absolute; top:800px; left:800px; font-family: 'EB Garamond It';" }
+:::{#nodeA4 .bbcheader style="font-family: 'EB Garamond SC12';"}
+Kubo Formula
+:::
+:::{#nodeA41 .bbcbody style="font-family: 'EB Garamond Bd';"}
+Kubo Formula asdf asd …
+:::
+:::
+
+
+:::{#list .incremental style="position:absolute; top:400px"}
+
+- Here is some text.
+- You can put the [target text]{#target} within a span to select it.
+- You can point to any element you can select using CSS selector.
+
+:::
+
+[]{.leaderline start='#box1' end='#box2' start-socket='right' lineid='example' size=8}
+
+[]{.leaderline start='#box1' end='#box3' start-socket='right' lineid='example' size=8}
+
+[]{.leaderline start='#box1' end='#box4' start-socket='right' lineid='example' size=8}
+
+<!-- []{.leaderline start='#box1' end='#box2' start-socket='right' lineid='example'} -->
+
+<!-- 
+[]{.leaderline start='#box2' end='#target' index=1 end-border-style='color:red;' lineid="line1"}
+
+[]{.leaderline start="#box2" end='#list ul li:nth-child(3)' index=2 end-socket="right"}
+
+[]{.leaderline .setAttribute lineid='example' color='blue' end-socket='bottom' index=0 caption-label='an arrow' label-style='color:red; fontSize:20'} -->

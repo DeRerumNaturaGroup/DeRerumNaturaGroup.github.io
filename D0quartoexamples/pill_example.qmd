@@ -1,0 +1,19 @@
+---
+title: Pill Example
+---
+
+::: {.pill-container}
+
+::: {.pill title="Tab One"}
+This is content for tab one.
+:::
+
+::: {.pill title="Tab Two"}
+This is content for tab two.
+:::
+
+::: {.pill title="Tab Three"}
+This is content for tab three.
+:::
+
+:::

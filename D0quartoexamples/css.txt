@@ -1,0 +1,17 @@
+A quick guide.
+
+
+For hand written fonts:
+
+  - handwrit = Regular hand written
+  - handwrith = Heading
+  - handwritb = Bold handwriting
+
+
+For boxes
+
+  - tbox
+    - theader
+    - tbody
+
+  
