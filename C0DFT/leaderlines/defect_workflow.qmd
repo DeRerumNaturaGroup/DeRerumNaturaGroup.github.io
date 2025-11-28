@@ -1,0 +1,78 @@
+---
+sidebar: false
+---
+
+<script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+
+
+
+
+::: {.step #step1 data-connect="step1A, step2" data-label="step1A: Vesta" style="width: 12em; height: 4em; top: 5em; left: 3em; text-align: center; background-color: #575454; border: 2px solid #53C55E; color: white;"}
+Structure Generation
+:::
+
+::: {.step #step1 style="width: 1.25em; height: 4em; top: 5em; left: 3em; text-align: center; border: transparent; background-color: #53C55E;"}
+
+:::
+
+::: {.step #step1A style="line-height: 1.5; text-align: left; width: 12em; height: 5em; top: 10em; left: 13.5em; background-color: #D1F0D6; border: 2px solid #53C55E; border-radius: 0.5em;"}
+- Bulk Pristine Supercell
+- Defective Supercells
+:::
+
+
+::: {.step #step2 data-connect="step2A, step3" data-label="step2A: Quantum Espresso" style="width: 12em; height: 4em; top: 16em; left: 3em; text-align: center; background-color: #575454; border: 2px solid #D93097; color: white;"}
+Calculations
+:::
+
+::: {.step #step1 style="width: 1.25em; height: 4em; top: 16em; left: 3em; text-align: center; border: transparent; background-color: #D93097;"}
+
+:::
+
+::: {.step #step2A data-connect="step2B" style="width: 10em; height: 5em; top: 21em; left: 18em; background-color: #FBDFF4; border: 2px solid #D93097; border-radius: 0.5em;"}
+- Relaxation
+- SCF Calculation
+:::
+
+
+<!-- 
+::: {.folded-tr-box style="width: 9em; top: 22em; left: 32.5em;"}
+Code: pw.x 
+(vc-relax)
+::: -->
+
+<!-- ::: {.step #step2B style="width: 10em; height: 3.75em; top: 25em; left: 20em;"}
+SCF Calculation
+::: -->
+
+
+::: {.step #step3 data-connect="step3A" data-label="step3A: Doped" style="width: 12em; height: 4em; top: 27em; left: 3em; text-align: center; background-color: #575454; border: 2px solid #4988BC; color: white;"}
+Data Handling and Analysis
+:::
+
+::: {.step #step1 style="width: 1.25em; height: 4em; top: 27em; left: 3em; text-align: center; border: transparent; background-color: #4988BC;"}
+
+:::
+
+
+::: {.step #step3A data-connect="step3B" style="line-height: 1.5; width: 15em; height: 8em; top: 33em; left: 13em; background-color: #CDE4F9; border: 2px solid #4988BC; border-radius: 0.5em;"}
+- Phase Diagrams
+- Chemical Potential Diagrams
+- Defect Formation Energies
+- Charge Transition Levels
+:::
+
+
+<!-- ::: {.step #step3B data-connect="step3C" style="width: 12em; height: 4em; top: 22em; left: 35em;"}
+Defect Formation Energies
+:::
+
+::: {.step #step3C style="width: 12em; height: 4em; top: 29em; left: 35em;"}
+Charge Transition Levels
+::: -->
+
+
+
+<!-- ::: {.step #step4 style="top: 300px; left: 300px;"}
+End
+::: --> -->

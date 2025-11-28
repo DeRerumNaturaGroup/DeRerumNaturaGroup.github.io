@@ -1,0 +1,63 @@
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+How to choose a timestep (dt)?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+The timestep must be much smaller than the fastest vibrations in your system.
+
+- If timestep is too large → atoms “overshoot” → energy drift, instability, or bonds break.
+
+- If timestep is too small → simulation is safe but unnecessarily slow.
+
+Take the example of Halide Perovskite:
+
+The fastest motions are bond stretching of Pb–Br / Pb–I / Cs–X and Br–Br / I–I interactions.
+
+Typical bond vibrations are on the order of 10–100 THz (period ≈ 0.01–0.1 ps = 10–100 fs).
+
+Rule of thumb: timestep ≲ 1/10 to 1/20 of the shortest vibrational period.
+
+So:
+
+If vibrational period ≈ 10 fs, then timestep ≲ 1 fs.
+
+If vibrational period ≈ 20 fs, then timestep ≲ 2 fs.
+
+:::
+::::
+
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+How to choose a dumping factors?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+For Nose-Hoover thermostat, typical choice for temp is 100 x dt and for pressure is 1000 x dt.
+
+
+:::
+::::
+
+:::: {.ddm style="font-size:0.8em; line-height:0"}
+:::{.ddm-head onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It"}
+
+How to choose run value?
+:::
+
+:::{.ddm-box style="font-family:EB Garamond It;border-color:transparent"}
+
+Use the formulas below:
+
+$$simulated time required = \frac{\Delta T}{cooling rate}$$
+
+$$number of steps = \frac{simulated time}{timestep}$$
+
+
+:::
+::::

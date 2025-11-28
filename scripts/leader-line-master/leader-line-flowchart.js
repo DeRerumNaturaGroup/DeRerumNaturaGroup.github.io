@@ -1,5 +1,5 @@
 <script>
-window.addEventListener('load', () => {
+window.addEventListener('load', function() {
   const flowLineStyle = {
     color: 'black',
     size: 2.75,
@@ -8,24 +8,24 @@ window.addEventListener('load', () => {
     dropShadow: true
   };
 
-  document.querySelectorAll('[data-connect]').forEach(el => {
-    const targets = el.dataset.connect.split(',').map(t => t.trim());
+  document.querySelectorAll('[data-connect]').forEach(function(el) {
+    const targets = el.dataset.connect.split(',').map(function(t) { return t.trim(); });
 
-    // Parse per-connection labels (format: "step2A: Label Text; step3A: Other Label")
     const labelMap = {};
     if (el.dataset.label) {
-      el.dataset.label.split(';').forEach(pair => {
-        const [key, value] = pair.split(':').map(s => s.trim());
+      el.dataset.label.split(';').forEach(function(pair) {
+        const parts = pair.split(':').map(function(s) { return s.trim(); });
+        const key = parts[0], value = parts[1];
         if (key && value) {
           labelMap[key] = value;
         }
       });
     }
 
-    targets.forEach(targetId => {
+    targets.forEach(function(targetId) {
       const target = document.getElementById(targetId);
       if (target) {
-        const options = { ...flowLineStyle };
+        const options = Object.assign({}, flowLineStyle);
 
         const labelText = labelMap[targetId];
         if (labelText) {
@@ -43,6 +43,3 @@ window.addEventListener('load', () => {
   });
 });
 </script>
-
-
-

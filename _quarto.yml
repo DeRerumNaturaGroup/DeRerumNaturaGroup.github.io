@@ -3,6 +3,8 @@ project:
   output-dir: docs
 filters:
   - pandoc-ext/diagram
+markdown_extensions:
+  - md_in_html  
 website:
   title: DRN Group
   reader-mode: true
@@ -58,4 +60,4 @@ format:
     include-after-body: 
       - text: |
           <script src="/scripts/leader-line-master/leader-line.min.js"></script> 
-      
+

@@ -2,12 +2,13 @@
   width: 8em;
   height: 6em;
   border: 2px solid #000;
-  text-align: center;
+  /* background-color: #c8bdb6fd; */
+  text-align: left;
   /* line-height: 2.5; */
-  font-size: 1.25em;
+  font-size: 1.5em;
   position: absolute;
   padding: 0.75em;
-  border-radius: 0.5em;
+  /* border-radius: 0.5em; */
   /* border-top: 15px solid transparent; */
 	/* border-left: 20px solid #555; */
 }
