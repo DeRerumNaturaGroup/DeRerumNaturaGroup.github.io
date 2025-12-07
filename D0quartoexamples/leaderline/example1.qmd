@@ -2,7 +2,7 @@
 title: ""
 format:
   revealjs:
-    width: 2000
+    width: 3000
     height: 1600
     scroll: true
     include-in-header: 
@@ -26,7 +26,7 @@ revealjs-plugins:
   <div id="end-element" style="width: 80px; height: 30px; background-color: lightcoral;">End</div>
 </div> -->
 
-:::{#box1A .bbccp style="width:400px; height:280px; position:absolute; top:0px; left:00px; font-family: 'EB Garamond It';" }
+:::{#box1A .bbccp style="width:440px; height:280px; position:absolute; top:800px; left:00px; font-family: 'EB Garamond It';" }
 :::{#node1Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
 Structure Generation
 :::
@@ -38,8 +38,8 @@ Structure Generation
 
 
 
-:::{#box2A .bbccp style="width:400px; height:450px; position:absolute; top:0px; left:700px; font-family: 'EB Garamond It';" }
-:::{#node2Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+:::{#box2A .bbccp style="width:400px; height:450px; position:absolute; top:700px; left:700px; font-family: 'EB Garamond It';" }
+:::{#node2Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; background-color: #b6d1b6ff"}
 Calculations
 :::
 :::{#node2Aii .bbccpbody style="font-family: 'EB Garamond Bd';"}
@@ -57,9 +57,9 @@ Calculations
 :::
 
 
-:::{#box3A .bbccp style="width:500px; height:410px; position:absolute; top:0px; left:1400px; font-family: 'EB Garamond It';" }
-:::{#node3Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
-Defects Data Handling
+:::{#box3A .bbccp style="width:500px; height:410px; position:absolute; top:500px; left:1500px; font-family: 'EB Garamond It';" }
+:::{#node3Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; background-color: Lavender"}
+Defects Processing
 :::
 :::{#node3Aii .bbccpbody style="font-family: 'EB Garamond Bd';"}
 - Phase Stability
@@ -70,35 +70,40 @@ Defects Data Handling
 :::
 
 
-:::{#box4A .bbccp style="width:500px; height:500px; position:absolute; top:950px; left:700px; font-family: 'EB Garamond It';" }
-:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+:::{#box4A .bbccp style="width:500px; height:500px; position:absolute; top:1000px; left:1500px; font-family: 'EB Garamond It';" }
+:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; background-color: Lavender"}
 Distortions
 :::
 :::{#node4Aii .bbccpbody style="font-family: 'EB Garamond Bd';"}
-- TM-I Bondlength
-- VanVleck Modes
-- Bonglength Dsitortion
+- TM-I Bond length
+- Van Vleck Modes
+- Bong length Distortion
 - Effective Coordination Number
 - JT Distortion Magnitude
 :::
+:::{#node4Aii .bbccpbody style="font-family: 'Shadows Light Reg'; text-align:right; border-top: transparent;"}
+Van Vleck Calculator
+:::
 :::
 
 
-:::{#box4A .bbccp style="width:500px; height:300px; position:absolute; top:950px; left:1400px; font-family: 'EB Garamond It';" }
-:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown;"}
-Key Findings
+:::{#box4A .bbccp style="width:500px; height:300px; position:absolute; top:850px; left:2500px; font-family: 'EB Garamond It';" }
+:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown; border-top: 0.4em solid Brown; text-align:center;"}
+<!-- - Electronic Structure
+- Defect Stability
+- Structure Stability -->
+Defect-Structure Relationship
 :::
 :::{#node4Aii .bbccpbody style="font-family: 'EB Garamond Bd'; border-top: 0.4em solid Brown; color: Brown;"}
-- Electronic Structure
-- Defect Stability
-- Structure Stability
+
 :::
 :::
 
 
 <!-- LEaderline starts from 1A -->
-<!-- []{.leaderline start='#node1Ai' end='#node2Ai' start-socket='right' end-socket='left' lineid='example' color='#B27A01' size=6}
+[]{.leaderline start='#box1A' end='#box2A' start-socket='right' end-socket='left' lineid='example' color='#B27A01' size=3 path='straight'}
 
-[]{.leaderline start='#node2Aii' end='#node3Ai' start-socket='right' end-socket='left' lineid='example' size=4 color='#072633'}
+[]{.leaderline start='#box2A' end='#box3A' start-socket='right' end-socket='left' lineid='example' size=3 color='#072633' path='straight'}
 
-[]{.leaderline start='#node2Aiii' end='#node4Ai' start-socket='bottom' end-socket='top' lineid='example' size=4 color='brown'} -->
+[]{.leaderline start='#node2Aiii' end='#node4Ai' start-socket='bottom' end-socket='top' lineid='example' size=3 color='brown' path='straight'}
+

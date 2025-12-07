@@ -84,8 +84,8 @@
   /* border-bottom: 0.4em solid #072633; */
   padding:0em;
   margin: 0em;
-  background-color:ivory;
-  color: #072633 ;
+  background-color:#f3f3f342;
+  color: #000000 ;
 
   font-size: 0.85em;
   display: inline-block;     /*shrink to fit content*/
@@ -97,8 +97,9 @@
   color: #072633;
   font-weight: bold;
   border-bottom: 0.8em solid #072633;
-  background-color: #B27A01;
+  background-color: #ffd477;
   padding: 0.1em;
+    padding-left: 0.6em;   /* <── Add this */
   /* border-bottom: 1px solid #072633; */
   margin: 0em;
 }
@@ -108,7 +109,7 @@
   margin: 0em;
   font-weight: normal;
   /* border-left: 0.2em solid #072633; */
-  border-top: 0.4em solid #072633;
+  border-top: 0.4em solid #436675;
 }
 
     .blob {
