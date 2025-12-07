@@ -4,7 +4,7 @@ listing:
   contents: C0research
   type: grid
   categories: true
-  image-placeholder: _figs/logo.png
+  image-placeholder: ./_figs/logoatom.png
   fields: [image, date, title, author, reading-time]
   sort:
   - "date"
