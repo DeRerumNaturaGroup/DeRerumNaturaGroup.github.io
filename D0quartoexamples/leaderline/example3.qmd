@@ -1,0 +1,41 @@
+---
+title: Leaderline Exmaple 3
+---
+
+<div class="stage" id="stage" style="position: relative; height: 300px;">
+
+  <div class="bbcbox"  id="nodeA" >
+  <div class="bbcheader" id="nodeA4" style="">Kubo Formula</div>
+  <div class="bbcbody" id="nodeA4" style="">Connects how time dependent perturbations may impact expectation values of operator $\hat A$</div>
+  </div>
+
+
+
+  <div class="bbcbox"  id="nodeA2" style="position: relative; top: 20%; left: 20%;">
+  <div class="bbcheader" id="nodeA2h" style="">Manifold</div>
+  <div class="bbcbody" id="nodeA2c" style="">Topological space locally $R^n$</div>
+  </div>
+
+   <div class="bbcbox"  id="nodeB" style="position: relative; top: 60%; left: 20%;">
+  <div class="bbcheader" id="nodeB2" style="">Manifold</div>
+  <div class="bbcbody" id="nodeBc" style="">Topological space locally $R^n$</div>
+   </div>
+
+
+</div>
+
+<script>
+ // Usage
+drawLeader({
+  from: { id: 'nodeA' },
+  to: { id: 'nodeA2' },
+  lineOptions: { color: 'DarkGoldenRod' }
+});
+
+drawLeader({
+  from: { id: 'nodeA' },
+  to: { id: 'nodeB' },
+  lineOptions: { color: 'crimson' }
+});
+
+</script>

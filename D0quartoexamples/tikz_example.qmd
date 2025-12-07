@@ -1,0 +1,66 @@
+---
+title: How to add and cross reference tikz diagrams in quarto
+# filters:
+#   - /_extensions/pandoc-ext/diagram
+# tikz:
+#   cache: false
+#   save-tex: true  # Enable saving intermediate .tex files
+#   tex-dir: tikz-tex  # Optional: Specify directory to save .tex files
+---
+
+Add to quarto yaml:
+```
+filters:
+  - pandoc-ext/diagram
+```
+
+[Source](https://github.com/quarto-dev/quarto-cli/discussions/8925)\
+[Extension](https://github.com/pandoc-ext/diagram)
+
+
+
+
+
+
+::: {#fig-tikzz}
+
+```{.tikz}
+%%| filename: stfigure
+%%| caption: A Figure
+
+\begin{tikzpicture}
+  \coordinate (T) at (5.4,3.6);
+  \draw (0,6) -- (0,0) -- (9,0);
+  \draw[blue] (0,5) to[out=-5,in=150] (T) to [out=-30,in=100] (8,0);
+  \draw[red] (T) ++ (150:3) --++ (-30:6);
+  \draw (T) circle (3pt);
+\end{tikzpicture}
+```
+
+This is a caption
+:::
+
+
+
+::: {#fig-tikz}
+
+```{.tikz}
+%%| filename: stick-figure
+%%| caption: A Stick Figure
+
+\begin{tikzpicture}
+  % Head
+  \draw (0,0) circle (1cm);
+  % Body
+  \draw (0,-1) -- (0,-3);
+  % Arms
+  \draw (-1,-2) -- (0,-1) -- (1,-2);
+  % Legs
+  \draw (-1,-4) -- (0,-3) -- (1,-4);
+\end{tikzpicture}
+```
+
+This is a caption
+:::
+
+See @fig-tikz.

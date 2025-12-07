@@ -1,0 +1,194 @@
+---
+title: ""
+format:
+  revealjs:
+    width: 2400
+    height: 1600
+    scroll: true
+    include-in-header: 
+      - text: '<script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>'
+    css: [../../css/buttons.css, 
+    ../../css/worldinescss/tabs.css,
+    ../../css/worldinescss/callouts.css,
+    ../../css/fonts-ebgaramond.css, 
+    ../../css/fonts-hand.css,
+    ../../css/worldinescss/fonts-hand.css, 
+    ../../css/worldinescss/shapes.css, 
+    ../../css/worldinescss/leaders.css]
+revealjs-plugins:
+  - leader-line
+---
+
+## {background-color="#F6F7F8"}
+<!-- <div class="bbcbox"  id="box1" >
+<div class="bbcheader" id="nodeA4" style="">Kubo Formula</div>
+<div class="bbcbody" id="nodeA4" style="">Connects how time dependent perturbations may impact expectation values of operator $\hat A$</div>
+</div> -->
+
+
+:::{#box1A .bbcbox style="width:400px; height:200px; position:absolute; top:200px; left:0px; font-family: 'EB Garamond It';" }
+:::{#node1Ai .bbcheader style="font-family: 'EB Garamond SC12';"}
+Transition Metals
+:::
+:::{#node1Aii .bbcbody style="font-family: 'EB Garamond Bd';"}
+Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, and Zn
+:::
+:::
+
+:::{#box1B .bbcbox style="width:400px; height:200px;position:absolute; top:600px; left:0px; font-family: 'EB Garamond It';" }
+:::{#node1Bi .bbcheader style="font-family: 'EB Garamond SC12';"}
+Ligand
+:::
+:::{#node1Bii .bbcbody style="font-family: 'EB Garamond Bd';"}
+Iodine
+:::
+:::
+
+
+:::{#box2A .bbcbox style="width:600px; height:210px; position:absolute; top:50px; left:700px; font-family: 'EB Garamond It'; background-color:#F6F7F8; color: brown;" }
+:::{#node2Ai .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
+Atomic Properties
+:::
+:::{#node2Aii .bbcbody style="font-family: 'EB Garamond Bd';"}
+- Ionic Radii
+- d-electron count
+:::
+:::
+
+:::{#box2B .bbcbox style="width:600px; height:210px; position:absolute; top:350px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node2Bi .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
+TM and Ligand Bonding Factors
+:::
+:::{#node2Bii .bbcbody style="font-family: 'EB Garamond Bd';"}
+- Orbitals Energies and Overlap
+- Electronegativity Difference
+:::
+:::
+
+
+:::{#box2C .bbcbox style="width:600px; height:260px; position:absolute; top:650px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node2Ci .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
+Calculated Energies
+:::
+:::{#node2Cii .bbcbody style="font-family: 'EB Garamond Bd';"}
+- Exchange Correlation
+- Ewald Electrostatics
+- Hartree Repulsion
+:::
+:::
+
+:::{#box2D .bbcbox style="width:500px; height:270px; position:absolute; top:1000px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node2Di .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
+Chemical Environment 
+(Including Pb and Cs)
+:::
+:::{#node2CDii .bbcbody style="font-family: 'EB Garamond Bd';"}
+- Chemical Potentials 
+- Synthesis Conditions
+:::
+:::
+
+:::{#box3A .bbcbox style="width:300px; height:130px; position:absolute; top:300px; left:1500px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node3Ai .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em; border-bottom: white;"}
+TM-I Bondlength
+:::
+:::
+
+:::{#box3B .bbcbox style="width:300px; height:200px; position:absolute; top:600px; left:1500px; font-family: 'EB Garamond It'; color: brown; background-color: #F6F7F8; color: brown;" }
+:::{#node3Bi .bbcheader style="font-family: 'Shadows Light Reg'; color: brown;"}
+Bond Nature
+:::
+:::{#node3Bii .bbcbody style="font-family: 'EB Garamond Bd';"}
+Ionic or Covalent
+:::
+:::
+
+
+:::{#box4A .bbcbox style="width:600px; height:270px; position:absolute; top:600px; left:2000px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node4Ai .bbcheader style="font-family: 'Shadows Light Reg'; color: brown;"}
+Strain and Lattice Distortions
+:::
+:::{#node4Aii .bbcbody style="font-family: 'EB Garamond Bd';"}
+- TM Octahedra (Symmetric Distortion)
+- Adjacent Pb Octahedra (Assymetric Distortion)
+:::
+:::
+
+
+:::{#box5A .bbcbox style="width:400px; height:130px; position:absolute; top:950px; left:1700px; font-family: 'EB Garamond It';" }
+:::{#node5Ai .bbcheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+Total Energy Balance
+:::
+:::
+
+:::{#box6A .bbcbox style="width:400px; height:130px; position:absolute; top:1300px; left:1450px; font-family: 'EB Garamond It';" }
+:::{#node6Ai .bbcheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+Stability of Defect
+:::
+:::
+
+
+
+<!-- Leaderlines strarts from 1A -->
+[]{.leaderline start='#box1A' end='#box2A' start-socket='right' lineid='example' size=4 start-plug-color=Orange end-plug-color='brown' gradient=true}
+
+[]{.leaderline start='#box1A' end='#box2B' start-socket='right' lineid='example' size=4 start-plug-color=Orange end-plug-color='brown' gradient=true}
+
+[]{.leaderline start='#box1A' end='#box2D' start-socket='right' end-socket='left 'lineid='example' size=4 start-plug-color=Orange end-plug-color='brown' gradient=true}
+
+
+
+<!-- Leaderlines strarts from 1B -->
+
+[]{.leaderline start='#box1B' end='#box2B' start-socket='right' lineid='example' size=4 start-plug-color='PowderBlue' end-plug-color='brown' gradient=true}
+
+[]{.leaderline start='#box1B' end='#box2D' start-socket='right' lineid='example' size=4 start-plug-color='PowderBlue' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 1C -->
+
+<!-- []{.leaderline start='#box1C' end='#box2D' start-socket='right' lineid='example' size=4 start-plug-color='#556B2F' end-plug-color='brown' gradient=true} -->
+
+
+<!-- Leaderlines strarts from 2A -->
+
+[]{.leaderline start='#box2A' end='#box3A' start-socket='right' end-socket='left' lineid='grad' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 2B -->
+
+[]{.leaderline start='#box2B' end='#box2C' start-socket='bottom' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+[]{.leaderline start='#box2B' end='#box3A' start-socket='right' end-socket='left' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+[]{.leaderline start='#box2B' end='#box3B' start-socket='right' end-socket='top' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 2C -->
+
+[]{.leaderline start='#box2C' end='#box3A' start-socket='right' end-socket='left' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 3A -->
+
+[]{.leaderline start='#box3A' end='#box3B' start-socket='bottom' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 3B -->
+
+[]{.leaderline start='#box3B' end='#box4A' start-socket='right' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 4A -->
+
+[]{.leaderline start='#box4A' end='#box5A' start-socket='bottom' end-socket='right' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 5A -->
+[]{.leaderline start='#box5A' end='#box6A' start-socket='bottom' end-socket='top' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+<!-- Leaderlines strarts from 2D -->
+[]{.leaderline start='#box2D' end='#box6A' start-socket='right' end-socket='top' lineid='example' size=4 start-plug-color='#F6F7F8' end-plug-color='brown' gradient=true}
+
+
+<!-- []{.leaderline start='#box1' end='#box2' start-socket='right' lineid='example'} -->
+
+<!-- 
+[]{.leaderline start='#box2' end='#target' index=1 end-border-style='color:red;' lineid="line1"}
+
+[]{.leaderline start="#box2" end='#list ul li:nth-child(3)' index=2 end-socket="right"}
+
+[]{.leaderline .setAttribute lineid='example' color='blue' end-socket='bottom' index=0 caption-label='an arrow' label-style='color:red; fontSize:20'} -->

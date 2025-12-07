@@ -59,9 +59,9 @@
   color: white;
 
   font-size: 0.85em;
-  display: inline-block;     /* shrink to fit content */
-  max-width: 35%;            /* limit width to 35% of parent */
-  word-wrap: break-word;     /* allow line breaks if content is too long */
+  display: inline-block;     /*shrink to fit content*/
+  max-width: 35%;           /* limit width to 35% of parent*/
+  word-wrap: break-word;     /* allow line breaks if content is too long*/
 }
 
 .bbcbox .bbcheader {
@@ -77,6 +77,8 @@
   margin: 0.3em;
   font-weight: normal;
 }
+
+
 
 
 

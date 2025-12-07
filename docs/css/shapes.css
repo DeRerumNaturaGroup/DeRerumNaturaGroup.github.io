@@ -59,9 +59,9 @@
   color: white;
 
   font-size: 0.85em;
-  display: inline-block;     /* shrink to fit content */
-  max-width: 35%;            /* limit width to 35% of parent */
-  word-wrap: break-word;     /* allow line breaks if content is too long */
+  display: inline-block;     /*shrink to fit content*/
+  max-width: 35%;           /* limit width to 35% of parent*/
+  word-wrap: break-word;     /* allow line breaks if content is too long*/
 }
 
 .bbcbox .bbcheader {
@@ -73,6 +73,35 @@
 }
 
 .bbcbox .bbcbody {
+  padding: 0.1em;
+  margin: 0.3em;
+  font-weight: normal;
+}
+
+.bbccp {
+  position: relative;
+  border-bottom: 0.4em solid #072633;
+  padding:0em;
+  margin: 0em;
+  background-color:ivory;
+  color: #072633 ;
+
+  font-size: 0.85em;
+  display: inline-block;     /*shrink to fit content*/
+  max-width: 35%;           /* limit width to 35% of parent*/
+  word-wrap: break-word;     /* allow line breaks if content is too long*/
+}
+
+.bbccp .bbccpheader {
+  color: #072633;
+  font-weight: bold;
+  background-color: #B27A01;
+  padding: 0.1em;
+  border-bottom: 1px solid #ccc;
+  margin: 0.3em;
+}
+
+.bbccp .bbccpbody {
   padding: 0.1em;
   margin: 0.3em;
   font-weight: normal;

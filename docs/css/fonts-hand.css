@@ -18,3 +18,31 @@
 .handwrith {
   color: #d00300;
 }
+
+@font-face {
+  font-family: 'Inquisitive';
+  src: url("../fonts/hand/Inquisitive.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NicemilkDEMO';
+  src: url("../fonts/hand/NicemilkDEMO.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overnight';
+  src: url("../fonts/hand/Overnight.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Take Chances';
+  src: url("../fonts/hand/TakeChances.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

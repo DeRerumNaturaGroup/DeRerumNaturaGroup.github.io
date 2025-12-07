@@ -214,65 +214,9 @@ function drawLeader({
 
 </script>
 
-
-
-</head><body class="nav-fixed quarto-light">// <script>
-
-// window.addEventListener('load', () => {
-
-//   // Define your reusable line style
-
-//   const flowLineStyle = {
-
-//     color: '#e74c3c',
-
-//     size: 4,
-
-//     path: 'fluid',
-
-//     endPlug: 'arrow',
-
-//     // dash: { len: 6, gap: 4 },
-
-//     // startPlug: 'disc',
-
-//     dropShadow: true
-
-//   };
-
-
-
-//   // Loop through all elements with `data-connect`
-
-//   document.querySelectorAll('[data-connect]').forEach(el => {
-
-//     const targets = el.dataset.connect.split(',');
-
-//     targets.forEach(targetId => {
-
-//       const target = document.getElementById(targetId.trim());
-
-//       if (target) {
-
-//         new LeaderLine(el, target, flowLineStyle);
-
-//       }
-
-//     });
-
-//   });
-
-// });
-
-// </script>
-
-
-
-
-
 <script>
 
-window.addEventListener('load', () => {
+window.addEventListener('load', function() {
 
   const flowLineStyle = {
 
@@ -290,21 +234,21 @@ window.addEventListener('load', () => {
 
 
 
-  document.querySelectorAll('[data-connect]').forEach(el => {
+  document.querySelectorAll('[data-connect]').forEach(function(el) {
 
-    const targets = el.dataset.connect.split(',').map(t => t.trim());
+    const targets = el.dataset.connect.split(',').map(function(t) { return t.trim(); });
 
 
-
-    // Parse per-connection labels (format: "step2A: Label Text; step3A: Other Label")
 
     const labelMap = {};
 
     if (el.dataset.label) {
 
-      el.dataset.label.split(';').forEach(pair => {
+      el.dataset.label.split(';').forEach(function(pair) {
 
-        const [key, value] = pair.split(':').map(s => s.trim());
+        const parts = pair.split(':').map(function(s) { return s.trim(); });
+
+        const key = parts[0], value = parts[1];
 
         if (key && value) {
 
@@ -318,13 +262,13 @@ window.addEventListener('load', () => {
 
 
 
-    targets.forEach(targetId => {
+    targets.forEach(function(targetId) {
 
       const target = document.getElementById(targetId);
 
       if (target) {
 
-        const options = { ...flowLineStyle };
+        const options = Object.assign({}, flowLineStyle);
 
 
 
@@ -362,12 +306,6 @@ window.addEventListener('load', () => {
 
 
 
-
-
-
-
-
-
 <link rel="stylesheet" href="../../css/buttons.css">
 <link rel="stylesheet" href="../../css/tabs.css">
 <link rel="stylesheet" href="../../css/callouts.css">
@@ -375,9 +313,9 @@ window.addEventListener('load', () => {
 <link rel="stylesheet" href="../../css/fonts-hand.css">
 <link rel="stylesheet" href="../../css/shapes.css">
 <link rel="stylesheet" href="../../css/leaders.css">
+</head>
 
-
-
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">

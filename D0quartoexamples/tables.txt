@@ -1,0 +1,31 @@
+---
+title: Examples for Tables
+---
+
+Using markdown with latex.
+
+| Berry Connection  | Berry Curvature  |
+|--------|--------|
+| $$\mathcal{A}_\theta = \langle u | i \partial_\theta u \rangle = 0$$  | $$\Omega_{\theta \phi} = \frac{1}{2}\sin \theta$$  |
+|$$\mathcal{A}_\phi = \langle u | i \partial_\phi u \rangle = \sin^2 \frac{\theta}{2}$$       |   |  
+
+: {.striped .hover .sm}
+
+
+```{=html}
+<table>
+  <caption>As described in the section above, Quarto tables are great.</caption>
+  <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td> $$\mathcal{A}_\theta = \langle u | i \partial_\theta u \rangle = 0$$ </td>
+      <td>Regular output</td>
+    </tr>
+  </tbody>
+</table>
+```

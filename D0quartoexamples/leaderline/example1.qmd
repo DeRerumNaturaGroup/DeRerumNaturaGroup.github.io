@@ -1,0 +1,104 @@
+---
+title: ""
+format:
+  revealjs:
+    width: 2000
+    height: 1600
+    scroll: true
+    include-in-header: 
+      - text: '<script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.7/leader-line.min.js"></script>'
+    css: [../../css/buttons.css, 
+    ../../css/worldinescss/tabs.css,
+    ../../css/worldinescss/callouts.css,
+    ../../css/fonts-ebgaramond.css, 
+    ../../css/fonts-hand.css,
+    ../../css/worldinescss/fonts-hand.css, 
+    ../../css/worldinescss/shapes.css, 
+    ../../css/worldinescss/leaders.css]
+revealjs-plugins:
+  - leader-line
+---
+
+
+## 
+<!-- <div style="display: flex; justify-content: space-between; margin-top: 100px;">
+  <div id="start-element" style="width: 80px; height: 30px; background-color: lightblue;">Start</div>
+  <div id="end-element" style="width: 80px; height: 30px; background-color: lightcoral;">End</div>
+</div> -->
+
+:::{#box1A .bbccp style="width:400px; height:280px; position:absolute; top:0px; left:00px; font-family: 'EB Garamond It';" }
+:::{#node1Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+Structure Generation
+:::
+:::{#node1Aii .bbccpbody style="font-family: 'EB Garamond Bd';"}
+- Bulk Pristine Supercell
+- Defective Supercell
+:::
+:::
+
+
+
+:::{#box2A .bbccp style="width:400px; height:450px; position:absolute; top:0px; left:700px; font-family: 'EB Garamond It';" }
+:::{#node2Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+Calculations
+:::
+:::{#node2Aii .bbccpbody style="font-family: 'EB Garamond Bd';"}
+- Relaxation (Only Pristine)
+- SCF (Pristine + Doped)
+- Relaxation (Doped)
+- PDOS
+- Spin Density
+:::
+<!-- :::{#node2Aiii .bbccpbody style="font-family: 'EB Garamond Bd'; border-left: 0.2em solid Brown; border-top: 0.4em solid Brown;"}
+- Relaxation (Doped)
+- PDOS
+- Spin Density
+::: -->
+:::
+
+
+:::{#box3A .bbccp style="width:500px; height:410px; position:absolute; top:0px; left:1400px; font-family: 'EB Garamond It';" }
+:::{#node3Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+Defects Data Handling
+:::
+:::{#node3Aii .bbccpbody style="font-family: 'EB Garamond Bd';"}
+- Phase Stability
+- Chemical Potential Diagrams
+- Defect Formation Energies
+- Charge State Transition Levels
+:::
+:::
+
+
+:::{#box4A .bbccp style="width:500px; height:500px; position:absolute; top:950px; left:700px; font-family: 'EB Garamond It';" }
+:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+Distortions
+:::
+:::{#node4Aii .bbccpbody style="font-family: 'EB Garamond Bd';"}
+- TM-I Bondlength
+- VanVleck Modes
+- Bonglength Dsitortion
+- Effective Coordination Number
+- JT Distortion Magnitude
+:::
+:::
+
+
+:::{#box4A .bbccp style="width:500px; height:300px; position:absolute; top:950px; left:1400px; font-family: 'EB Garamond It';" }
+:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown;"}
+Key Findings
+:::
+:::{#node4Aii .bbccpbody style="font-family: 'EB Garamond Bd'; border-top: 0.4em solid Brown; color: Brown;"}
+- Electronic Structure
+- Defect Stability
+- Structure Stability
+:::
+:::
+
+
+<!-- LEaderline starts from 1A -->
+<!-- []{.leaderline start='#node1Ai' end='#node2Ai' start-socket='right' end-socket='left' lineid='example' color='#B27A01' size=6}
+
+[]{.leaderline start='#node2Aii' end='#node3Ai' start-socket='right' end-socket='left' lineid='example' size=4 color='#072633'}
+
+[]{.leaderline start='#node2Aiii' end='#node4Ai' start-socket='bottom' end-socket='top' lineid='example' size=4 color='brown'} -->
