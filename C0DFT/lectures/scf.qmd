@@ -41,7 +41,7 @@ The energy cutoff determines how many plane waves are to be used for calculation
 
 
 
-```{python}
+<!-- ```{python}
 import plotly.graph_objects as go
 import numpy as np
 
@@ -78,7 +78,7 @@ fig = go.Figure(
 
 fig.show()
 
-```
+``` -->
 
 
 ## Before You Run It

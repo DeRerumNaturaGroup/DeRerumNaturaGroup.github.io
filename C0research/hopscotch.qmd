@@ -1,12 +1,27 @@
 ---
 title: Tight-binding insights into ILHPs
 ---
+::: {.column-margin}
+![Tight binding network](../_figs/research/TB-network.png)
+:::
+## Background
 
+### The Tight-Binding Hamiltonian
+The tight-binding method is a simple but powerful way to describe how electrons move in a solid. The core idea is that electrons tend to stay close to the atoms they belong to, but they can also spread out by “hopping” to neighboring atoms. This balance between staying localized and moving through the material, determines many of the electronic properties of a crystal.
 
-## ELI5
-<!-- Motivation (ELI5 GPT) -->
+By focusing only on the energy of an electron on an atom and the probability of hopping between nearby atoms, the tight-binding model captures the essential physics behind band formation, electrical conductivity, and the electronic structure of a wide range of materials. Despite its simplicity, it often provides accurate insights into systems ranging from common solids to advanced materials like graphene, semiconductors, and topological phases.
 
-## Abstract
+### Anion-Exchance and ILHPs
+
+Ionic liquid–hybrid perovskites (ILHPs) integrate ionic liquids into the perovskite lattice, enhancing stability, ion mobility, and defect behavior. Combined with anion exchange, which replaces halide ions (Cl⁻, Br⁻, I⁻) in the structure, these materials allow precise tuning of optical and electronic properties without altering the overall lattice.
+
+Together, ILHPs and anion exchange provide a versatile platform for designing perovskites with tailored stability, bandgaps, and performance for applications in solar cells, LEDs, and other optoelectronic devices.
+
+## The Study
 <!-- Abstract with image from the paper -->
 
+Our study employs a synergetic DFT and TB approach, to
+tune the bandgaps of cubic phase ILHPs (CsPbBr$_x$ I$_{3-x}$, x = 0, 1, 2, or 3) via anion exchange and create delocalization maps based on the TB Hamiltonians. Closer examination allows us to extract from this, reduced TB (redTB) models which are readily interpretable. The hopping distribution abstracted from the redTB model singles out CsPbBrI$_2$ as being qualitatively and quantitatively different from the rest of the set, following a many-small as opposed to the few-big hopping scheme employed by the others.
+
 ## Links
+- [Paper link](https://pubs.rsc.org/en/content/articlelanding/2025/cp/d5cp01159k#!divCitation)

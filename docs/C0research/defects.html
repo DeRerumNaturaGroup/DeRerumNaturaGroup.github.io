@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LAMMPS GPU Installation – DRN Group</title>
+<title>defects – DRN Group</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,61 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8d46f82fdf11f034aa719052a77560f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a8289c177f726665e07e9eb1bd32beb1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,55 +68,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-
-
 <script>
-
 function toggleBox(header) {
-
   // Use jQuery to find the associated container and toggle its visibility
-
   $(header).next('.dd-box').slideToggle();
-
   $(header).next('.ddm-box').slideToggle();
-
 }
-
 </script>
 
 
-
-
-
 <script>
-
 function openCity(evt, cityName) {
-
   var i, x, tablinks;
-
   x = document.getElementsByClassName("city");
-
   for (i = 0; i < x.length; i++) {
-
     x[i].style.display = "none";
-
   }
-
   tablinks = document.getElementsByClassName("tablink");
-
   for (i = 0; i < x.length; i++) {
-
     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-
   }
-
   document.getElementById(cityName).style.display = "block";
-
   evt.currentTarget.className += " w3-red";
-
 }
-
-
 
 </script>
 
@@ -160,200 +99,101 @@ function openCity(evt, cityName) {
 
 
 
-
-
-
-
-
-
-
 <script>
-
 //Draws leader between 'from' and 'to' on 'stage'. Uses existing objects if ids exist, otherwise creates them according to given style parameter.
-
 //lineOptions to stylize.
-
 //Issues. May need to create id via html if container is to keep equations.
-
 function drawLeader({
-
   
-
   containerId = 'stage',
-
   from = { id: 'from', text: '', className: '', style: {} },
-
   to = { id: 'to', text: '', className: '', style: {} },
-
   lineOptions = {}
-
 }) {
-
   // Creates 'from' and 'to' in 'containerId'. Ignores creation if ids already exist and draws a leaderline between them.
-
   window.addEventListener('load', () => {
-
     const container = document.getElementById(containerId);
-
     const elements = { from, to };
-
     const createdDivs = {};
 
-
-
     for (const key in elements) {
-
       const { id, text, className, style } = elements[key];
-
       let el = document.getElementById(id);
 
-
-
       if (!el || !container.contains(el)) {
-
         el = document.createElement('div');
-
         el.id = id;
-
         el.textContent = text;
-
         el.className = className || 'anchor80-line';
-
         Object.assign(el.style, {
-
           position: 'relative',
-
           ...style
-
         });
-
         container.appendChild(el);
-
       }
-
-
 
       createdDivs[key] = el;
-
     }
-
-
 
     new LeaderLine(createdDivs.from, createdDivs.to, lineOptions);
-
   });
-
 }
 
-
-
 </script>
-
 <script>
-
-window.addEventListener('load', () => {
-
+window.addEventListener('load', function() {
   const flowLineStyle = {
-
     color: 'black',
-
     size: 2.75,
-
     path: 'fluid',
-
     endPlug: 'arrow',
-
     dropShadow: true
-
   };
 
-
-
-  document.querySelectorAll('[data-connect]').forEach(el => {
-
-    const targets = el.dataset.connect.split(',').map(t => t.trim());
-
-
-
-    // Parse per-connection labels (format: "step2A: Label Text; step3A: Other Label")
+  document.querySelectorAll('[data-connect]').forEach(function(el) {
+    const targets = el.dataset.connect.split(',').map(function(t) { return t.trim(); });
 
     const labelMap = {};
-
     if (el.dataset.label) {
-
-      el.dataset.label.split(';').forEach(pair => {
-
-        const [key, value] = pair.split(':').map(s => s.trim());
-
+      el.dataset.label.split(';').forEach(function(pair) {
+        const parts = pair.split(':').map(function(s) { return s.trim(); });
+        const key = parts[0], value = parts[1];
         if (key && value) {
-
           labelMap[key] = value;
-
         }
-
       });
-
     }
 
-
-
-    targets.forEach(targetId => {
-
+    targets.forEach(function(targetId) {
       const target = document.getElementById(targetId);
-
       if (target) {
-
-        const options = { ...flowLineStyle };
-
-
+        const options = Object.assign({}, flowLineStyle);
 
         const labelText = labelMap[targetId];
-
         if (labelText) {
-
           options.middleLabel = LeaderLine.pathLabel(labelText, {
-
             fontSize: '18px',
-
             color: 'black',
-
             backgroundColor: 'rgba(255,255,255,0.85)',
-
             padding: 4
-
           });
-
         }
 
-
-
         new LeaderLine(el, target, options);
-
       }
-
     });
-
   });
-
 });
-
 </script>
 
 
-
-
-
-
-
-
-
-<link rel="stylesheet" href="../../css/buttons.css">
-<link rel="stylesheet" href="../../css/tabs.css">
-<link rel="stylesheet" href="../../css/callouts.css">
-<link rel="stylesheet" href="../../css/fonts-ebgaramond.css">
-<link rel="stylesheet" href="../../css/fonts-hand.css">
-<link rel="stylesheet" href="../../css/shapes.css">
-<link rel="stylesheet" href="../../css/leaders.css">
+<link rel="stylesheet" href="../css/buttons.css">
+<link rel="stylesheet" href="../css/tabs.css">
+<link rel="stylesheet" href="../css/callouts.css">
+<link rel="stylesheet" href="../css/fonts-ebgaramond.css">
+<link rel="stylesheet" href="../css/fonts-hand.css">
+<link rel="stylesheet" href="../css/shapes.css">
+<link rel="stylesheet" href="../css/leaders.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -363,7 +203,7 @@ window.addEventListener('load', () => {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">DRN Group</span>
     </a>
   </div>
@@ -374,11 +214,11 @@ window.addEventListener('load', () => {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -387,21 +227,21 @@ window.addEventListener('load', () => {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-guides">    
         <li>
-    <a class="dropdown-item" href="../../C0DFT/home_DFT.html">
+    <a class="dropdown-item" href="../C0DFT/home_DFT.html">
  <span class="dropdown-text">DFT Tutorials</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../people.html"> 
+    <a class="nav-link" href="../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -420,7 +260,7 @@ window.addEventListener('load', () => {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">LAMMPS GPU Installation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -434,8 +274,8 @@ window.addEventListener('load', () => {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -456,7 +296,7 @@ window.addEventListener('load', () => {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
+  <a href="../C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Espresso</span></a>
   </div>
 </li>
@@ -464,7 +304,7 @@ window.addEventListener('load', () => {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../about.html" class="sidebar-item-text sidebar-link">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -473,119 +313,17 @@ window.addEventListener('load', () => {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#environment-setup" id="toc-environment-setup" class="nav-link active" data-scroll-target="#environment-setup">Environment Setup</a>
-  <ul class="collapse">
-  <li><a href="#step-1" id="toc-step-1" class="nav-link" data-scroll-target="#step-1">Step 1</a></li>
-  <li><a href="#step-2" id="toc-step-2" class="nav-link" data-scroll-target="#step-2">Step 2</a></li>
-  <li><a href="#step-3" id="toc-step-3" class="nav-link" data-scroll-target="#step-3">Step 3</a></li>
-  <li><a href="#step-4" id="toc-step-4" class="nav-link" data-scroll-target="#step-4">Step 4</a></li>
-  <li><a href="#step-5" id="toc-step-5" class="nav-link" data-scroll-target="#step-5">Step 5</a></li>
-  </ul></li>
-  <li><a href="#lammps-installation" id="toc-lammps-installation" class="nav-link" data-scroll-target="#lammps-installation">LAMMPS Installation</a>
-  <ul class="collapse">
-  <li><a href="#step-1-1" id="toc-step-1-1" class="nav-link" data-scroll-target="#step-1-1">Step 1</a></li>
-  <li><a href="#step-2-1" id="toc-step-2-1" class="nav-link" data-scroll-target="#step-2-1">Step 2</a></li>
-  <li><a href="#step-3-configure" id="toc-step-3-configure" class="nav-link" data-scroll-target="#step-3-configure">Step 3 (Configure)</a></li>
-  <li><a href="#step-4-build-and-install" id="toc-step-4-build-and-install" class="nav-link" data-scroll-target="#step-4-build-and-install">Step 4 (Build and Install)</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">LAMMPS GPU Installation</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
 
-
-<section id="environment-setup" class="level2">
-<h2 class="anchored" data-anchor-id="environment-setup">Environment Setup</h2>
-<section id="step-1" class="level3">
-<h3 class="anchored" data-anchor-id="step-1">Step 1</h3>
-<p>Download Miniforge installer:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-2" class="level3">
-<h3 class="anchored" data-anchor-id="step-2">Step 2</h3>
-<p>Run the installer:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Miniforge3-Linux-x86_64.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-3" class="level3">
-<h3 class="anchored" data-anchor-id="step-3">Step 3</h3>
-<p>Activate Miniforge:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/miniforge3/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-4" class="level3">
-<h3 class="anchored" data-anchor-id="step-4">Step 4</h3>
-<p>Create a new conda environment:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> md python=3.11</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-5" class="level3">
-<h3 class="anchored" data-anchor-id="step-5">Step 5</h3>
-<p>Activate the environment:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="lammps-installation" class="level2">
-<h2 class="anchored" data-anchor-id="lammps-installation">LAMMPS Installation</h2>
-<section id="step-1-1" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-1">Step 1</h3>
-<p>Install required dependencies:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Also install CUDA if it’s not installed. Check with:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nvcc</span> <span class="at">--version</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nvidia-smi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-2-1" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-1">Step 2</h3>
-<p>Clone and prepare the LAMMPS repository:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/lammps/lammps.git</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> lammps</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> build</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-3-configure" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-configure">Step 3 (Configure)</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> ../cmake <span class="dt">\</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> CMAKE_INSTALL_PREFIX=../lammps_gpu <span class="dt">\</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> BUILD_MPI=on <span class="dt">\</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> BUILD_OMP=on <span class="dt">\</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> PKG_KOKKOS=on <span class="dt">\</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> Kokkos_ENABLE_CUDA=on <span class="dt">\</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> Kokkos_ARCH_AMPERE80=on <span class="dt">\</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> CMAKE_C_COMPILER=mpicc <span class="dt">\</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">-D</span> CMAKE_CXX_COMPILER=mpicxx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> ../cmake   <span class="at">-D</span> CMAKE_INSTALL_PREFIX=../lammps_gpu   <span class="at">-D</span> CMAKE_BUILD_TYPE=Release   <span class="at">-D</span> BUILD_MPI=on   <span class="at">-D</span> BUILD_OMP=on   <span class="at">-D</span> CMAKE_C_COMPILER=mpicc   <span class="at">-D</span> CMAKE_CXX_COMPILER=mpicxx   <span class="at">-D</span> PKG_Kokkos=on   <span class="at">-D</span> Kokkos_ENABLE_CUDA=on   <span class="at">-D</span> Kokkos_ARCH_AMPERE80=on   <span class="at">-D</span> PKG_GPU=on   <span class="at">-D</span> PKG_USER-API=on   <span class="at">-D</span> PKG_KSPACE=on   <span class="at">-D</span> PKG_MANYBODY=on   <span class="at">-D</span> PKG_MOLECULE=on   <span class="at">-D</span> PKG_MISC=on   <span class="at">-D</span> PKG_USER-REAXC=on   <span class="at">-D</span> PKG_MLIAP=on   <span class="at">-D</span> PKG_ML-SNAP=on   <span class="at">-D</span> PKG_KIM=on   <span class="at">-D</span> BIN2C=/home/misbah/nvhpc/Linux_x86_64/24.3/cuda/12.3/bin/bin2c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="step-4-build-and-install" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-build-and-install">Step 4 (Build and Install)</h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="at">-j</span><span class="va">$(</span><span class="fu">nproc</span><span class="va">)</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -988,7 +726,7 @@ window.addEventListener('load', () => {
   });
   </script>
 </div> <!-- /content -->
-<script src="../../scripts/leader-line-master/leader-line.min.js"></script>
+<script src="../scripts/leader-line-master/leader-line.min.js"></script>
 
 
 

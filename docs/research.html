@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Listing Example – DRN Group</title>
+<title>Research – DRN Group</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,15 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<link href="site_libs/bootstrap/bootstrap-8d46f82fdf11f034aa719052a77560f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-=======
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
 <link href="site_libs/bootstrap/bootstrap-a8289c177f726665e07e9eb1bd32beb1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
->>>>>>> bc9790d (updates)
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,55 +99,29 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-
-
 <script>
-
 function toggleBox(header) {
-
   // Use jQuery to find the associated container and toggle its visibility
-
   $(header).next('.dd-box').slideToggle();
-
   $(header).next('.ddm-box').slideToggle();
-
 }
-
 </script>
 
 
-
-
-
 <script>
-
 function openCity(evt, cityName) {
-
   var i, x, tablinks;
-
   x = document.getElementsByClassName("city");
-
   for (i = 0; i < x.length; i++) {
-
     x[i].style.display = "none";
-
   }
-
   tablinks = document.getElementsByClassName("tablink");
-
   for (i = 0; i < x.length; i++) {
-
     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-
   }
-
   document.getElementById(cityName).style.display = "block";
-
   evt.currentTarget.className += " w3-red";
-
 }
-
-
 
 </script>
 
@@ -164,206 +130,94 @@ function openCity(evt, cityName) {
 
 
 
-
-
-
-
-
-
-
 <script>
-
 //Draws leader between 'from' and 'to' on 'stage'. Uses existing objects if ids exist, otherwise creates them according to given style parameter.
-
 //lineOptions to stylize.
-
 //Issues. May need to create id via html if container is to keep equations.
-
 function drawLeader({
-
   
-
   containerId = 'stage',
-
   from = { id: 'from', text: '', className: '', style: {} },
-
   to = { id: 'to', text: '', className: '', style: {} },
-
   lineOptions = {}
-
 }) {
-
   // Creates 'from' and 'to' in 'containerId'. Ignores creation if ids already exist and draws a leaderline between them.
-
   window.addEventListener('load', () => {
-
     const container = document.getElementById(containerId);
-
     const elements = { from, to };
-
     const createdDivs = {};
 
-
-
     for (const key in elements) {
-
       const { id, text, className, style } = elements[key];
-
       let el = document.getElementById(id);
 
-
-
       if (!el || !container.contains(el)) {
-
         el = document.createElement('div');
-
         el.id = id;
-
         el.textContent = text;
-
         el.className = className || 'anchor80-line';
-
         Object.assign(el.style, {
-
           position: 'relative',
-
           ...style
-
         });
-
         container.appendChild(el);
-
       }
-
-
 
       createdDivs[key] = el;
-
     }
-
-
 
     new LeaderLine(createdDivs.from, createdDivs.to, lineOptions);
-
   });
-
 }
 
-
-
 </script>
-
 <script>
-
-window.addEventListener('load', () => {
-
+window.addEventListener('load', function() {
   const flowLineStyle = {
-<<<<<<< HEAD
-
-    color: 'black',
-
-    size: 2.75,
-
-=======
     color: 'black',
     size: 2.75,
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
     path: 'fluid',
-
     endPlug: 'arrow',
-
     dropShadow: true
-
   };
 
-
-
-  document.querySelectorAll('[data-connect]').forEach(el => {
-
-    const targets = el.dataset.connect.split(',').map(t => t.trim());
-
-
-
-    // Parse per-connection labels (format: "step2A: Label Text; step3A: Other Label")
+  document.querySelectorAll('[data-connect]').forEach(function(el) {
+    const targets = el.dataset.connect.split(',').map(function(t) { return t.trim(); });
 
     const labelMap = {};
-
     if (el.dataset.label) {
-
-      el.dataset.label.split(';').forEach(pair => {
-
-        const [key, value] = pair.split(':').map(s => s.trim());
-
+      el.dataset.label.split(';').forEach(function(pair) {
+        const parts = pair.split(':').map(function(s) { return s.trim(); });
+        const key = parts[0], value = parts[1];
         if (key && value) {
-
           labelMap[key] = value;
-
         }
-
       });
-
     }
 
-
-
-    targets.forEach(targetId => {
-
+    targets.forEach(function(targetId) {
       const target = document.getElementById(targetId);
-
       if (target) {
-
-        const options = { ...flowLineStyle };
-
-
+        const options = Object.assign({}, flowLineStyle);
 
         const labelText = labelMap[targetId];
-
         if (labelText) {
-
           options.middleLabel = LeaderLine.pathLabel(labelText, {
-
             fontSize: '18px',
-
             color: 'black',
-
             backgroundColor: 'rgba(255,255,255,0.85)',
-
             padding: 4
-
           });
-
         }
 
-
-
         new LeaderLine(el, target, options);
-
       }
-
     });
-
   });
-
 });
-
 </script>
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-=======
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
->>>>>>> bc9790d (updates)
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -466,7 +320,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Listing Example</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Research</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -521,13 +375,13 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Listing Example</h1>
+<h1 class="title">Research</h1>
 </div>
 
 
@@ -544,21 +398,44 @@ window.Quarto = {
 </header>
 
 
+<p>Click on the thumbnails below for more detail.</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1749841733937" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-=======
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1756473661417" data-listing-reading-time-sort="1">
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1740996694445" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
->>>>>>> bc9790d (updates)
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1765108265061">
+<a href="./C0research/defects.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="_figs/logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1765108804872" data-listing-reading-time-sort="2" data-listing-word-count-sort="310">
+<a href="./C0research/hopscotch.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="_figs/research/TB-network.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Tight-binding insights into ILHPs
+</h5>
+<div class="listing-reading-time card-text text-muted">2 min</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1740996694445" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <a href="./C0research/research.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="_figs/logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -575,28 +452,10 @@ Research
 </div>
 </div></a>
 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1754465761253" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./C0research/meg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="_figs\hugorheinholdchimp.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-=======
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1756473661417" data-listing-reading-time-sort="1">
-<a href="./C0research/meg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="_figs/logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1765100818564" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1765104097247" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <a href="./C0research/meg.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="_figs/hugorheinholdchimp.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
->>>>>>> bc9790d (updates)
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Mutli-Exciton Generation

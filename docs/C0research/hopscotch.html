@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>workflow – DRN Group</title>
+<title>Tight-binding insights into ILHPs – DRN Group</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-8d46f82fdf11f034aa719052a77560f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a8289c177f726665e07e9eb1bd32beb1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,55 +68,29 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-
-
 <script>
-
 function toggleBox(header) {
-
   // Use jQuery to find the associated container and toggle its visibility
-
   $(header).next('.dd-box').slideToggle();
-
   $(header).next('.ddm-box').slideToggle();
-
 }
-
 </script>
 
 
-
-
-
 <script>
-
 function openCity(evt, cityName) {
-
   var i, x, tablinks;
-
   x = document.getElementsByClassName("city");
-
   for (i = 0; i < x.length; i++) {
-
     x[i].style.display = "none";
-
   }
-
   tablinks = document.getElementsByClassName("tablink");
-
   for (i = 0; i < x.length; i++) {
-
     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-
   }
-
   document.getElementById(cityName).style.display = "block";
-
   evt.currentTarget.className += " w3-red";
-
 }
-
-
 
 </script>
 
@@ -125,210 +99,140 @@ function openCity(evt, cityName) {
 
 
 
-
-
-
-
-
-
-
 <script>
-
 //Draws leader between 'from' and 'to' on 'stage'. Uses existing objects if ids exist, otherwise creates them according to given style parameter.
-
 //lineOptions to stylize.
-
 //Issues. May need to create id via html if container is to keep equations.
-
 function drawLeader({
-
   
-
   containerId = 'stage',
-
   from = { id: 'from', text: '', className: '', style: {} },
-
   to = { id: 'to', text: '', className: '', style: {} },
-
   lineOptions = {}
-
 }) {
-
   // Creates 'from' and 'to' in 'containerId'. Ignores creation if ids already exist and draws a leaderline between them.
-
   window.addEventListener('load', () => {
-
     const container = document.getElementById(containerId);
-
     const elements = { from, to };
-
     const createdDivs = {};
 
-
-
     for (const key in elements) {
-
       const { id, text, className, style } = elements[key];
-
       let el = document.getElementById(id);
 
-
-
       if (!el || !container.contains(el)) {
-
         el = document.createElement('div');
-
         el.id = id;
-
         el.textContent = text;
-
         el.className = className || 'anchor80-line';
-
         Object.assign(el.style, {
-
           position: 'relative',
-
           ...style
-
         });
-
         container.appendChild(el);
-
       }
-
-
 
       createdDivs[key] = el;
-
     }
-
-
 
     new LeaderLine(createdDivs.from, createdDivs.to, lineOptions);
-
   });
-
 }
 
-
-
 </script>
-
 <script>
-
-window.addEventListener('load', () => {
-
+window.addEventListener('load', function() {
   const flowLineStyle = {
-
     color: 'black',
-
     size: 2.75,
-
     path: 'fluid',
-
     endPlug: 'arrow',
-
     dropShadow: true
-
   };
 
-
-
-  document.querySelectorAll('[data-connect]').forEach(el => {
-
-    const targets = el.dataset.connect.split(',').map(t => t.trim());
-
-
-
-    // Parse per-connection labels (format: "step2A: Label Text; step3A: Other Label")
+  document.querySelectorAll('[data-connect]').forEach(function(el) {
+    const targets = el.dataset.connect.split(',').map(function(t) { return t.trim(); });
 
     const labelMap = {};
-
     if (el.dataset.label) {
-
-      el.dataset.label.split(';').forEach(pair => {
-
-        const [key, value] = pair.split(':').map(s => s.trim());
-
+      el.dataset.label.split(';').forEach(function(pair) {
+        const parts = pair.split(':').map(function(s) { return s.trim(); });
+        const key = parts[0], value = parts[1];
         if (key && value) {
-
           labelMap[key] = value;
-
         }
-
       });
-
     }
 
-
-
-    targets.forEach(targetId => {
-
+    targets.forEach(function(targetId) {
       const target = document.getElementById(targetId);
-
       if (target) {
-
-        const options = { ...flowLineStyle };
-
-
+        const options = Object.assign({}, flowLineStyle);
 
         const labelText = labelMap[targetId];
-
         if (labelText) {
-
           options.middleLabel = LeaderLine.pathLabel(labelText, {
-
             fontSize: '18px',
-
             color: 'black',
-
             backgroundColor: 'rgba(255,255,255,0.85)',
-
             padding: 4
-
           });
-
         }
 
-
-
         new LeaderLine(el, target, options);
-
       }
-
     });
-
   });
-
 });
-
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
-
-
-
-
-
-
-<link rel="stylesheet" href="../../css/buttons.css">
-<link rel="stylesheet" href="../../css/tabs.css">
-<link rel="stylesheet" href="../../css/callouts.css">
-<link rel="stylesheet" href="../../css/fonts-ebgaramond.css">
-<link rel="stylesheet" href="../../css/fonts-hand.css">
-<link rel="stylesheet" href="../../css/shapes.css">
-<link rel="stylesheet" href="../../css/leaders.css">
+<link rel="stylesheet" href="../css/buttons.css">
+<link rel="stylesheet" href="../css/tabs.css">
+<link rel="stylesheet" href="../css/callouts.css">
+<link rel="stylesheet" href="../css/fonts-ebgaramond.css">
+<link rel="stylesheet" href="../css/fonts-hand.css">
+<link rel="stylesheet" href="../css/shapes.css">
+<link rel="stylesheet" href="../css/leaders.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">DRN Group</span>
     </a>
   </div>
@@ -339,11 +243,11 @@ window.addEventListener('load', () => {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -352,21 +256,21 @@ window.addEventListener('load', () => {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-guides">    
         <li>
-    <a class="dropdown-item" href="../../C0DFT/home_DFT.html">
+    <a class="dropdown-item" href="../C0DFT/home_DFT.html">
  <span class="dropdown-text">DFT Tutorials</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../people.html"> 
+    <a class="nav-link" href="../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -380,84 +284,135 @@ window.addEventListener('load', () => {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Tight-binding insights into ILHPs</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Espresso</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a>
+  <ul class="collapse">
+  <li><a href="#the-tight-binding-hamiltonian" id="toc-the-tight-binding-hamiltonian" class="nav-link" data-scroll-target="#the-tight-binding-hamiltonian">The Tight-Binding Hamiltonian</a></li>
+  <li><a href="#anion-exchance-and-ilhps" id="toc-anion-exchance-and-ilhps" class="nav-link" data-scroll-target="#anion-exchance-and-ilhps">Anion-Exchance and ILHPs</a></li>
+  </ul></li>
+  <li><a href="#the-study" id="toc-the-study" class="nav-link" data-scroll-target="#the-study">The Study</a></li>
+  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content page-columns page-full" id="quarto-document-content">
 
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
-<div id="step1" class="step" data-connect="step1A, step2" style="width: 12em; height: 4em; top: 5em; left: 3em;">
-<p>Structure Generation</p>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tight-binding insights into ILHPs</h1>
 </div>
-<div class="folded-tl-box" style="top: 5em; left: 2.5em;">
-<p>1</p>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_figs/research/TB-network.png" class="img-fluid figure-img"></p>
+<figcaption>Tight binding network</figcaption>
+</figure>
 </div>
-<div class="folded-tr-box" style="top: 9.5em; left: 13em;">
-<p>Software: Vesta</p>
-</div>
-<div id="step1A" class="step" style="line-height: 1.5; text-align: left; width: 12em; height: 9em; top: 14em; left: 3em;">
+</div></div><section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="the-tight-binding-hamiltonian" class="level3">
+<h3 class="anchored" data-anchor-id="the-tight-binding-hamiltonian">The Tight-Binding Hamiltonian</h3>
+<p>The tight-binding method is a simple but powerful way to describe how electrons move in a solid. The core idea is that electrons tend to stay close to the atoms they belong to, but they can also spread out by “hopping” to neighboring atoms. This balance between staying localized and moving through the material, determines many of the electronic properties of a crystal.</p>
+<p>By focusing only on the energy of an electron on an atom and the probability of hopping between nearby atoms, the tight-binding model captures the essential physics behind band formation, electrical conductivity, and the electronic structure of a wide range of materials. Despite its simplicity, it often provides accurate insights into systems ranging from common solids to advanced materials like graphene, semiconductors, and topological phases.</p>
+</section>
+<section id="anion-exchance-and-ilhps" class="level3">
+<h3 class="anchored" data-anchor-id="anion-exchance-and-ilhps">Anion-Exchance and ILHPs</h3>
+<p>Ionic liquid–hybrid perovskites (ILHPs) integrate ionic liquids into the perovskite lattice, enhancing stability, ion mobility, and defect behavior. Combined with anion exchange, which replaces halide ions (Cl⁻, Br⁻, I⁻) in the structure, these materials allow precise tuning of optical and electronic properties without altering the overall lattice.</p>
+<p>Together, ILHPs and anion exchange provide a versatile platform for designing perovskites with tailored stability, bandgaps, and performance for applications in solar cells, LEDs, and other optoelectronic devices.</p>
+</section>
+</section>
+<section id="the-study" class="level2">
+<h2 class="anchored" data-anchor-id="the-study">The Study</h2>
+<!-- Abstract with image from the paper -->
+<p>Our study employs a synergetic DFT and TB approach, to tune the bandgaps of cubic phase ILHPs (CsPbBr<span class="math inline">\(_x\)</span> I<span class="math inline">\(_{3-x}\)</span>, x = 0, 1, 2, or 3) via anion exchange and create delocalization maps based on the TB Hamiltonians. Closer examination allows us to extract from this, reduced TB (redTB) models which are readily interpretable. The hopping distribution abstracted from the redTB model singles out CsPbBrI<span class="math inline">\(_2\)</span> as being qualitatively and quantitatively different from the rest of the set, following a many-small as opposed to the few-big hopping scheme employed by the others.</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
 <ul>
-<li>Bulk Pristine Supercell</li>
-<li>Defective Supercells Point defects by substituting lead with 3d TMs</li>
+<li><a href="https://pubs.rsc.org/en/content/articlelanding/2025/cp/d5cp01159k#!divCitation">Paper link</a></li>
 </ul>
-</div>
-<div id="step2" class="step" data-connect="step2A, step3" style="width: 12em; height: 4em; top: 5em; left: 19em;">
-<p>Calculations</p>
-</div>
-<div class="folded-tl-box" style="top: 5em; left: 22.5em;">
-<p>2</p>
-</div>
-<div class="folded-tr-box" style="top: 9.5em; left: 33em;">
-<p>Software: QE</p>
-</div>
-<div id="step2A" class="step" data-connect="step2B" style="width: 10em; height: 3.75em; top: 15em; left: 20em;">
-<p>Relaxation</p>
-</div>
-<div class="folded-tr-box" style="width: 9em; top: 22em; left: 32.5em;">
-<p>Code: pw.x (vc-relax)</p>
-</div>
-<div id="step2B" class="step" style="width: 10em; height: 3.75em; top: 25em; left: 20em;">
-<p>SCF Calculation</p>
-</div>
-<div class="folded-tr-box" style="width: 9em; top: 34em; left: 32.5em;">
-<p>Code: pw.x (scf)</p>
-</div>
-<div id="step3" class="step" data-connect="step3A" style="width: 12em; height: 4em; top: 5em; left: 35em;">
-<p>Data Handling and Analysis</p>
-</div>
-<div class="folded-tl-box" style="top: 5em; left: 42.5em;">
-<p>3</p>
-</div>
-<div class="folded-tr-box" style="top: 9.5em; left: 54em;">
-<p>Software: Doped</p>
-</div>
-<div id="step3A" class="step" data-connect="step3B" style="line-height: 1.5; width: 12em; height: 6em; top: 13em; left: 35em;">
-<ul>
-<li>Phase Diagrams</li>
-<li>Chemical Potential Diagrams</li>
-</ul>
-</div>
-<div id="step3B" class="step" data-connect="step3C" style="width: 12em; height: 4em; top: 22em; left: 35em;">
-<p>Defect Formation Energies</p>
-</div>
-<div id="step3C" class="step" style="width: 12em; height: 4em; top: 29em; left: 35em;">
-<p>Charge Transition Levels</p>
-</div>
-<!-- ::: {.step #step4 style="top: 300px; left: 300px;"}
-End
-::: -->
-<p>–&gt;</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -860,7 +815,7 @@ End
   });
   </script>
 </div> <!-- /content -->
-<script src="../../scripts/leader-line-master/leader-line.min.js"></script>
+<script src="../scripts/leader-line-master/leader-line.min.js"></script>
 
 
 

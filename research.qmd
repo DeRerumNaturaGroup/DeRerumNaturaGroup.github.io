@@ -1,12 +1,14 @@
 ---
-title: "Listing Example"
+title: "Research"
 listing:
   contents: C0research
   type: grid
   categories: true
-  image-placeholder: ./_figs/logoatom.png
+  image-placeholder: '_figs/logo.png'
   fields: [image, date, title, author, reading-time]
   sort:
   - "date"
   - "title desc"
 ---
+
+Click on the thumbnails below for more detail.
