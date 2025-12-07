@@ -2,9 +2,9 @@
 title: ""
 ---
 
-De Rerum Natura—Latin for On the Nature of Things—takes its name from Lucretius’ ancient poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.
+De Rerum Natura—Latin for On the Nature of Things—takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.
 
-At the DRN Group we are concerned with the nature of things too, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data, to uncover the mechanisms behind conductivity, porosity, catalytic activity, and beyond.
+At the DRN Group we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data, to uncover the mechanisms behind conductivity, porosity, catalytic activity, and beyond.
 
 Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.
 

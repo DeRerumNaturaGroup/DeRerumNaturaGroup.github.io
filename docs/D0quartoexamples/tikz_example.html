@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Listing Example – DRN Group</title>
+<title>How to add and cross reference tikz diagrams in quarto – DRN Group</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,33 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<link href="site_libs/bootstrap/bootstrap-8d46f82fdf11f034aa719052a77560f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-=======
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
-<link href="site_libs/bootstrap/bootstrap-a8289c177f726665e07e9eb1bd32beb1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
->>>>>>> bc9790d (updates)
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a8289c177f726665e07e9eb1bd32beb1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,86 +66,31 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-
-
 <script>
-
 function toggleBox(header) {
-
   // Use jQuery to find the associated container and toggle its visibility
-
   $(header).next('.dd-box').slideToggle();
-
   $(header).next('.ddm-box').slideToggle();
-
 }
-
 </script>
 
 
-
-
-
 <script>
-
 function openCity(evt, cityName) {
-
   var i, x, tablinks;
-
   x = document.getElementsByClassName("city");
-
   for (i = 0; i < x.length; i++) {
-
     x[i].style.display = "none";
-
   }
-
   tablinks = document.getElementsByClassName("tablink");
-
   for (i = 0; i < x.length; i++) {
-
     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-
   }
-
   document.getElementById(cityName).style.display = "block";
-
   evt.currentTarget.className += " w3-red";
-
 }
-
-
 
 </script>
 
@@ -164,242 +99,104 @@ function openCity(evt, cityName) {
 
 
 
-
-
-
-
-
-
-
 <script>
-
 //Draws leader between 'from' and 'to' on 'stage'. Uses existing objects if ids exist, otherwise creates them according to given style parameter.
-
 //lineOptions to stylize.
-
 //Issues. May need to create id via html if container is to keep equations.
-
 function drawLeader({
-
   
-
   containerId = 'stage',
-
   from = { id: 'from', text: '', className: '', style: {} },
-
   to = { id: 'to', text: '', className: '', style: {} },
-
   lineOptions = {}
-
 }) {
-
   // Creates 'from' and 'to' in 'containerId'. Ignores creation if ids already exist and draws a leaderline between them.
-
   window.addEventListener('load', () => {
-
     const container = document.getElementById(containerId);
-
     const elements = { from, to };
-
     const createdDivs = {};
 
-
-
     for (const key in elements) {
-
       const { id, text, className, style } = elements[key];
-
       let el = document.getElementById(id);
 
-
-
       if (!el || !container.contains(el)) {
-
         el = document.createElement('div');
-
         el.id = id;
-
         el.textContent = text;
-
         el.className = className || 'anchor80-line';
-
         Object.assign(el.style, {
-
           position: 'relative',
-
           ...style
-
         });
-
         container.appendChild(el);
-
       }
-
-
 
       createdDivs[key] = el;
-
     }
-
-
 
     new LeaderLine(createdDivs.from, createdDivs.to, lineOptions);
-
   });
-
 }
 
-
-
 </script>
-
 <script>
-
 window.addEventListener('load', () => {
-
   const flowLineStyle = {
-<<<<<<< HEAD
-
-    color: 'black',
-
-    size: 2.75,
-
-=======
     color: 'black',
     size: 2.75,
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
     path: 'fluid',
-
     endPlug: 'arrow',
-
     dropShadow: true
-
   };
 
-
-
   document.querySelectorAll('[data-connect]').forEach(el => {
-
     const targets = el.dataset.connect.split(',').map(t => t.trim());
 
-
-
     // Parse per-connection labels (format: "step2A: Label Text; step3A: Other Label")
-
     const labelMap = {};
-
     if (el.dataset.label) {
-
       el.dataset.label.split(';').forEach(pair => {
-
         const [key, value] = pair.split(':').map(s => s.trim());
-
         if (key && value) {
-
           labelMap[key] = value;
-
         }
-
       });
-
     }
-
-
 
     targets.forEach(targetId => {
-
       const target = document.getElementById(targetId);
-
       if (target) {
-
         const options = { ...flowLineStyle };
 
-
-
         const labelText = labelMap[targetId];
-
         if (labelText) {
-
           options.middleLabel = LeaderLine.pathLabel(labelText, {
-
             fontSize: '18px',
-
             color: 'black',
-
             backgroundColor: 'rgba(255,255,255,0.85)',
-
             padding: 4
-
           });
-
         }
 
-
-
         new LeaderLine(el, target, options);
-
       }
-
     });
-
   });
-
 });
-
 </script>
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-=======
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
->>>>>>> bc9790d (updates)
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="css/buttons.css">
-<link rel="stylesheet" href="css/tabs.css">
-<link rel="stylesheet" href="css/callouts.css">
-<link rel="stylesheet" href="css/fonts-ebgaramond.css">
-<link rel="stylesheet" href="css/fonts-hand.css">
-<link rel="stylesheet" href="css/shapes.css">
-<link rel="stylesheet" href="css/leaders.css">
+<link rel="stylesheet" href="../css/buttons.css">
+<link rel="stylesheet" href="../css/tabs.css">
+<link rel="stylesheet" href="../css/callouts.css">
+<link rel="stylesheet" href="../css/fonts-ebgaramond.css">
+<link rel="stylesheet" href="../css/fonts-hand.css">
+<link rel="stylesheet" href="../css/shapes.css">
+<link rel="stylesheet" href="../css/leaders.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -409,7 +206,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">DRN Group</span>
     </a>
   </div>
@@ -420,11 +217,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -433,21 +230,21 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-guides">    
         <li>
-    <a class="dropdown-item" href="./C0DFT/home_DFT.html">
+    <a class="dropdown-item" href="../C0DFT/home_DFT.html">
  <span class="dropdown-text">DFT Tutorials</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
+    <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./people.html"> 
+    <a class="nav-link" href="../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -466,7 +263,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Listing Example</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">How to add and cross reference tikz diagrams in quarto</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -480,8 +277,8 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -502,7 +299,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
+  <a href="../C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Espresso</span></a>
   </div>
 </li>
@@ -510,7 +307,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -519,15 +316,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Listing Example</h1>
+<h1 class="title">How to add and cross reference tikz diagrams in quarto</h1>
 </div>
 
 
@@ -544,75 +341,46 @@ window.Quarto = {
 </header>
 
 
+<p>Add to quarto yaml:</p>
+<pre><code>filters:
+  - pandoc-ext/diagram</code></pre>
+<p><a href="https://github.com/quarto-dev/quarto-cli/discussions/8925">Source</a><br>
+<a href="https://github.com/pandoc-ext/diagram">Extension</a></p>
+<div id="fig-tikzz" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tikzz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tikz_example_files/mediabag/stfigure.svg" class="img-fluid figure-img"></p>
+<figcaption>A Figure</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tikzz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This is a caption
+</figcaption>
+</figure>
+</div>
+<div id="fig-tikz" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tikz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tikz_example_files/mediabag/stick-figure.svg" class="img-fluid figure-img"></p>
+<figcaption>A Stick Figure</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tikz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: This is a caption
+</figcaption>
+</figure>
+</div>
+<p>See <a href="#fig-tikz" class="quarto-xref">Figure&nbsp;2</a>.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1749841733937" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-=======
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1756473661417" data-listing-reading-time-sort="1">
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1740996694445" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
->>>>>>> bc9790d (updates)
-<a href="./C0research/research.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="_figs/logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Research
-</h5>
-<div class="listing-reading-time card-text text-muted">1 min</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1754465761253" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./C0research/meg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="_figs\hugorheinholdchimp.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-=======
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1756473661417" data-listing-reading-time-sort="1">
-<a href="./C0research/meg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="_figs/logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
->>>>>>> fb951552035cd44b5dff5d1b2f2f30bbf0d776d9
-=======
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1765100818564" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./C0research/meg.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="_figs/hugorheinholdchimp.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
->>>>>>> bc9790d (updates)
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Mutli-Exciton Generation
-</h5>
-<div class="listing-reading-time card-text text-muted">1 min</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1013,7 +781,7 @@ Mutli-Exciton Generation
   });
   </script>
 </div> <!-- /content -->
-<script src="./scripts/leader-line-master/leader-line.min.js"></script>
+<script src="../scripts/leader-line-master/leader-line.min.js"></script>
 
 
 
