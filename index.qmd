@@ -2,11 +2,29 @@
 title: ""
 ---
 
+:::{.column-margin}
+:::{#box4A .bbccp style="font-family: 'EB Garamond It';" }
+:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown; border-top: 0.4em solid Brown; text-align:center; background-color: #111111; color: white"}
+Lucretius
+:::
+:::{#node4Aii .bbccpbody style="font-family: 'EB Garamond Bd'; border-top: 0em solid Brown; color: Brown;"}
+
+:::
+:::
+:::{#box4A .bbccp style="font-family: 'EB Garamond It';" }
+:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown; border-top: 0.4em solid Brown; text-align:center;"}
+Nothing can be created out of nothing.
+:::
+:::{#node4Aii .bbccpbody style="font-family: 'EB Garamond Bd'; border-top: 0.4em solid Brown; color: Brown;"}
+
+:::
+:::
+:::
+
 De Rerum Natura—Latin for On the Nature of Things—takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.
 
-At the DRN Group we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data, to uncover the mechanisms behind conductivity, porosity, catalytic activity, and beyond.
-
-Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.
+At the DRN Group we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.
 
 
-
+---
+The website is still under-development and new information will be added soon. 

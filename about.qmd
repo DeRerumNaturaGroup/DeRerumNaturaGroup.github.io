@@ -2,4 +2,8 @@
 title: "About"
 ---
 
-About this site
+DRN is a research group working at GIK Institute. As mentioned on the home page, the name is a nod to Lucretius’ poem on the same name, which sought to explain the universe through the lens of atomism and reason, free from superstition.
+
+The DRN group studies properties of matter in the computational realm. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.
+
+The website is still under-development and new information will be forthcoming. 

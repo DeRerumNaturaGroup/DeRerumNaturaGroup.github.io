@@ -11,4 +11,4 @@ listing:
   - "title desc"
 ---
 
-Click on the thumbnails below for more detail.
+This page is still under construction. Click on the thumbnails below for more detail.

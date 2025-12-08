@@ -1,6 +1,6 @@
 ---
 title: Mutli-Exciton Generation
 ---
-![Elephant](../_figs/hugorheinholdchimp.png)
+![Pondering the mysteries](../_figs/hugorheinholdchimp.png)
 
-Test
+Coming soon.

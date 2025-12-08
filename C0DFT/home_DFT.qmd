@@ -2,7 +2,27 @@
 title: DFT
 ---
 
-## abc
+Resources related to DFT will be added here. 
+
+## Some text books on DFT:
+
+- Richard M. Martin. Electronic Structure_ Basic Theory and Practical Methods, 2nd Edition-Cambridge University Press (2020)
+- Richard M. Martin. Interacting Electrons_ Theory and Computational Approaches (2016)
+- Feliciano Giustino. Materials Modelling using Density unctional Theory - Properties and Predictions-Oxford University Press (2014)
+- David Sholl, Janice A Steckel. Density functional theory - A practical introduction-Wiley-Interscience (2009)
+- Wolfram Koch, Max C. Holthausen. A Chemist's Guide to Density Functional Theory. Wiley-VCH (2001)
+- Carsten Ullrich. Time-Dependent Density-Functional Theory_ Concepts and Applications-Oxford University Press (2012)
+
+## Some Useful links:
+
+- See youtube channels of QuantumNerd and PhysWhiz
+- Parnab Das' website.
+- Mattermodeling on stack exchange is a very useful resource
+
+## Foundantional Texts for Deeper Understanding:
+- Walter Kohn's papers. 
+
+<!-- ## abc
 project:
   type: book
 
@@ -23,7 +43,7 @@ book:
 - 7_band_structure.qmd
 - 8_dos_and_pdos.qmd
 - 9_practical_examples.qmd
-- references.qmd
+- references.qmd -->
 
 
 ## DFT Lectures
@@ -32,10 +52,10 @@ book:
 
 <!-- - [Kohn-Sham Equations](ks_equation.qmd) -->
 
-bibliography: bibliography.bib
+<!-- bibliography: bibliography.bib
 format:
   html:
     theme: cosmo
     toc: true
   pdf:
-    documentclass: book
+    documentclass: book -->

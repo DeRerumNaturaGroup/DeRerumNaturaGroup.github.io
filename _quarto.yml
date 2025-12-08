@@ -33,12 +33,16 @@ website:
     logo: _figs/logo.png
     logo-alt: Mysteries of physics, mathematics, and life
     contents:
+      - text: "Research"
+        href: "research.qmd"
+      - text: "People"
+        href: "people.qmd"        
+      - text: "About"
+        href: "about.qmd"
       - section: "Resources"
         contents:
           - href: C0resources/QE/QE.qmd
             text: Espresso
-      - text: "About"
-        href: "about.qmd"
 format:
   html:
     toc: true
