@@ -1,5 +1,12 @@
 ---
-title: Publications
+title: ""
+bibliography: _bibliography/spervez.bib
+csl: nature.csl
+nocite: |
+  @*
 ---
 
-Coming soon.
+# Publications
+
+::: {#refs}
+:::
