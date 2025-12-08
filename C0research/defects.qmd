@@ -1,0 +1,12 @@
+---
+title: Defects in Perovskites
+---
+
+
+## Background 
+
+Perovskites are a fascinating class of materials known for their remarkable ability to convert sunlight into electricity and emit bright, tunable light. But like any material, they are not perfect—tiny imperfections, or defects, naturally appear in their crystal structure. The presence of transition metals adds another layer of complexity, as their multiple oxidation states and strong interactions with the lattice can create additional defect states or alter defect behavior. Some defects can improve performance, enhancing how electrons move or how light is absorbed, while others act as traps that reduce efficiency and stability. By studying these defects i.e. how they form, migrate, and interact, we can better understand perovskites and design materials that are more efficient, longer-lasting, and tailored for specific applications.
+
+## The Study
+
+Coming soon

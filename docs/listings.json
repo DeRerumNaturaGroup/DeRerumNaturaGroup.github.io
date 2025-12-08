@@ -2,10 +2,10 @@
   {
     "listing": "/research.html",
     "items": [
-      "/C0research/defects.html",
       "/C0research/hopscotch.html",
       "/C0research/research.html",
-      "/C0research/meg.html"
+      "/C0research/meg.html",
+      "/C0research/defects.html"
     ]
   }
 ]

@@ -33,8 +33,12 @@ website:
     logo: _figs/logo.png
     logo-alt: Mysteries of physics, mathematics, and life
     contents:
+      - text: "Home"
+        href: "index.qmd"
       - text: "Research"
         href: "research.qmd"
+      - text: "Publications"
+        href: "publications.qmd"
       - text: "People"
         href: "people.qmd"        
       - text: "About"
@@ -43,6 +47,10 @@ website:
         contents:
           - href: C0resources/QE/QE.qmd
             text: Espresso
+          - href: C0resources/Lammps/home_lammps.qmd
+            text: LAMMPS
+          - href: C0resources/ase/home_ase.qmd
+            text: ASE
 format:
   html:
     toc: true

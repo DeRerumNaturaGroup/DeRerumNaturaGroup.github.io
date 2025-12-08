@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kohn-Sham States and the Number of Electrons – DRN Group</title>
+<title>tipsandtricks – DRN Group</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a8289c177f726665e07e9eb1bd32beb1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-a8289c177f726665e07e9eb1bd32beb1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -186,14 +186,43 @@ window.addEventListener('load', function() {
 });
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../css/buttons.css">
-<link rel="stylesheet" href="../../css/tabs.css">
-<link rel="stylesheet" href="../../css/callouts.css">
-<link rel="stylesheet" href="../../css/fonts-ebgaramond.css">
-<link rel="stylesheet" href="../../css/fonts-hand.css">
-<link rel="stylesheet" href="../../css/shapes.css">
-<link rel="stylesheet" href="../../css/leaders.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../css/buttons.css">
+<link rel="stylesheet" href="../../../css/tabs.css">
+<link rel="stylesheet" href="../../../css/callouts.css">
+<link rel="stylesheet" href="../../../css/fonts-ebgaramond.css">
+<link rel="stylesheet" href="../../../css/fonts-hand.css">
+<link rel="stylesheet" href="../../../css/shapes.css">
+<link rel="stylesheet" href="../../../css/leaders.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -203,7 +232,7 @@ window.addEventListener('load', function() {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">DRN Group</span>
     </a>
   </div>
@@ -214,11 +243,11 @@ window.addEventListener('load', function() {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../../../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -227,21 +256,21 @@ window.addEventListener('load', function() {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-guides">    
         <li>
-    <a class="dropdown-item" href="../../C0DFT/home_DFT.html">
+    <a class="dropdown-item" href="../../../C0DFT/home_DFT.html">
  <span class="dropdown-text">DFT Tutorials</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../publications.html"> 
+    <a class="nav-link" href="../../../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../people.html"> 
+    <a class="nav-link" href="../../../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -260,7 +289,7 @@ window.addEventListener('load', function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Kohn-Sham States and the Number of Electrons</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -274,8 +303,8 @@ window.addEventListener('load', function() {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../../index.html" class="sidebar-logo-link">
+      <img src="../../../_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -287,19 +316,19 @@ window.addEventListener('load', function() {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../research.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../people.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../people.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">People</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../about.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -314,8 +343,20 @@ window.addEventListener('load', function() {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Espresso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../C0resources/Lammps/home_lammps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LAMMPS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../C0resources/ase/home_ase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ASE</span></a>
   </div>
 </li>
       </ul>
@@ -329,50 +370,48 @@ window.addEventListener('load', function() {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Kohn-Sham States and the Number of Electrons</h1>
+
+
+
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>How to choose a timestep (dt)?</p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>If you open the header of an espresso <code>pw.x</code> output file, you might see:</p>
-<pre><code>     number of electrons       =        44.00
-     number of Kohn-Sham states=           26</code></pre>
-<p>Well, what are these?</p>
-<p>In understanding electronic structure calculations using density functional theory (DFT), it’s useful to imagine a familiar situation: a family going on a picnic.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figs_DFT/KSstates.svg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>The number of KS States is like the rows of seats on a bus and the number of electrons are akin to the people riding out to picnic.</figcaption>
-</figure>
-</div>
-<p>The number of valence electrons in a material is like the number of family members who are actually going on the picnic. These are the people who will participate in activities, contribute to the experience, and need to be accounted for in the logistics. Similarly, valence electrons are those that participate in bonding and electronic behavior, and are the focus of most DFT calculations.</p>
-<p>However, in organizing a real trip, one often brings more than just the family. There may be a hired guide to navigate, porters to carry supplies, or someone skilled in negotiation for dealing with vendors. This expanded group represents the total number of electrons in a DFT calculation. It includes both the valence electrons and any additional electrons that the pseudopotential has chosen to treat explicitly—perhaps semicore states or shallow core levels that are important for accuracy in certain elements.</p>
-<p>To transport this group, a bus is needed. The Kohn–Sham states correspond to the rows of seats on the bus. In a non-spin-polarized system, each row can seat two people: one with spin up and one with spin down. Therefore, the number of rows ideally needs to be at least half the number of electrons. But planning conservatively, we often include more rows than necessary—not everyone likes to share a seat, and we may want to observe what other passengers (electronic states) are doing even if they are not part of the initial group. These extra rows represent the unoccupied Kohn–Sham states, which are important for understanding conduction bands, optical transitions, and other excited-state properties.</p>
-<p>This analogy helps clarify why the number of Kohn–Sham states is not the same as the number of electrons, and why pseudopotentials and spin considerations affect how many orbitals the DFT calculation must solve for.</p>
-<p>While the picnic bus analogy helps build intuition about valence electrons, total electrons, and Kohn–Sham states in DFT, it necessarily simplifies a number of important physical and computational subtleties and its limitations must always be at the back of our mind:</p>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>The timestep must be much smaller than the fastest vibrations in your system.</p>
 <ul>
-<li>First, the analogy treats Kohn–Sham states as fixed seats, suggesting a discrete, localized picture. In reality, Kohn–Sham orbitals are continuous wavefunctions—often delocalized over an entire crystal in the form of Bloch states. They are not static slots that electrons occupy, but mathematical solutions to a differential equation that describe how electron density is distributed in space.</li>
-<li>Second, the analogy implies that electrons either fully occupy or do not occupy Kohn–Sham states, like passengers sitting in seats. This works for insulators and simple semiconductors, but breaks down in metals or finite-temperature systems where fractional occupations are common. In such cases, the occupancy of a state is not binary, but smoothly distributed around the Fermi level according to the Fermi–Dirac distribution.</li>
-<li>Third, unoccupied Kohn–Sham states are portrayed as empty rows included just in case they’re needed. However, these states are not merely optional extras—they are integral to predicting important physical properties, such as optical absorption spectra, band gaps, and excited-state behavior. They must be computed carefully and with the same rigor as occupied states.</li>
-<li>Fourth, the treatment of spin in the analogy is simplified. While saying that “some people prefer not to share a row” illustrates the difference between spin-polarized and non-spin-polarized calculations, it glosses over more subtle aspects of spin, such as antiferromagnetic ordering, spin splitting, and spin–orbit coupling. These effects can lead to highly nontrivial behavior in the electronic structure, which cannot be captured by the seating metaphor.</li>
-<li>Finally, while the role of the pseudopotential is likened to choosing who goes on the trip, the analogy omits the fact that pseudopotentials also encode how valence electrons interact with the frozen core. This interaction affects transferability, scattering properties, and the accuracy of calculated forces—factors that are invisible in the analogy.</li>
+<li><p>If timestep is too large → atoms “overshoot” → energy drift, instability, or bonds break.</p></li>
+<li><p>If timestep is too small → simulation is safe but unnecessarily slow.</p></li>
 </ul>
+<p>Take the example of Halide Perovskite:</p>
+<p>The fastest motions are bond stretching of Pb–Br / Pb–I / Cs–X and Br–Br / I–I interactions.</p>
+<p>Typical bond vibrations are on the order of 10–100 THz (period ≈ 0.01–0.1 ps = 10–100 fs).</p>
+<p>Rule of thumb: timestep ≲ 1/10 to 1/20 of the shortest vibrational period.</p>
+<p>So:</p>
+<p>If vibrational period ≈ 10 fs, then timestep ≲ 1 fs.</p>
+<p>If vibrational period ≈ 20 fs, then timestep ≲ 2 fs.</p>
+</div>
+</div>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>How to choose a dumping factors?</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>For Nose-Hoover thermostat, typical choice for temp is 100 x dt and for pressure is 1000 x dt.</p>
+</div>
+</div>
+<div class="ddm" style="font-size:0.8em; line-height:0">
+<div class="ddm-head" onclick="toggleBox(this)" style="border-bottom: px solid red;font-family:EB Garamond It">
+<p>How to choose run value?</p>
+</div>
+<div class="ddm-box" style="font-family:EB Garamond It;border-color:transparent">
+<p>Use the formulas below:</p>
+<p><span class="math display">\[simulated time required = \frac{\Delta T}{cooling rate}\]</span></p>
+<p><span class="math display">\[number of steps = \frac{simulated time}{timestep}\]</span></p>
+</div>
+</div>
 
 
 
@@ -777,7 +816,7 @@ window.addEventListener('load', function() {
   });
   </script>
 </div> <!-- /content -->
-<script src="../../scripts/leader-line-master/leader-line.min.js"></script>
+<script src="../../../scripts/leader-line-master/leader-line.min.js"></script>
 
 
 

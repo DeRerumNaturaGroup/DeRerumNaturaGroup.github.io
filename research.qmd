@@ -4,11 +4,12 @@ listing:
   contents: C0research
   type: grid
   categories: true
-  image-placeholder: '_figs/logo.png'
-  fields: [image, date, title, author, reading-time]
+  image-placeholder: '/_figs/hugorheinholdchimpsmall.png'
+  fields: [image, date, title, author]
   sort:
   - "date"
   - "title desc"
 ---
+![](/_figs/hugorheinholdchimpsmall.png){width=0}
 
 This page is still under construction. Click on the thumbnails below for more detail.

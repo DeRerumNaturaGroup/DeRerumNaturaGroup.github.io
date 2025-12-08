@@ -285,6 +285,24 @@ window.addEventListener('load', function() {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../people.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">People</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -302,12 +320,6 @@ window.addEventListener('load', function() {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -318,7 +330,9 @@ window.addEventListener('load', function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#abc" id="toc-abc" class="nav-link active" data-scroll-target="#abc">abc</a></li>
+  <li><a href="#some-text-books-on-dft" id="toc-some-text-books-on-dft" class="nav-link active" data-scroll-target="#some-text-books-on-dft">Some text books on DFT:</a></li>
+  <li><a href="#some-useful-links" id="toc-some-useful-links" class="nav-link" data-scroll-target="#some-useful-links">Some Useful links:</a></li>
+  <li><a href="#foundantional-texts-for-deeper-understanding" id="toc-foundantional-texts-for-deeper-understanding" class="nav-link" data-scroll-target="#foundantional-texts-for-deeper-understanding">Foundantional Texts for Deeper Understanding:</a></li>
   <li><a href="#dft-lectures" id="toc-dft-lectures" class="nav-link" data-scroll-target="#dft-lectures">DFT Lectures</a></li>
   </ul>
 </nav>
@@ -345,23 +359,53 @@ window.addEventListener('load', function() {
 </header>
 
 
-<section id="abc" class="level2">
-<h2 class="anchored" data-anchor-id="abc">abc</h2>
-<p>project: type: book</p>
-<p>XYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:</p>
+<p>Resources related to DFT will be added here.</p>
+<section id="some-text-books-on-dft" class="level2">
+<h2 class="anchored" data-anchor-id="some-text-books-on-dft">Some text books on DFT:</h2>
 <ul>
-<li>index.qmd</li>
-<li>1_introduction.qmd</li>
-<li>2_theoretical_fundamentals.qmd</li>
-<li>3_ks_equations.qmd</li>
-<li>4_xc_functionals.qmd</li>
-<li>5_scf_calculation.qmd</li>
-<li>6_geometry_optimization.qmd</li>
-<li>7_band_structure.qmd</li>
-<li>8_dos_and_pdos.qmd</li>
-<li>9_practical_examples.qmd</li>
-<li>references.qmd</li>
+<li>Richard M. Martin. Electronic Structure_ Basic Theory and Practical Methods, 2nd Edition-Cambridge University Press (2020)</li>
+<li>Richard M. Martin. Interacting Electrons_ Theory and Computational Approaches (2016)</li>
+<li>Feliciano Giustino. Materials Modelling using Density unctional Theory - Properties and Predictions-Oxford University Press (2014)</li>
+<li>David Sholl, Janice A Steckel. Density functional theory - A practical introduction-Wiley-Interscience (2009)</li>
+<li>Wolfram Koch, Max C. Holthausen. A Chemist’s Guide to Density Functional Theory. Wiley-VCH (2001)</li>
+<li>Carsten Ullrich. Time-Dependent Density-Functional Theory_ Concepts and Applications-Oxford University Press (2012)</li>
 </ul>
+</section>
+<section id="some-useful-links" class="level2">
+<h2 class="anchored" data-anchor-id="some-useful-links">Some Useful links:</h2>
+<ul>
+<li>See youtube channels of QuantumNerd and PhysWhiz</li>
+<li>Parnab Das’ website.</li>
+<li>Mattermodeling on stack exchange is a very useful resource</li>
+</ul>
+</section>
+<section id="foundantional-texts-for-deeper-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="foundantional-texts-for-deeper-understanding">Foundantional Texts for Deeper Understanding:</h2>
+<ul>
+<li>Walter Kohn’s papers.</li>
+</ul>
+<!-- ## abc
+project:
+  type: book
+
+XYZ 
+book:
+  title: "Introduction to Density Functional Theory"
+  author: "Your Name"
+  date: today
+  chapters:
+  
+- index.qmd
+- 1_introduction.qmd
+- 2_theoretical_fundamentals.qmd
+- 3_ks_equations.qmd
+- 4_xc_functionals.qmd
+- 5_scf_calculation.qmd
+- 6_geometry_optimization.qmd
+- 7_band_structure.qmd
+- 8_dos_and_pdos.qmd
+- 9_practical_examples.qmd
+- references.qmd -->
 </section>
 <section id="dft-lectures" class="level2">
 <h2 class="anchored" data-anchor-id="dft-lectures">DFT Lectures</h2>
@@ -369,7 +413,13 @@ window.addEventListener('load', function() {
 <li><a href="../C0DFT/lectures/scf.html">Self-consistent Field (SCF) Calculation</a></li>
 </ul>
 <!-- - [Kohn-Sham Equations](ks_equation.qmd) -->
-<p>bibliography: bibliography.bib format: html: theme: cosmo toc: true pdf: documentclass: book</p>
+<!-- bibliography: bibliography.bib
+format:
+  html:
+    theme: cosmo
+    toc: true
+  pdf:
+    documentclass: book -->
 
 
 </section>

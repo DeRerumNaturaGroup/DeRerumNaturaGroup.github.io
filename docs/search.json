@@ -67,7 +67,11 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Coming soon."
+    "text": "Coming soon.",
+    "crumbs": [
+      "Home",
+      "Publications"
+    ]
   },
   {
     "objectID": "C0DFT/leaderlines/defect_workflow.html",
@@ -109,14 +113,18 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "Click on the thumbnails below for more detail.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTight-binding insights into ILHPs\n\n2 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutli-Exciton Generation\n\n1 min\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "This page is still under construction. Click on the thumbnails below for more detail.\n\n\n\n\n\n\n\n\n\n\n\n\nTight-binding insights into ILHPs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutli-Exciton Generation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefects in Perovskites\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Research"
+    ]
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site",
+    "text": "DRN is a research group working at GIK Institute. As mentioned on the home page, the name is a nod to Lucretius’ poem on the same name, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nThe DRN group studies properties of matter in the computational realm. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nThe website is still under-development and new information will be forthcoming.",
     "crumbs": [
       "Home",
       "About"
@@ -230,21 +238,35 @@
     "href": "C0DFT/home_DFT.html",
     "title": "DFT",
     "section": "",
-    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:\n\nindex.qmd\n1_introduction.qmd\n2_theoretical_fundamentals.qmd\n3_ks_equations.qmd\n4_xc_functionals.qmd\n5_scf_calculation.qmd\n6_geometry_optimization.qmd\n7_band_structure.qmd\n8_dos_and_pdos.qmd\n9_practical_examples.qmd\nreferences.qmd"
+    "text": "Resources related to DFT will be added here."
   },
   {
-    "objectID": "C0DFT/home_DFT.html#abc",
-    "href": "C0DFT/home_DFT.html#abc",
+    "objectID": "C0DFT/home_DFT.html#some-text-books-on-dft",
+    "href": "C0DFT/home_DFT.html#some-text-books-on-dft",
     "title": "DFT",
-    "section": "",
-    "text": "project: type: book\nXYZ book: title: “Introduction to Density Functional Theory” author: “Your Name” date: today chapters:\n\nindex.qmd\n1_introduction.qmd\n2_theoretical_fundamentals.qmd\n3_ks_equations.qmd\n4_xc_functionals.qmd\n5_scf_calculation.qmd\n6_geometry_optimization.qmd\n7_band_structure.qmd\n8_dos_and_pdos.qmd\n9_practical_examples.qmd\nreferences.qmd"
+    "section": "Some text books on DFT:",
+    "text": "Some text books on DFT:\n\nRichard M. Martin. Electronic Structure_ Basic Theory and Practical Methods, 2nd Edition-Cambridge University Press (2020)\nRichard M. Martin. Interacting Electrons_ Theory and Computational Approaches (2016)\nFeliciano Giustino. Materials Modelling using Density unctional Theory - Properties and Predictions-Oxford University Press (2014)\nDavid Sholl, Janice A Steckel. Density functional theory - A practical introduction-Wiley-Interscience (2009)\nWolfram Koch, Max C. Holthausen. A Chemist’s Guide to Density Functional Theory. Wiley-VCH (2001)\nCarsten Ullrich. Time-Dependent Density-Functional Theory_ Concepts and Applications-Oxford University Press (2012)"
+  },
+  {
+    "objectID": "C0DFT/home_DFT.html#some-useful-links",
+    "href": "C0DFT/home_DFT.html#some-useful-links",
+    "title": "DFT",
+    "section": "Some Useful links:",
+    "text": "Some Useful links:\n\nSee youtube channels of QuantumNerd and PhysWhiz\nParnab Das’ website.\nMattermodeling on stack exchange is a very useful resource"
+  },
+  {
+    "objectID": "C0DFT/home_DFT.html#foundantional-texts-for-deeper-understanding",
+    "href": "C0DFT/home_DFT.html#foundantional-texts-for-deeper-understanding",
+    "title": "DFT",
+    "section": "Foundantional Texts for Deeper Understanding:",
+    "text": "Foundantional Texts for Deeper Understanding:\n\nWalter Kohn’s papers."
   },
   {
     "objectID": "C0DFT/home_DFT.html#dft-lectures",
     "href": "C0DFT/home_DFT.html#dft-lectures",
     "title": "DFT",
     "section": "DFT Lectures",
-    "text": "DFT Lectures\n\nSelf-consistent Field (SCF) Calculation\n\n\nbibliography: bibliography.bib format: html: theme: cosmo toc: true pdf: documentclass: book"
+    "text": "DFT Lectures\n\nSelf-consistent Field (SCF) Calculation"
   },
   {
     "objectID": "C0DFT/leaderlines/TB_workflow.html",
@@ -258,7 +280,10 @@
     "href": "index.html",
     "title": "DRN Group",
     "section": "",
-    "text": "De Rerum Natura—Latin for On the Nature of Things—takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nAt the DRN Group we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data, to uncover the mechanisms behind conductivity, porosity, catalytic activity, and beyond.\nOur work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible."
+    "text": "Lucretius\n\n\n\n\n\n\n\nNothing can be created out of nothing.\n\n\n\n\n\nDe Rerum Natura—Latin for On the Nature of Things—takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nAt the DRN Group we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\n\nThe website is still under-development and new information will be added soon.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "C0research/research.html#codes",
@@ -272,6 +297,78 @@
     "href": "C0research/meg.html",
     "title": "Mutli-Exciton Generation",
     "section": "",
-    "text": "Elephant\n\n\nTest"
+    "text": "Coming soon."
+  },
+  {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "For contact, email:\nsheharyar [at] giki.edu.pk",
+    "crumbs": [
+      "Home",
+      "People"
+    ]
+  },
+  {
+    "objectID": "C0research/defects.html",
+    "href": "C0research/defects.html",
+    "title": "Defects in Perovskites",
+    "section": "",
+    "text": "Perovskites are a fascinating class of materials known for their remarkable ability to convert sunlight into electricity and emit bright, tunable light. But like any material, they are not perfect—tiny imperfections, or defects, naturally appear in their crystal structure. The presence of transition metals adds another layer of complexity, as their multiple oxidation states and strong interactions with the lattice can create additional defect states or alter defect behavior. Some defects can improve performance, enhancing how electrons move or how light is absorbed, while others act as traps that reduce efficiency and stability. By studying these defects i.e. how they form, migrate, and interact, we can better understand perovskites and design materials that are more efficient, longer-lasting, and tailored for specific applications."
+  },
+  {
+    "objectID": "C0research/defects.html#background",
+    "href": "C0research/defects.html#background",
+    "title": "Defects in Perovskites",
+    "section": "",
+    "text": "Perovskites are a fascinating class of materials known for their remarkable ability to convert sunlight into electricity and emit bright, tunable light. But like any material, they are not perfect—tiny imperfections, or defects, naturally appear in their crystal structure. The presence of transition metals adds another layer of complexity, as their multiple oxidation states and strong interactions with the lattice can create additional defect states or alter defect behavior. Some defects can improve performance, enhancing how electrons move or how light is absorbed, while others act as traps that reduce efficiency and stability. By studying these defects i.e. how they form, migrate, and interact, we can better understand perovskites and design materials that are more efficient, longer-lasting, and tailored for specific applications."
+  },
+  {
+    "objectID": "C0research/defects.html#the-study",
+    "href": "C0research/defects.html#the-study",
+    "title": "Defects in Perovskites",
+    "section": "The Study",
+    "text": "The Study\nComing soon"
+  },
+  {
+    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html",
+    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html",
+    "title": "LAMMPS GPU Installation",
+    "section": "",
+    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+  },
+  {
+    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
+    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
+    "title": "LAMMPS GPU Installation",
+    "section": "",
+    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+  },
+  {
+    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
+    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
+    "title": "LAMMPS GPU Installation",
+    "section": "LAMMPS Installation",
+    "text": "LAMMPS Installation\n\nStep 1\nInstall required dependencies:\nsudo apt update\nsudo apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev\nAlso install CUDA if it’s not installed. Check with:\nnvcc --version\nnvidia-smi\n\n\nStep 2\nClone and prepare the LAMMPS repository:\ngit clone https://github.com/lammps/lammps.git\ncd lammps\nmkdir build\ncd build\n\n\nStep 3 (Configure)\ncmake ../cmake \\\n  -D CMAKE_INSTALL_PREFIX=../lammps_gpu \\\n  -D BUILD_MPI=on \\\n  -D BUILD_OMP=on \\\n  -D PKG_KOKKOS=on \\\n  -D Kokkos_ENABLE_CUDA=on \\\n  -D Kokkos_ARCH_AMPERE80=on \\\n  -D CMAKE_C_COMPILER=mpicc \\\n  -D CMAKE_CXX_COMPILER=mpicxx\ncmake ../cmake   -D CMAKE_INSTALL_PREFIX=../lammps_gpu   -D CMAKE_BUILD_TYPE=Release   -D BUILD_MPI=on   -D BUILD_OMP=on   -D CMAKE_C_COMPILER=mpicc   -D CMAKE_CXX_COMPILER=mpicxx   -D PKG_Kokkos=on   -D Kokkos_ENABLE_CUDA=on   -D Kokkos_ARCH_AMPERE80=on   -D PKG_GPU=on   -D PKG_USER-API=on   -D PKG_KSPACE=on   -D PKG_MANYBODY=on   -D PKG_MOLECULE=on   -D PKG_MISC=on   -D PKG_USER-REAXC=on   -D PKG_MLIAP=on   -D PKG_ML-SNAP=on   -D PKG_KIM=on   -D BIN2C=/home/misbah/nvhpc/Linux_x86_64/24.3/cuda/12.3/bin/bin2c\n\n\nStep 4 (Build and Install)\nmake -j$(nproc)\nmake install"
+  },
+  {
+    "objectID": "C0resources/Lammps/lectures/tipsandtricks.html",
+    "href": "C0resources/Lammps/lectures/tipsandtricks.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "How to choose a timestep (dt)?\n\n\nThe timestep must be much smaller than the fastest vibrations in your system.\n\nIf timestep is too large → atoms “overshoot” → energy drift, instability, or bonds break.\nIf timestep is too small → simulation is safe but unnecessarily slow.\n\nTake the example of Halide Perovskite:\nThe fastest motions are bond stretching of Pb–Br / Pb–I / Cs–X and Br–Br / I–I interactions.\nTypical bond vibrations are on the order of 10–100 THz (period ≈ 0.01–0.1 ps = 10–100 fs).\nRule of thumb: timestep ≲ 1/10 to 1/20 of the shortest vibrational period.\nSo:\nIf vibrational period ≈ 10 fs, then timestep ≲ 1 fs.\nIf vibrational period ≈ 20 fs, then timestep ≲ 2 fs.\n\n\n\n\nHow to choose a dumping factors?\n\n\nFor Nose-Hoover thermostat, typical choice for temp is 100 x dt and for pressure is 1000 x dt.\n\n\n\n\nHow to choose run value?\n\n\nUse the formulas below:\n\\[simulated time required = \\frac{\\Delta T}{cooling rate}\\]\n\\[number of steps = \\frac{simulated time}{timestep}\\]"
+  },
+  {
+    "objectID": "C0resources/Lammps/home_lammps.html",
+    "href": "C0resources/Lammps/home_lammps.html",
+    "title": "LAMMPS",
+    "section": "",
+    "text": "LAMMPS is a code for Molecular Dynamics simulations.",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "LAMMPS"
+    ]
   }
 ]
