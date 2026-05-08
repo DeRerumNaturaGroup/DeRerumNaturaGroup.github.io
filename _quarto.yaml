@@ -29,6 +29,7 @@ website:
         text: About
   sidebar:
     style: floating
+    collapse-level: 1
     search: true
     logo: _figs/logo.png
     logo-alt: Mysteries of physics, mathematics, and life
