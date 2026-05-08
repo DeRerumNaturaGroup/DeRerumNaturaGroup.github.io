@@ -124,7 +124,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "DRN is a research group working at GIK Institute. As mentioned on the home page, the name is a nod to Lucretius’ poem on the same name, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nThe DRN group studies properties of matter in the computational realm. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nThe website is still under-development and new information will be forthcoming.",
+    "text": "DRN is a research group active at GIK Institute. As mentioned on the home page, the name is a nod to Lucretius’ poem on the same name, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nThe DRN group studies properties of matter in the computational realm. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nThe website is still under-development and new information will be forthcoming.",
     "crumbs": [
       "Home",
       "About"
@@ -280,7 +280,7 @@
     "href": "index.html",
     "title": "DRN Group",
     "section": "",
-    "text": "Lucretius\n\n\n\n\n\n\n\nNothing can be created out of nothing.\n\n\n\n\n\nDe Rerum Natura—Latin for On the Nature of Things—takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nAt the DRN Group we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\n\nThe website is still under-development and new information will be added soon.",
+    "text": "Lucretius\n\n\n\n\n\n\n\nNothing can be created out of nothing.\n\n\n\n\n\nDe Rerum Natura—Latin for On the Nature of Things  —takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nAt DRN we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nThus when the mood is less poetic, we explain DRN as being:  Data-driven Research in Nanomaterials.\n\nThe website is still under-development and new content will be added over time.",
     "crumbs": [
       "Home"
     ]
@@ -304,7 +304,7 @@
     "href": "people.html",
     "title": "DRN Group",
     "section": "",
-    "text": "For contact, email:\nsheharyar [at] giki.edu.pk",
+    "text": "Sheharyar Pervez (Computational Materials Scientist) \n\n\nI am a computational materials scientist working at the intersection of materials modeling, condensed matter physics, and data-driven discovery. My research combines density functional theory (DFT), molecular dynamics, and high-throughput computational approaches to understand and design advanced materials, with a particular focus on defects, electronic structure, and functional materials such as metal–organic frameworks and halide perovskites. I am also interested in the growing role of artificial intelligence and machine learning in accelerating materials research and scientific discovery.",
     "crumbs": [
       "Home",
       "People"
@@ -370,5 +370,100 @@
       "Resources",
       "LAMMPS"
     ]
+  },
+  {
+    "objectID": "people.html#sheharyar-pervez",
+    "href": "people.html#sheharyar-pervez",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Research Interests: Material modeling, computational materials, condensed matter\nemail: sheharyar [at] giki.edu.pk",
+    "crumbs": [
+      "Home",
+      "People"
+    ]
+  },
+  {
+    "objectID": "C0resources/ase/home_ase.html",
+    "href": "C0resources/ase/home_ase.html",
+    "title": "ASE (and pymatgen)",
+    "section": "",
+    "text": "ASE and pymatgen are both powerful libraries. Both offer interfaces for handling files generated by DFT codes such as VASP and Quantum ESPRESSO.\nOver here we will share useful routines that can be used to handle data.",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "ASE"
+    ]
+  },
+  {
+    "objectID": "people.html#dr.-john-doe",
+    "href": "people.html#dr.-john-doe",
+    "title": "DRN Group",
+    "section": "Dr. John Doe",
+    "text": "Dr. John Doe\nComputational Materials Scientist\n\nEmail: johndoe@email.com\nWebsite: example.com\nAffiliation: XYZ University",
+    "crumbs": [
+      "Home",
+      "People"
+    ]
+  },
+  {
+    "objectID": "people.html#sheharyar-pervez-1",
+    "href": "people.html#sheharyar-pervez-1",
+    "title": "DRN Group",
+    "section": "",
+    "text": "PhD Researcher / Computational Materials Scientist\nResearch Focus:\nElectronic properties of halide perovskites and defect tolerance in semiconductor materials.\nTechnical Stack:\nFortran Quantum Espresso HPC (CPU/GPU) Python\n{{&lt; fa brands github &gt;}} GitHub | {{&lt; fa graduation-cap &gt;}} Scholar",
+    "crumbs": [
+      "Home",
+      "People"
+    ]
+  },
+  {
+    "objectID": "index.html#when-the-mood-is-less-poetic-we-explain-drn-as-being-data-driven-research-in-nanomaterials.",
+    "href": "index.html#when-the-mood-is-less-poetic-we-explain-drn-as-being-data-driven-research-in-nanomaterials.",
+    "title": "DRN Group",
+    "section": "When the mood is less poetic, we explain DRN as being: Data-driven Research in Nanomaterials.",
+    "text": "When the mood is less poetic, we explain DRN as being: Data-driven Research in Nanomaterials.\nThe website is still under-development and new content will be added over time.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "C0atomism/lectures/01epicurus.html",
+    "href": "C0atomism/lectures/01epicurus.html",
+    "title": "Epicurus and Greek Atomism",
+    "section": "",
+    "text": "Epicurus believed in an eternal universe, where anything that comes into being must come from something that exists, all that is destroyed does not cease to exist, but all that exists always will.[10] He held that this universe consists of two things; matter and void.[11] Matter is made up of atoms, tiny bodies that are unable to be broken down into smaller parts, that only have the unchanging qualities of shape, size, and weight.[12] There are an infinite number of these atoms, though only a finite number of types, and an infinite amount of void. Because of the infinite supply of atoms, there are an infinite number of worlds, each separated from each other by vast areas of void, some of which could be vastly different from our own.[13]\nThe atoms are in constant motion through the void, moving in one of four different ways. They can collide with each other, either bouncing back, or joining together and vibrating to maintain the overall shape of the larger object.[14] When not prevented by other atoms, all atoms naturally move at the same speed downwards in relation to the rest of the world, though they must also occasionally “swerve” randomly out of their usual path; without the swerving motion, atoms would never collide with each other from their parallel trajectory downwards.[15] Epicurus argued that the swerve, which was absent in Democritus’ earlier atomic theory, was also what accounted for humanity’s free will; if it were not for the swerve, humans would be subject to a never-ending chain of cause and effect.[16]\nEpicurus also believed that senses relied on atoms; which were constantly being emitted from every object. Atoms themselves, which only had size, shape, and weight, did not possess the qualities perceived by the senses, such as redness, but instead would cause the observer to experience them in their mind. Because atoms moved sufficiently quickly, this would be experienced as a continuous sensation of vision."
+  },
+  {
+    "objectID": "C0atomism/atomism_home.html",
+    "href": "C0atomism/atomism_home.html",
+    "title": "Atomism: Ancient to Modern",
+    "section": "",
+    "text": "We believe we owe a debt to history. In these pages we shall go over the history of atomism, from its origins in ancient Greece to its more modern forms.\n\nEpicurus and Greek atomism\nIslamic atomism: Ashari and Maturidi\nAtoms: Experimental Evidence\nAtoms: In Silico",
+    "crumbs": [
+      "Home",
+      "Atomism",
+      "Atomism - Ancient to Modern"
+    ]
+  },
+  {
+    "objectID": "C0atomism/lectures/02islamic.html",
+    "href": "C0atomism/lectures/02islamic.html",
+    "title": "Islamic Atomism",
+    "section": "",
+    "text": "Coming soon"
+  },
+  {
+    "objectID": "C0atomism/lectures/in_silico.html",
+    "href": "C0atomism/lectures/in_silico.html",
+    "title": "Atoms: In Silico",
+    "section": "",
+    "text": "Coming soon"
+  },
+  {
+    "objectID": "C0atomism/lectures/experiments.html",
+    "href": "C0atomism/lectures/experiments.html",
+    "title": "Experimental Evidence of Atoms",
+    "section": "",
+    "text": "Coming soon"
   }
 ]

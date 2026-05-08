@@ -1,3 +1,31 @@
-For contact, email:
 
-sheharyar [at] giki.edu.pk
+
+<style>
+p.small {
+  line-height: 1.2;
+}
+
+p.big {
+  line-height: 1.8;
+}
+</style>
+
+
+<p class="small">
+[Sheharyar Pervez]{style="font-family:Roboto; font-weight:bold;"}<br>
+[(Computational Materials Scientist)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.9em;"} <br>
+
+::::{.columns}
+:::{.column width=60%}
+I am a computational materials scientist working at the intersection of materials modeling, condensed matter physics, and data-driven discovery. My research combines density functional theory (DFT), molecular dynamics, and high-throughput computational approaches to understand and design advanced materials, with a particular focus on defects, electronic structure, and functional materials such as metal–organic frameworks and halide perovskites. I am also interested in the growing role of artificial intelligence and machine learning in accelerating materials research and scientific discovery.
+:::
+:::{.column width=10%}
+:::
+:::{.column width=30%}
+![](_figs/hugorheinholdchimp.png){.rounded-circle width="100%"}
+
+:::
+::::
+
+</p>
+

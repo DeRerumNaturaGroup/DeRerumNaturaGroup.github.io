@@ -1,0 +1,14 @@
+---
+title: Epicurus and Greek Atomism
+---
+
+Epicurus was a key figure in the history of atomism. He revived and transformed the atomism of Democritus into a comprehensive philosophy of nature grounded in materialism and natural causation. By introducing the concept of the atomic “swerve,” he softened strict determinism and connected atomism to human freedom and ethical life. 
+
+> Epicurus believed in an eternal universe, where anything that comes into being must come from something that exists, all that is destroyed does not cease to exist, but all that exists always will.He held that this universe consists of two things; matter and void.[11] Matter is made up of atoms, tiny bodies that are unable to be broken down into smaller parts, that only have the unchanging qualities of shape, size, and weight. There are an infinite number of these atoms, though only a finite number of types, and an infinite amount of void. Because of the infinite supply of atoms, there are an infinite number of worlds, each separated from each other by vast areas of void, some of which could be vastly different from our own.
+
+> The atoms are in constant motion through the void, moving in one of four different ways. They can collide with each other, either bouncing back, or joining together and vibrating to maintain the overall shape of the larger object.[14] When not prevented by other atoms, all atoms naturally move at the same speed downwards in relation to the rest of the world, though they must also occasionally "swerve" randomly out of their usual path; without the swerving motion, atoms would never collide with each other from their parallel trajectory downwards.[15] Epicurus argued that the swerve, which was absent in Democritus' earlier atomic theory, was also what accounted for humanity's free will; if it were not for the swerve, humans would be subject to a never-ending chain of cause and effect.
+
+> Epicurus also believed that senses relied on atoms; which were constantly being emitted from every object. Atoms themselves, which only had size, shape, and weight, did not possess the qualities perceived by the senses, such as redness, but instead would cause the observer to experience them in their mind. Because atoms moved sufficiently quickly, this would be experienced as a continuous sensation of vision.
+
+Source: [Wikipedia/Epicurus](https://en.wikipedia.org/wiki/Epicurus)
+

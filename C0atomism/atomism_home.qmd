@@ -1,0 +1,10 @@
+---
+title: "Atomism: Ancient to Modern"
+---
+
+We believe we owe a debt to history. In these pages we shall go over the history of atomism, from its origins in ancient Greece to its more modern forms. 
+
+- [Epicurus and Greek atomism](lectures/01epicurus.qmd)
+- [Islamic atomism: Ashari and Maturidi](lectures/02islamic.qmd)
+- [Atoms: Experimental Evidence](lectures/experiments.qmd)
+- [Atoms: In Silico](lectures/in_silico.qmd)

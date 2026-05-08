@@ -51,6 +51,10 @@ website:
             text: LAMMPS
           - href: C0resources/ase/home_ase.qmd
             text: ASE
+      - section: "Atomism"
+        contents:
+          - href: C0atomism/atomism_home.qmd
+            text: Atomism - Ancient to Modern
 format:
   html:
     toc: true
