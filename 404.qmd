@@ -8,3 +8,5 @@ sidebar: false
 
 ![](_figs/404/ghalib1.png){width=40%}
 
+
+![](_figs/404/nijatkatalib-ghalib.jpeg){width=40%}
