@@ -5,4 +5,4 @@ title: Form
 
 Please fill out the form below:
 
-<iframe src="https://forms.gle/X9MxoTPtx5mLnV2p6" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://forms.gle/X9MxoTPtx5mLnV2p6" width="80%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>

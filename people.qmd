@@ -13,7 +13,7 @@ p.big {
 
 <p class="small">
 [Sheharyar Pervez]{style="font-family:Roboto; font-weight:bold;"}<br>
-[(Computational Materials Scientist)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.9em;"} <br>
+[(Computational Materials)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.9em;"} <br>
 
 ::::{.columns}
 :::{.column width=60%}
@@ -38,7 +38,7 @@ I am a computational materials scientist working at the intersection of material
 
 ::::{.columns}
 :::{.column width=60%}
-
+Dr. Nasir Javed’s current research interests include gaining a deeper understanding of the interaction between light and advanced functional optical materials at the nanoscale for implementation in optoelectronic devices, photonics, and organic optoelectronics. He conducts research into the optical and photophysical properties of nanostructured materials, with a particular emphasis on their applications in light-emitting devices and solar cells. His portfolio of materials is diverse and includes organic semiconductors, carbon nanostructures, nanocrystals, environmentally friendly materials, and piezoelectric materials. To achieve our research goals, we employ a range of experimental techniques for synthesizing, fabricating, and characterizing materials of interest alongside quantum chemistry simulation and machine learning algorithm for materials discovery.
 :::
 :::{.column width=10%}
 :::
