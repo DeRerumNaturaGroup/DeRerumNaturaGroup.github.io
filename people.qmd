@@ -13,7 +13,7 @@ p.big {
 
 <p class="small">
 [Sheharyar Pervez]{style="font-family:Roboto; font-weight:bold;"}<br>
-[(Computational Materials)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.9em;"} <br>
+[(Condensed Matter | Computational Materials)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;"} <br>
 
 ::::{.columns}
 :::{.column width=60%}
@@ -34,7 +34,7 @@ I am a computational materials scientist working at the intersection of material
 
 <p class="small">
 [Nasir Javed]{style="font-family:Roboto; font-weight:bold;"}<br>
-[(Spectroscopy)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.9em;"} <br>
+[(Optoelectronics | Energy materials)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;"} <br>
 
 ::::{.columns}
 :::{.column width=60%}
@@ -57,11 +57,11 @@ Dr. Nasir Javed’s current research interests include gaining a deeper understa
 
 <p class="small">
 [Misbah Shaheen]{style="font-family:Roboto; font-weight:bold;"}<br>
-[(Defect Modeling)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.9em;"} <br>
+[(Computational Materials | Condensed Matter)]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;"} <br>
 
 ::::{.columns}
 :::{.column width=60%}
-
+I am a PhD researcher in computational materials science specializing in first-principles simulations based on Density Functional Theory (DFT). My research focuses on anion-exchanged and defect-engineered halide perovskites for next-generation optoelectronic and energy applications. My experience includes computational materials modeling, quantum mechanical simulations, and the use of high-performance computing techniques for materials design and analysis. My research interests further extend to advanced theoretical concepts including electron–phonon coupling, polaron formation, and low-dimensional as well as topological materials, with a broader aim of understanding and designing functional materials for emerging technologies.
 :::
 :::{.column width=10%}
 :::
