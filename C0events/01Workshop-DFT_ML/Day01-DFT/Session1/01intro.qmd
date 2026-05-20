@@ -1,0 +1,12 @@
+---
+title: First lectures
+---
+
+::::{.dd}
+:::{.dd-head onclick="toggleBox(this)"}
+SCF
+:::
+:::{.dd-box}
+blah blah
+:::
+::::
