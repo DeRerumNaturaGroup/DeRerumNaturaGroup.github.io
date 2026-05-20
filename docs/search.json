@@ -142,14 +142,14 @@
     "href": "D0quartoexamples/leaderline/example1.html#section",
     "title": "DRN Group",
     "section": "",
-    "text": "Structure Generation\n\n\n\nBulk Pristine Supercell\nDefective Supercell\n\n\n\n\n\nCalculations\n\n\n\nRelaxation (Only Pristine)\nSCF (Pristine + Doped)\nRelaxation (Doped)\nPDOS\nSpin Density\n\n\n\n\n\n\nDefects Processing\n\n\n\nPhase Stability\nChemical Potential Diagrams\nDefect Formation Energies\nCharge State Transition Levels\n\n\n\n\n\nDistortions\n\n\n\nTM-I Bond length\nVan Vleck Modes\nBong length Distortion\nEffective Coordination Number\nJT Distortion Magnitude\n\n\n\nVan Vleck Calculator\n\n\n\n\n\nDefect-Structure Relationship"
+    "text": "Structure Generation\n\n\n\nBulk Pristine Supercell\nDefective Supercell\n\n\n\n\n\nCalculations\n\n\n\nRelaxation (Only Pristine)\nSCF (Pristine + Doped)\nRelaxation (Doped)\nPDOS\nSpin Density\n\n\n\n\n\n\nDefects Processing\n\n\n\nPhase Stability\nChemical Potential Diagrams\nDefect Formation Energies\nCharge State Transition Levels\n\n\n\n\n\nDistortions\n\n\n\nTM-I Bond length\nVan Vleck Modes\nBong length Distortion\nEffective Coordination Number\nJT Distortion Magnitude\n\n\n\nVan Vleck Calculator\n\n\n\n\nDefect-Structure Relationship"
   },
   {
     "objectID": "D0quartoexamples/leaderline/example2reveal.html#section",
     "href": "D0quartoexamples/leaderline/example2reveal.html#section",
     "title": "DRN Group",
     "section": "",
-    "text": "Transition Metals\n\n\nSc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, and Zn\n\n\n\n\nLigand\n\n\nIodine\n\n\n\n\nAtomic Properties\n\n\n\nIonic Radii\nd-electron count\n\n\n\n\n\nTM and Ligand Bonding Factors\n\n\n\nOrbitals Energies and Overlap\nElectronegativity Difference\n\n\n\n\n\nCalculated Energies\n\n\n\nExchange Correlation\nEwald Electrostatics\nHartree Repulsion\n\n\n\n\n\nChemical Environment (Including Pb and Cs)\n\n\n\nChemical Potentials\nSynthesis Conditions\n\n\n\n\n\nTM-I Bondlength\n\n\n\n\nBond Nature\n\n\nIonic or Covalent\n\n\n\n\nStrain and Lattice Distortions\n\n\n\nTM Octahedra (Symmetric Distortion)\nAdjacent Pb Octahedra (Assymetric Distortion)\n\n\n\n\n\nTotal Energy Balance\n\n\n\n\nStability of Defect"
+    "text": "Transition Metals\n\n\n\n\n\nLigand (Iodine)\n\n\n\n\n\nAtomic Properties\n\n\n\nIonic Radii\nd-electron count\n\n\n\n\n\nTM and Ligand Bonding Factors\n\n\n\nOrbitals Energies and Overlap\nElectronegativity Difference\n\n\n\n\n\nCalculations\n\n\n\nEnergies\nCharge Distributions\n\n\n\n\n\nChemical Environment\n\n\n\nChemical Potentials (Including Pb and Cs)\nSynthesis Conditions\n\n\n\n\n\nTM-I Bondlength\n\n\n\n\nBond Nature\n\n\nIonic or Covalent\n\n\n\n\nStrain and Lattice Distortions\n\n\n\nTM Octahedra (Symmetric Distortion)\nAdjacent Pb Octahedra (Assymetric Distortion)\n\n\n\n\n\nTotal Energy Balance\n\n\n\n\nStability of Defect"
   },
   {
     "objectID": "C0resources/QE/QE.html",

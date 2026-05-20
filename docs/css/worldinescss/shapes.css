@@ -70,12 +70,13 @@
   padding: 0.1em;
   border-bottom: 1px solid #ccc;
   margin: 0.3em;
+  font-size: 1.3em;
 }
 
 .bbcbox .bbcbody {
   padding: 0.1em;
   margin: 0.3em;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 

@@ -38,7 +38,7 @@ Structure Generation
 
 
 
-:::{#box2A .bbccp style="width:400px; height:450px; position:absolute; top:700px; left:700px; font-family: 'EB Garamond It';" }
+:::{#box2A .bbccp style="width:400px; height:450px; position:absolute; top:715px; left:700px; font-family: 'EB Garamond It';" }
 :::{#node2Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; background-color: #b6d1b6ff"}
 Calculations
 :::
@@ -57,7 +57,7 @@ Calculations
 :::
 
 
-:::{#box3A .bbccp style="width:500px; height:410px; position:absolute; top:500px; left:1500px; font-family: 'EB Garamond It';" }
+:::{#box3A .bbccp style="width:500px; height:410px; position:absolute; top:450px; left:1500px; font-family: 'EB Garamond It';" }
 :::{#node3Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; background-color: Lavender"}
 Defects Processing
 :::
@@ -70,7 +70,7 @@ Defects Processing
 :::
 
 
-:::{#box4A .bbccp style="width:500px; height:500px; position:absolute; top:1000px; left:1500px; font-family: 'EB Garamond It';" }
+:::{#box4A .bbccp style="width:500px; height:500px; position:absolute; top:950px; left:1500px; font-family: 'EB Garamond It';" }
 :::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; background-color: Lavender"}
 Distortions
 :::
@@ -87,23 +87,31 @@ Van Vleck Calculator
 :::
 
 
-:::{#box4A .bbccp style="width:500px; height:300px; position:absolute; top:850px; left:2500px; font-family: 'EB Garamond It';" }
-:::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown; border-top: 0.4em solid Brown; text-align:center;"}
-<!-- - Electronic Structure
-- Defect Stability
-- Structure Stability -->
+:::{#box5A .bbccp style="width:500px; height:300px; position:absolute; top:870px; left:2400px; font-family: 'EB Garamond It';" }
+:::{#node5Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown; border-top: 0.4em solid Brown; text-align:center;"}
+
 Defect-Structure Relationship
 :::
-:::{#node4Aii .bbccpbody style="font-family: 'EB Garamond Bd'; border-top: 0.4em solid Brown; color: Brown;"}
+:::{#node5Aii .bbccpbody style="font-family: 'EB Garamond Bd'; border-top: 0.4em solid Brown; color: Brown;"}
+
+:::
+:::
+
+:::{#box6A .bbccp style="width:700px; height:800px; position:absolute; top:400px; left:1450px; font-family: 'EB Garamond It'; background: transparent;" }
+<!-- :::{#node4Ai .bbccpheader style="font-family: 'EB Garamond SC12'; border-bottom: white; color: Brown; border-top: 0.4em solid Brown; text-align:center;"}
+
+::: -->
+
+:::{#node6Aii .bbccpbody style="font-family: 'EB Garamond Bd'; border-top: 0.4em solid Lavender; width:570px; height:1050px; border-right: 0.4em solid Lavender; border-bottom: 0.4em solid Lavender; border-left: 0.4em solid Lavender; color: Brown;"}
 
 :::
 :::
 
 
 <!-- LEaderline starts from 1A -->
-[]{.leaderline start='#box1A' end='#box2A' start-socket='right' end-socket='left' lineid='example' color='#B27A01' size=3 path='straight'}
+[]{.leaderline start='#box1A' end='#box2A' start-socket='right' end-socket='left' lineid='example' color='#436675' size=5 path='straight'}
 
-[]{.leaderline start='#box2A' end='#box3A' start-socket='right' end-socket='left' lineid='example' size=3 color='#072633' path='straight'}
+[]{.leaderline start='#box2A' end='#node6Aii' start-socket='right' end-socket='left' lineid='example' size=5 color='#436675' path='straight'}
 
-[]{.leaderline start='#node2Aiii' end='#node4Ai' start-socket='bottom' end-socket='top' lineid='example' size=3 color='brown' path='straight'}
+[]{.leaderline start='#node6Aii' end='#node5Ai' start-socket='right' end-socket='left' lineid='example' size=5 color='brown' path='straight'}
 

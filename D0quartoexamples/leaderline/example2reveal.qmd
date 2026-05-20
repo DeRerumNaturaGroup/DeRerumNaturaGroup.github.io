@@ -19,96 +19,95 @@ revealjs-plugins:
   - leader-line
 ---
 
-## {background-color="#F6F7F8"}
+## 
+<!-- {background-color="#F6F7F8"} -->
 <!-- <div class="bbcbox"  id="box1" >
 <div class="bbcheader" id="nodeA4" style="">Kubo Formula</div>
 <div class="bbcbody" id="nodeA4" style="">Connects how time dependent perturbations may impact expectation values of operator $\hat A$</div>
 </div> -->
 
 
-:::{#box1A .bbcbox style="width:400px; height:200px; position:absolute; top:200px; left:0px; font-family: 'EB Garamond It';" }
-:::{#node1Ai .bbcheader style="font-family: 'EB Garamond SC12';"}
+:::{#box1A .bbcbox style="width:400px; height:130px; position:absolute; top:200px; left:0px; font-family: 'EB Garamond It';" }
+:::{#node1Ai .bbcheader style="font-family: 'NicemilkDEMO'; border-bottom: white;"}
 Transition Metals
 :::
-:::{#node1Aii .bbcbody style="font-family: 'EB Garamond Bd';"}
-Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, and Zn
-:::
+<!-- :::{#node1Aii .bbcbody style="font-family: 'NicemilkDEMO';"}
+
+::: -->
 :::
 
-:::{#box1B .bbcbox style="width:400px; height:200px;position:absolute; top:600px; left:0px; font-family: 'EB Garamond It';" }
-:::{#node1Bi .bbcheader style="font-family: 'EB Garamond SC12';"}
-Ligand
+:::{#box1B .bbcbox style="width:400px; height:130px;position:absolute; top:600px; left:0px; font-family: 'EB Garamond It';" }
+:::{#node1Bi .bbcheader style="font-family: 'NicemilkDEMO'; border-bottom: white;"}
+Ligand (Iodine)
 :::
-:::{#node1Bii .bbcbody style="font-family: 'EB Garamond Bd';"}
+<!-- :::{#node1Bii .bbcbody style="font-family: 'NicemilkDEMO';"}
 Iodine
-:::
+::: -->
 :::
 
 
-:::{#box2A .bbcbox style="width:600px; height:210px; position:absolute; top:50px; left:700px; font-family: 'EB Garamond It'; background-color:#F6F7F8; color: brown;" }
-:::{#node2Ai .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
+:::{#box2A .bbcbox style="width:600px; height:230px; position:absolute; top:50px; left:700px; font-family: 'EB Garamond It'; background-color:#F6F7F8; color: brown;" }
+:::{#node2Ai .bbcheader style="font-family: 'NicemilkDEMO'; color: brown; letter-spacing: 0.1em;"}
 Atomic Properties
 :::
-:::{#node2Aii .bbcbody style="font-family: 'EB Garamond Bd';"}
+:::{#node2Aii .bbcbody style="font-family: 'Shadows Light Reg';"}
 - Ionic Radii
 - d-electron count
 :::
 :::
 
-:::{#box2B .bbcbox style="width:600px; height:210px; position:absolute; top:350px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
-:::{#node2Bi .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
+:::{#box2B .bbcbox style="width:600px; height:230px; position:absolute; top:350px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node2Bi .bbcheader style="font-family: 'NicemilkDEMO'; color: brown; letter-spacing: 0.1em;"}
 TM and Ligand Bonding Factors
 :::
-:::{#node2Bii .bbcbody style="font-family: 'EB Garamond Bd';"}
+:::{#node2Bii .bbcbody style="font-family: 'Shadows Light Reg';"}
 - Orbitals Energies and Overlap
 - Electronegativity Difference
 :::
 :::
 
 
-:::{#box2C .bbcbox style="width:600px; height:260px; position:absolute; top:650px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
-:::{#node2Ci .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
-Calculated Energies
+:::{#box2C .bbcbox style="width:600px; height:250px; position:absolute; top:650px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node2Ci .bbcheader style="font-family: 'NicemilkDEMO'; color: brown; letter-spacing: 0.1em;"}
+Calculations
 :::
-:::{#node2Cii .bbcbody style="font-family: 'EB Garamond Bd';"}
-- Exchange Correlation
-- Ewald Electrostatics
-- Hartree Repulsion
+:::{#node2Cii .bbcbody style="font-family: 'Shadows Light Reg';"}
+- Energies
+- Charge Distributions
 :::
 :::
 
 :::{#box2D .bbcbox style="width:500px; height:270px; position:absolute; top:1000px; left:700px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
-:::{#node2Di .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em;"}
+:::{#node2Di .bbcheader style="font-family: 'NicemilkDEMO'; color: brown; letter-spacing: 0.1em;"}
 Chemical Environment 
-(Including Pb and Cs)
 :::
-:::{#node2CDii .bbcbody style="font-family: 'EB Garamond Bd';"}
-- Chemical Potentials 
+:::{#node2CDii .bbcbody style="font-family: 'Shadows Light Reg';"}
+- Chemical Potentials (Including Pb and Cs)
 - Synthesis Conditions
 :::
 :::
 
 :::{#box3A .bbcbox style="width:300px; height:130px; position:absolute; top:300px; left:1500px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
-:::{#node3Ai .bbcheader style="font-family: 'Shadows Light Reg'; color: brown; letter-spacing: 0.1em; border-bottom: white;"}
+:::{#node3Ai .bbcheader style="font-family: 'NicemilkDEMO'; color: brown; letter-spacing: 0.1em; border-bottom: white;"}
 TM-I Bondlength
 :::
 :::
 
 :::{#box3B .bbcbox style="width:300px; height:200px; position:absolute; top:600px; left:1500px; font-family: 'EB Garamond It'; color: brown; background-color: #F6F7F8; color: brown;" }
-:::{#node3Bi .bbcheader style="font-family: 'Shadows Light Reg'; color: brown;"}
+:::{#node3Bi .bbcheader style="font-family: 'NicemilkDEMO'; color: brown;"}
 Bond Nature
 :::
-:::{#node3Bii .bbcbody style="font-family: 'EB Garamond Bd';"}
+:::{#node3Bii .bbcbody style="font-family: 'Shadows Light Reg'; "}
 Ionic or Covalent
 :::
 :::
 
 
-:::{#box4A .bbcbox style="width:600px; height:270px; position:absolute; top:600px; left:2000px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
-:::{#node4Ai .bbcheader style="font-family: 'Shadows Light Reg'; color: brown;"}
+:::{#box4A .bbcbox style="width:560px; height:270px; position:absolute; top:600px; left:2000px; font-family: 'EB Garamond It'; background-color: #F6F7F8; color: brown;" }
+:::{#node4Ai .bbcheader style="font-family: 'NicemilkDEMO'; color: brown;"}
 Strain and Lattice Distortions
 :::
-:::{#node4Aii .bbcbody style="font-family: 'EB Garamond Bd';"}
+:::{#node4Aii .bbcbody style="font-family: 'Shadows Light Reg';"}
 - TM Octahedra (Symmetric Distortion)
 - Adjacent Pb Octahedra (Assymetric Distortion)
 :::
@@ -116,13 +115,13 @@ Strain and Lattice Distortions
 
 
 :::{#box5A .bbcbox style="width:400px; height:130px; position:absolute; top:950px; left:1700px; font-family: 'EB Garamond It';" }
-:::{#node5Ai .bbcheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+:::{#node5Ai .bbcheader style="font-family: 'NicemilkDEMO'; border-bottom: white;"}
 Total Energy Balance
 :::
 :::
 
 :::{#box6A .bbcbox style="width:400px; height:130px; position:absolute; top:1300px; left:1450px; font-family: 'EB Garamond It';" }
-:::{#node6Ai .bbcheader style="font-family: 'EB Garamond SC12'; border-bottom: white;"}
+:::{#node6Ai .bbcheader style="font-family: 'NicemilkDEMO'; border-bottom: white;"}
 Stability of Defect
 :::
 :::
