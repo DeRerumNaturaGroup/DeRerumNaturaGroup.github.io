@@ -6,4 +6,5 @@ DRN is a research group active at GIK Institute. As mentioned on the home page, 
 
 The DRN group studies properties of matter in the computational realm. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.
 
-The website is still under-development and new information will be forthcoming. 
+
+Email: [drn@giki.edu.pk]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;"} <br>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d3105735129c7a3dfcef26b2d42d6add.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8d46f82fdf11f034aa719052a77560f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1222d93258a9cfd6575100443884d280.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -246,95 +247,50 @@ function drawLeader({
 </script>
 
 <script>
-
 window.addEventListener('load', function() {
-
   const flowLineStyle = {
-
     color: 'black',
-
     size: 2.75,
-
     path: 'fluid',
-
     endPlug: 'arrow',
-
     dropShadow: true
-
   };
 
-
-
   document.querySelectorAll('[data-connect]').forEach(function(el) {
-
     const targets = el.dataset.connect.split(',').map(function(t) { return t.trim(); });
 
-
-
     const labelMap = {};
-
     if (el.dataset.label) {
-
       el.dataset.label.split(';').forEach(function(pair) {
-
         const parts = pair.split(':').map(function(s) { return s.trim(); });
-
         const key = parts[0], value = parts[1];
-
         if (key && value) {
-
           labelMap[key] = value;
-
         }
-
       });
-
     }
 
-
-
     targets.forEach(function(targetId) {
-
       const target = document.getElementById(targetId);
-
       if (target) {
-
         const options = Object.assign({}, flowLineStyle);
 
-
-
         const labelText = labelMap[targetId];
-
         if (labelText) {
-
           options.middleLabel = LeaderLine.pathLabel(labelText, {
-
             fontSize: '18px',
-
             color: 'black',
-
             backgroundColor: 'rgba(255,255,255,0.85)',
-
             padding: 4
-
           });
-
         }
 
-
-
         new LeaderLine(el, target, options);
-
       }
-
     });
-
   });
-
 });
-
 </script>
-
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -350,7 +306,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -382,6 +338,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">DRN Group</span>
     </a>
@@ -454,7 +412,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -496,13 +455,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
@@ -519,6 +478,23 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./C0resources/ase/home_ase.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ASE</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Atomism</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C0atomism/atomism_home.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Atomism - Ancient to Modern</span></a>
   </div>
 </li>
       </ul>
@@ -561,7 +537,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1765276872554" data-listing-reading-time-sort="2" data-listing-word-count-sort="310">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1779635668564" data-listing-reading-time-sort="2" data-listing-word-count-sort="310">
 <a href="./C0research/hopscotch.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="_figs\research\TB-network.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -577,7 +553,7 @@ Tight-binding insights into ILHPs
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1749841733937" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1756473661417" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
 <a href="./C0research/research.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="/_figs/hugorheinholdchimpsmall.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -593,7 +569,7 @@ Research
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1765276872555" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1779635668566" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
 <a href="./C0research/meg.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="/_figs/hugorheinholdchimpsmall.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -609,7 +585,7 @@ Mutli-Exciton Generation
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1765276872552" data-listing-reading-time-sort="1" data-listing-word-count-sort="125">
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1779635668563" data-listing-reading-time-sort="1" data-listing-word-count-sort="125">
 <a href="./C0research/defects.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="/_figs/hugorheinholdchimpsmall.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -679,13 +655,14 @@ Defects in Perovskites
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

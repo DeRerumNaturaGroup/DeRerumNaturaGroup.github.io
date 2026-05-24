@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,14 +32,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-343313b17078e6c2acf5a6c8a244e039.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d3105735129c7a3dfcef26b2d42d6add.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8d46f82fdf11f034aa719052a77560f2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1222d93258a9cfd6575100443884d280.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -215,95 +216,50 @@ function drawLeader({
 </script>
 
 <script>
-
 window.addEventListener('load', function() {
-
   const flowLineStyle = {
-
     color: 'black',
-
     size: 2.75,
-
     path: 'fluid',
-
     endPlug: 'arrow',
-
     dropShadow: true
-
   };
 
-
-
   document.querySelectorAll('[data-connect]').forEach(function(el) {
-
     const targets = el.dataset.connect.split(',').map(function(t) { return t.trim(); });
 
-
-
     const labelMap = {};
-
     if (el.dataset.label) {
-
       el.dataset.label.split(';').forEach(function(pair) {
-
         const parts = pair.split(':').map(function(s) { return s.trim(); });
-
         const key = parts[0], value = parts[1];
-
         if (key && value) {
-
           labelMap[key] = value;
-
         }
-
       });
-
     }
 
-
-
     targets.forEach(function(targetId) {
-
       const target = document.getElementById(targetId);
-
       if (target) {
-
         const options = Object.assign({}, flowLineStyle);
 
-
-
         const labelText = labelMap[targetId];
-
         if (labelText) {
-
           options.middleLabel = LeaderLine.pathLabel(labelText, {
-
             fontSize: '18px',
-
             color: 'black',
-
             backgroundColor: 'rgba(255,255,255,0.85)',
-
             padding: 4
-
           });
-
         }
 
-
-
         new LeaderLine(el, target, options);
-
       }
-
     });
-
   });
-
 });
-
 </script>
-
 
 
 <link rel="stylesheet" href="css/buttons.css">
@@ -322,6 +278,8 @@ window.addEventListener('load', function() {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">DRN Group</span>
     </a>
@@ -394,7 +352,8 @@ window.addEventListener('load', function() {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./_figs/logo.png" alt="Mysteries of physics, mathematics, and life" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -436,13 +395,13 @@ window.addEventListener('load', function() {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./C0resources/QE/QE.html" class="sidebar-item-text sidebar-link">
@@ -463,6 +422,23 @@ window.addEventListener('load', function() {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Atomism</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./C0atomism/atomism_home.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Atomism - Ancient to Modern</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -477,8 +453,65 @@ window.addEventListener('load', function() {
 
 
 
-<p>For contact, email:</p>
-<p>sheharyar [at] giki.edu.pk</p>
+<style>
+p.small {
+  line-height: 1.2;
+}
+
+p.big {
+  line-height: 1.8;
+}
+</style>
+<p class="small">
+</p><p><span style="font-family:Roboto; font-weight:bold;">Sheharyar Pervez</span><br> <span style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;">(Condensed Matter | Computational Materials)</span> <br> Email: <span style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;">sheharyar [at] giki.edu.pk</span> <br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>I am a computational materials scientist working at the intersection of materials modeling, condensed matter physics, and data-driven discovery. My research combines density functional theory (DFT), molecular dynamics, and high-throughput computational approaches to understand and design advanced materials, with a particular focus on defects, electronic structure, and functional materials such as metal–organic frameworks and halide perovskites. I am also interested in the growing role of artificial intelligence and machine learning in accelerating materials research and scientific discovery.</p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:30%;">
+<p><img src="_figs/hugorheinholdchimp.png" class="rounded-circle img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p></p>
+<!--  -->
+<p class="small">
+</p><p><span style="font-family:Roboto; font-weight:bold;">Nasir Javed</span><br> <span style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;">(Optoelectronics | Energy materials)</span> <br> Email: <span style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;">nasir.javed [at] giki.edu.pk</span> <br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Dr.&nbsp;Nasir Javed’s current research interests include gaining a deeper understanding of the interaction between light and advanced functional optical materials at the nanoscale for implementation in optoelectronic devices, photonics, and organic optoelectronics. He conducts research into the optical and photophysical properties of nanostructured materials, with a particular emphasis on their applications in light-emitting devices and solar cells. His portfolio of materials is diverse and includes organic semiconductors, carbon nanostructures, nanocrystals, environmentally friendly materials, and piezoelectric materials. To achieve our research goals, we employ a range of experimental techniques for synthesizing, fabricating, and characterizing materials of interest alongside quantum chemistry simulation and machine learning algorithm for materials discovery.</p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:30%;">
+<p><img src="_figs/hugorheinholdchimp.png" class="rounded-circle img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p></p>
+<!--  -->
+<p class="small">
+</p><p><span style="font-family:Roboto; font-weight:bold;">Misbah Shaheen</span><br> <span style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;">(Computational Materials | Condensed Matter)</span> <br> Email: <span style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;">misbah.shaheen [at] giki.edu.pk</span> <br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>I am a PhD researcher in computational materials science specializing in first-principles simulations based on Density Functional Theory (DFT). My research focuses on anion-exchanged and defect-engineered halide perovskites for next-generation optoelectronic and energy applications. My experience includes computational materials modeling, quantum mechanical simulations, and the use of high-performance computing techniques for materials design and analysis. My research interests further extend to advanced theoretical concepts including electron–phonon coupling, polaron formation, and low-dimensional as well as topological materials, with a broader aim of understanding and designing functional materials for emerging technologies.</p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:30%;">
+<p><img src="_figs/hugorheinholdchimp.png" class="rounded-circle img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p></p>
+<p class="small">
+</p><p><span style="font-family:Roboto; font-weight:bold;">Rao Uzair</span><br> <span style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;">(Computational Materials | Condensed Matter)</span> <br> <!-- Email: [misbah.shaheen [at] giki.edu.pk]{style="font-family:Roboto; font-weight:normal; color:gray; font-size:0.85em;"} <br> --></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>I am a PhD researcher in computational materials science specializing in first-principles simulations based on Density Functional Theory (DFT). My research focuses on anion-exchanged and defect-engineered halide perovskites for next-generation optoelectronic and energy applications. My experience includes computational materials modeling, quantum mechanical simulations, and the use of high-performance computing techniques for materials design and analysis. My research interests further extend to advanced theoretical concepts including electron–phonon coupling, polaron formation, and low-dimensional as well as topological materials, with a broader aim of understanding and designing functional materials for emerging technologies.</p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:30%;">
+<p><img src="_figs/hugorheinholdchimp.png" class="rounded-circle img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p></p>
 
 
 
@@ -534,13 +567,14 @@ window.addEventListener('load', function() {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
