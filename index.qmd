@@ -29,5 +29,3 @@ At DRN we are concerned with the nature of things as well, albeit in the computa
 
 Thus when the mood is less poetic, we explain DRN as being: <br> [**Data-driven Research in Nanomaterials**]{style="color:white; background-color:#c83737; padding:0.2em"}.
 
----
-The website is still under-development and new content will be added over time. 
