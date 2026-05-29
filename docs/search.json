@@ -1,10 +1,88 @@
 [
   {
-    "objectID": "C0publications/home_calculusI.html",
-    "href": "C0publications/home_calculusI.html",
-    "title": "Calculus I",
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
     "section": "",
-    "text": "This is the home page for calculus I (MT-101). All assignments, announcements, and other relevant materials will be posted here."
+    "text": "This page is still under construction. Click on the thumbnails below for more detail.\n\n\n\n\n\n\n\n\n\n\n\n\nTight-binding insights into ILHPs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutli-Exciton Generation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefects in Perovskites\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Research"
+    ]
+  },
+  {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Sheharyar Pervez (Condensed Matter | Computational Materials)  Email: sheharyar [at] giki.edu.pk \n\n\nI am a computational materials scientist working at the intersection of materials modeling, condensed matter physics, and data-driven discovery. My research combines density functional theory (DFT), molecular dynamics, and high-throughput computational approaches to understand and design advanced materials, with a particular focus on defects, electronic structure, and functional materials such as metal–organic frameworks and halide perovskites. I am also interested in the growing role of artificial intelligence and machine learning in accelerating materials research and scientific discovery.\n\n\n\n\n\n\n\n\n\nNasir Javed (Optoelectronics | Energy materials)  Email: nasir.javed [at] giki.edu.pk \n\n\nDr. Nasir Javed’s current research interests include gaining a deeper understanding of the interaction between light and advanced functional optical materials at the nanoscale for implementation in optoelectronic devices, photonics, and organic optoelectronics. He conducts research into the optical and photophysical properties of nanostructured materials, with a particular emphasis on their applications in light-emitting devices and solar cells. His portfolio of materials is diverse and includes organic semiconductors, carbon nanostructures, nanocrystals, environmentally friendly materials, and piezoelectric materials. To achieve our research goals, we employ a range of experimental techniques for synthesizing, fabricating, and characterizing materials of interest alongside quantum chemistry simulation and machine learning algorithm for materials discovery.\n\n\n\n\n\n\n\n\n\nMisbah Shaheen (Computational Materials | Condensed Matter)  Email: misbah.shaheen [at] giki.edu.pk \n\n\nI am a PhD researcher in computational materials science specializing in first-principles simulations based on Density Functional Theory (DFT). My research focuses on anion-exchanged and defect-engineered halide perovskites for next-generation optoelectronic and energy applications. My experience includes computational materials modeling, quantum mechanical simulations, and the use of high-performance computing techniques for materials design and analysis. My research interests further extend to advanced theoretical concepts including electron–phonon coupling, polaron formation, and low-dimensional as well as topological materials, with a broader aim of understanding and designing functional materials for emerging technologies.\n\n\n\n\n\n\n\n\nRao Uzair (Computational Materials | Condensed Matter)  \n\n\n\n\n\n\n\n\n\n\n\nNaseeb Ullah (Computational Materials | Condensed Matter)",
+    "crumbs": [
+      "Home",
+      "People"
+    ]
+  },
+  {
+    "objectID": "D0quartoexamples/tikz_example.html",
+    "href": "D0quartoexamples/tikz_example.html",
+    "title": "How to add and cross reference tikz diagrams in quarto",
+    "section": "",
+    "text": "Add to quarto yaml:\nfilters:\n  - pandoc-ext/diagram\nSource\nExtension\n\n\n\n%%| filename: stfigure\n%%| caption: A Figure\n\n\\begin{tikzpicture}\n  \\coordinate (T) at (5.4,3.6);\n  \\draw (0,6) -- (0,0) -- (9,0);\n  \\draw[blue] (0,5) to[out=-5,in=150] (T) to [out=-30,in=100] (8,0);\n  \\draw[red] (T) ++ (150:3) --++ (-30:6);\n  \\draw (T) circle (3pt);\n\\end{tikzpicture}\n\n\nFigure 1: This is a caption\n\n\n\n\n\n\n%%| filename: stick-figure\n%%| caption: A Stick Figure\n\n\\begin{tikzpicture}\n  % Head\n  \\draw (0,0) circle (1cm);\n  % Body\n  \\draw (0,-1) -- (0,-3);\n  % Arms\n  \\draw (-1,-2) -- (0,-1) -- (1,-2);\n  % Legs\n  \\draw (-1,-4) -- (0,-3) -- (1,-4);\n\\end{tikzpicture}\n\n\nFigure 2: This is a caption\n\n\n\nSee Figure 2."
+  },
+  {
+    "objectID": "D0quartoexamples/leaderline/example3.html",
+    "href": "D0quartoexamples/leaderline/example3.html",
+    "title": "Leaderline Exmaple 3",
+    "section": "",
+    "text": "Kubo Formula\n\n\nConnects how time dependent perturbations may impact expectation values of operator \\(\\hat A\\)\n\n\n\n\nManifold\n\n\nTopological space locally \\(R^n\\)\n\n\n\n\nManifold\n\n\nTopological space locally \\(R^n\\)"
+  },
+  {
+    "objectID": "D0quartoexamples/leaderline/example1.html#section",
+    "href": "D0quartoexamples/leaderline/example1.html#section",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Structure Generation\n\n\n\nBulk Pristine Supercell\nDefective Supercell\n\n\n\n\n\nCalculations\n\n\n\nRelaxation (Only Pristine)\nSCF (Pristine + Doped)\nRelaxation (Doped)\nPDOS\nSpin Density\n\n\n\n\n\n\nDefects Processing\n\n\n\nPhase Stability\nChemical Potential Diagrams\nDefect Formation Energies\nCharge State Transition Levels\n\n\n\n\n\nDistortions\n\n\n\nTM-I Bond length\nVan Vleck Modes\nBong length Distortion\nEffective Coordination Number\nJT Distortion Magnitude\n\n\n\nVan Vleck Calculator\n\n\n\n\nDefect-Structure Relationship"
+  },
+  {
+    "objectID": "C0resources/Lammps/lectures/tipsandtricks.html",
+    "href": "C0resources/Lammps/lectures/tipsandtricks.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "How to choose a timestep (dt)?\n\n\nThe timestep must be much smaller than the fastest vibrations in your system.\n\nIf timestep is too large → atoms “overshoot” → energy drift, instability, or bonds break.\nIf timestep is too small → simulation is safe but unnecessarily slow.\n\nTake the example of Halide Perovskite:\nThe fastest motions are bond stretching of Pb–Br / Pb–I / Cs–X and Br–Br / I–I interactions.\nTypical bond vibrations are on the order of 10–100 THz (period ≈ 0.01–0.1 ps = 10–100 fs).\nRule of thumb: timestep ≲ 1/10 to 1/20 of the shortest vibrational period.\nSo:\nIf vibrational period ≈ 10 fs, then timestep ≲ 1 fs.\nIf vibrational period ≈ 20 fs, then timestep ≲ 2 fs.\n\n\n\n\nHow to choose a dumping factors?\n\n\nFor Nose-Hoover thermostat, typical choice for temp is 100 x dt and for pressure is 1000 x dt.\n\n\n\n\nHow to choose run value?\n\n\nUse the formulas below:\n\\[simulated time required = \\frac{\\Delta T}{cooling rate}\\]\n\\[number of steps = \\frac{simulated time}{timestep}\\]"
+  },
+  {
+    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html",
+    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html",
+    "title": "LAMMPS GPU Installation",
+    "section": "",
+    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+  },
+  {
+    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
+    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
+    "title": "LAMMPS GPU Installation",
+    "section": "",
+    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+  },
+  {
+    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
+    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
+    "title": "LAMMPS GPU Installation",
+    "section": "LAMMPS Installation",
+    "text": "LAMMPS Installation\n\nStep 1\nInstall required dependencies:\nsudo apt update\nsudo apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev\nAlso install CUDA if it’s not installed. Check with:\nnvcc --version\nnvidia-smi\n\n\nStep 2\nClone and prepare the LAMMPS repository:\ngit clone https://github.com/lammps/lammps.git\ncd lammps\nmkdir build\ncd build\n\n\nStep 3 (Configure)\ncmake ../cmake \\\n  -D CMAKE_INSTALL_PREFIX=../lammps_gpu \\\n  -D BUILD_MPI=on \\\n  -D BUILD_OMP=on \\\n  -D PKG_KOKKOS=on \\\n  -D Kokkos_ENABLE_CUDA=on \\\n  -D Kokkos_ARCH_AMPERE80=on \\\n  -D CMAKE_C_COMPILER=mpicc \\\n  -D CMAKE_CXX_COMPILER=mpicxx\ncmake ../cmake   -D CMAKE_INSTALL_PREFIX=../lammps_gpu   -D CMAKE_BUILD_TYPE=Release   -D BUILD_MPI=on   -D BUILD_OMP=on   -D CMAKE_C_COMPILER=mpicc   -D CMAKE_CXX_COMPILER=mpicxx   -D PKG_Kokkos=on   -D Kokkos_ENABLE_CUDA=on   -D Kokkos_ARCH_AMPERE80=on   -D PKG_GPU=on   -D PKG_USER-API=on   -D PKG_KSPACE=on   -D PKG_MANYBODY=on   -D PKG_MOLECULE=on   -D PKG_MISC=on   -D PKG_USER-REAXC=on   -D PKG_MLIAP=on   -D PKG_ML-SNAP=on   -D PKG_KIM=on   -D BIN2C=/home/misbah/nvhpc/Linux_x86_64/24.3/cuda/12.3/bin/bin2c\n\n\nStep 4 (Build and Install)\nmake -j$(nproc)\nmake install"
+  },
+  {
+    "objectID": "C0resources/home_resources.html",
+    "href": "C0resources/home_resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "ABS"
+  },
+  {
+    "objectID": "C0research/research.html#codes",
+    "href": "C0research/research.html#codes",
+    "title": "Research",
+    "section": "Codes",
+    "text": "Codes\n\nAsliGheo\nJHR"
   },
   {
     "objectID": "C0research/hopscotch.html",
@@ -35,147 +113,53 @@
     "text": "Links\n\nPaper link"
   },
   {
-    "objectID": "C0Lammps/lammps_installation/LAMMPS_GPU.html",
-    "href": "C0Lammps/lammps_installation/LAMMPS_GPU.html",
-    "title": "LAMMPS GPU Installation",
+    "objectID": "C0publications/home_calculusI.html",
+    "href": "C0publications/home_calculusI.html",
+    "title": "Calculus I",
     "section": "",
-    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+    "text": "This is the home page for calculus I (MT-101). All assignments, announcements, and other relevant materials will be posted here."
   },
   {
-    "objectID": "C0Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
-    "href": "C0Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
-    "title": "LAMMPS GPU Installation",
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html",
+    "title": "Quantum Meets AI Workshop 2026",
     "section": "",
-    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
+    "text": "Have you ever wondered how a computer actually “sees” a molecule?\nCan an algorithm predict the next breakthrough solar cell or smartphone battery faster than a scientist in a lab coat?\nWhat happens when we teach the laws of quantum physics to an Artificial Intelligence?\n\nIf you are a physicist or chemist looking to scale up your discoveries, or a data scientist looking for complex, real-world problems to solve, you are in the right place.\nIn what follows we give an insight into how these questions are answered in the world of matter modeling. We will go into greater depth during the workshop."
   },
   {
-    "objectID": "C0Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
-    "href": "C0Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
-    "title": "LAMMPS GPU Installation",
-    "section": "LAMMPS Installation",
-    "text": "LAMMPS Installation\n\nStep 1\nInstall required dependencies:\nsudo apt update\nsudo apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev\nAlso install CUDA if it’s not installed. Check with:\nnvcc --version\nnvidia-smi\n\n\nStep 2\nClone and prepare the LAMMPS repository:\ngit clone https://github.com/lammps/lammps.git\ncd lammps\nmkdir build\ncd build\n\n\nStep 3 (Configure)\ncmake ../cmake \\\n  -D CMAKE_INSTALL_PREFIX=../lammps_gpu \\\n  -D BUILD_MPI=on \\\n  -D BUILD_OMP=on \\\n  -D PKG_KOKKOS=on \\\n  -D Kokkos_ENABLE_CUDA=on \\\n  -D Kokkos_ARCH_AMPERE80=on \\\n  -D CMAKE_C_COMPILER=mpicc \\\n  -D CMAKE_CXX_COMPILER=mpicxx\ncmake ../cmake   -D CMAKE_INSTALL_PREFIX=../lammps_gpu   -D CMAKE_BUILD_TYPE=Release   -D BUILD_MPI=on   -D BUILD_OMP=on   -D CMAKE_C_COMPILER=mpicc   -D CMAKE_CXX_COMPILER=mpicxx   -D PKG_Kokkos=on   -D Kokkos_ENABLE_CUDA=on   -D Kokkos_ARCH_AMPERE80=on   -D PKG_GPU=on   -D PKG_USER-API=on   -D PKG_KSPACE=on   -D PKG_MANYBODY=on   -D PKG_MOLECULE=on   -D PKG_MISC=on   -D PKG_USER-REAXC=on   -D PKG_MLIAP=on   -D PKG_ML-SNAP=on   -D PKG_KIM=on   -D BIN2C=/home/misbah/nvhpc/Linux_x86_64/24.3/cuda/12.3/bin/bin2c\n\n\nStep 4 (Build and Install)\nmake -j$(nproc)\nmake install"
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#welcome-to-the-frontier-where-science-meets-ai",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#welcome-to-the-frontier-where-science-meets-ai",
+    "title": "Quantum Meets AI Workshop 2026",
+    "section": "",
+    "text": "Have you ever wondered how a computer actually “sees” a molecule?\nCan an algorithm predict the next breakthrough solar cell or smartphone battery faster than a scientist in a lab coat?\nWhat happens when we teach the laws of quantum physics to an Artificial Intelligence?\n\nIf you are a physicist or chemist looking to scale up your discoveries, or a data scientist looking for complex, real-world problems to solve, you are in the right place.\nIn what follows we give an insight into how these questions are answered in the world of matter modeling. We will go into greater depth during the workshop."
   },
   {
-    "objectID": "C0Lammps/lectures/tipsandtricks.html",
-    "href": "C0Lammps/lectures/tipsandtricks.html",
-    "title": "DRN Group",
-    "section": "",
-    "text": "How to choose a timestep (dt)?\n\n\nThe timestep must be much smaller than the fastest vibrations in your system.\n\nIf timestep is too large → atoms “overshoot” → energy drift, instability, or bonds break.\nIf timestep is too small → simulation is safe but unnecessarily slow.\n\nTake the example of Halide Perovskite:\nThe fastest motions are bond stretching of Pb–Br / Pb–I / Cs–X and Br–Br / I–I interactions.\nTypical bond vibrations are on the order of 10–100 THz (period ≈ 0.01–0.1 ps = 10–100 fs).\nRule of thumb: timestep ≲ 1/10 to 1/20 of the shortest vibrational period.\nSo:\nIf vibrational period ≈ 10 fs, then timestep ≲ 1 fs.\nIf vibrational period ≈ 20 fs, then timestep ≲ 2 fs.\n\n\n\n\nHow to choose a dumping factors?\n\n\nFor Nose-Hoover thermostat, typical choice for temp is 100 x dt and for pressure is 1000 x dt.\n\n\n\n\nHow to choose run value?\n\n\nUse the formulas below:\n\\[simulated time required = \\frac{\\Delta T}{cooling rate}\\]\n\\[number of steps = \\frac{simulated time}{timestep}\\]"
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#part-1-what-is-computational-materials-science",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#part-1-what-is-computational-materials-science",
+    "title": "Quantum Meets AI Workshop 2026",
+    "section": "Part 1: What is Computational Materials Science?",
+    "text": "Part 1: What is Computational Materials Science?\nAt its core, computational materials science is about simulating reality.\nInstead of mixing chemicals in a traditional laboratory, researchers use powerful computers to build virtual models of atoms and molecules. By applying the laws of physics to these digital models, we can predict how a material will behave—how strong it is, how it conducts electricity, or how it reacts to light—before it is ever physically created.\n\nThe Traditional Bottleneck\nHistorically, discovering a new material takes about 10 to 20 years. It involves a lot of trial and error: cook a sample in a lab, test it, fail, tweak the recipe, and try again. Computational modeling shortens this loop by letting us screen thousands of virtual candidates first, picking only the absolute best ones to actually manufacture in the real world."
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Publications\n\n\n1. Shaheen, M. & Pervez, S. Hopscotching perovskites: DFT leveraged tight-binding insights into inorganic lead halide perovskites. Phys. Chem. Chem. Phys. 27, 19950–19959 (2025).\n\n\n2. Pervez, S. & Iqbal, M. Z. Capacitive and diffusive contributions in supercapacitors and batteries: A critique of b-value and the ν–ν1/2 model. Small 19, 2305059 (2023).\n\n\n3. Pervez, S. & Iqbal, M. Z. Evaluation of battery-grade alkaline earth metal sulfide electrodes for energy storage applications. International Journal of Energy Research 46, 8093–8101 (2022).",
-    "crumbs": [
-      "Home",
-      "Publications"
-    ]
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#part-2-the-workshop-journey-day-by-day",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#part-2-the-workshop-journey-day-by-day",
+    "title": "Quantum Meets AI Workshop 2026",
+    "section": "Part 2: The Workshop Journey (Day by Day)",
+    "text": "Part 2: The Workshop Journey (Day by Day)\nTo understand how we accelerate this science, our workshop is broken into three core pillars:\n\n🔬 Day 1: Zooming In with Quantum Mechanics (DFT)\nBefore we can use AI, we need high-quality data. That data comes from the fundamental laws of physics. On Day 1, we look at Density Functional Theory (DFT).\n\nThe Concept: Think of DFT as a super-powered, quantum-mechanical microscope. Everything in the universe is made of atoms, and how those atoms behave depends entirely on their electrons. DFT is a mathematical cleverness that lets computers calculate exactly where electrons want to go and how they hold atoms together.\nWhy it matters: It gives us the “ground truth” physics of a material. If you want to know if a crystal will be stable or what color light a semiconductor will absorb, DFT gives you the precise answer from first principles.\n\n\n\n🤖 Day 2: Scaling Up with Artificial Intelligence (AI)\nIf DFT is so accurate, why do we need AI? Because quantum mechanics is incredibly slow. Calculating the properties of just a few hundred atoms using DFT can take a supercomputer days or weeks.\n\nThe Concept: Instead of running a slow physics calculation for every single new material, we use Machine Learning. We take the results of thousands of previous DFT calculations and use them to train an AI.\nThe AI’s Job: The AI learns the underlying patterns—the “rules of thumb” of how atoms interact. Once trained, the AI can predict the properties of a brand-new material in milliseconds rather than days.\n\n\n\n🧬 Day 3: Talking to Computers (Cheminformatics & Graph Neural Networks)\nTo train an AI on materials, we have a unique challenge: How do you describe a molecule or a crystal to a computer? You can’t just type in “this looks like a shiny metal.”\n\nCheminformatics: This is the language interface. It converts chemical structures, formulas, and bonds into digital data strings (like code) that a computer can read, sort, and search.\nGraph Neural Networks (GNNs): This is where modern AI gets beautiful. In physics and chemistry, molecules and crystals are essentially networks of atoms connected by bonds. In computer science, this is called a Graph (nodes connected by lines). GNNs are a special type of AI designed specifically to look at these chemical networks, understanding how the arrangement and neighborhood of each atom dictate the ultimate property of the entire material."
   },
   {
-    "objectID": "C0DFT/leaderlines/defect_workflow.html",
-    "href": "C0DFT/leaderlines/defect_workflow.html",
-    "title": "DRN Group",
-    "section": "",
-    "text": "Structure Generation\n\n\n\n\n\n\nBulk Pristine Supercell\nDefective Supercells\n\n\n\nCalculations\n\n\n\n\n\n\nRelaxation\nSCF Calculation\n\n\n\n\n\nData Handling and Analysis\n\n\n\n\n\n\nPhase Diagrams\nChemical Potential Diagrams\nDefect Formation Energies\nCharge Transition Levels\n\n\n\n\n–&gt;"
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#part-3-why-this-interdisciplinary-mix-matters",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#part-3-why-this-interdisciplinary-mix-matters",
+    "title": "Quantum Meets AI Workshop 2026",
+    "section": "Part 3: Why This Interdisciplinary Mix Matters",
+    "text": "Part 3: Why This Interdisciplinary Mix Matters\nThis workshop brings together two completely different ways of thinking, and that is where the magic happens:\n\nFor the Physicists, Chemists, and Materials Scientists: You bring the intuition, the domain expertise, and the fundamental laws of nature. AI gives you a digital superpower to scale your insights from a few molecules to millions of possibilities overnight.\nFor the Computer and Data Scientists: You bring the algorithms, the pattern-recognition tools, and the data architecture. Materials science gives you some of the richest, most complex, and physically meaningful datasets in the world to test and stretch your models.\n\nTogether, we aren’t just predicting the future of technology—we are computing the very matter it will be built from."
   },
   {
-    "objectID": "C0DFT/lectures/tipsandtricks/scftips.html",
-    "href": "C0DFT/lectures/tipsandtricks/scftips.html",
-    "title": "DRN Group",
+    "objectID": "C0events/01Workshop-DFT_ML-2026/Day01-DFT/Session1/01intro.html",
+    "href": "C0events/01Workshop-DFT_ML-2026/Day01-DFT/Session1/01intro.html",
+    "title": "First lectures",
     "section": "",
-    "text": "How to restart scf calculation?\n\n\ncan use restart option\n\n\n\n\nWhen to use relax and vc-relax?\n\n\nanswer\n\n\n\n\nUse space_group to employ symmetry and reduce computational cost\n\n\nanswer\n\n\n\n\nWhen to use k-points shifting?\n\n\nBook- page 40 onwards\n\n\n\n\nAny rule for selecting k-points?\n\n\nBook- page 40 onwards\n\n\n\n\nHow to check convergence?\n\n\nnswer\n\n\n\n\nHow to set convergence criteria for relax and vcrelax calculation?\n\n\n\netot_conv_thr\nforc_conv_thr\npress_conv_thr"
-  },
-  {
-    "objectID": "C0resources/home_resources.html",
-    "href": "C0resources/home_resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "ABS"
-  },
-  {
-    "objectID": "D0quartoexamples/leaderline/example3.html",
-    "href": "D0quartoexamples/leaderline/example3.html",
-    "title": "Leaderline Exmaple 3",
-    "section": "",
-    "text": "Kubo Formula\n\n\nConnects how time dependent perturbations may impact expectation values of operator \\(\\hat A\\)\n\n\n\n\nManifold\n\n\nTopological space locally \\(R^n\\)\n\n\n\n\nManifold\n\n\nTopological space locally \\(R^n\\)"
-  },
-  {
-    "objectID": "D0quartoexamples/pill_example.html",
-    "href": "D0quartoexamples/pill_example.html",
-    "title": "Pill Example",
-    "section": "",
-    "text": "This is content for tab one.\n\n\nThis is content for tab two.\n\n\nThis is content for tab three."
-  },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "This page is still under construction. Click on the thumbnails below for more detail.\n\n\n\n\n\n\n\n\n\n\n\n\nTight-binding insights into ILHPs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResearch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMutli-Exciton Generation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefects in Perovskites\n\n\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Home",
-      "Research"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "DRN is a research group active at GIK Institute. As mentioned on the home page, the name is a nod to Lucretius’ poem on the same name, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nThe DRN group studies properties of matter in the computational realm. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nEmail: drn@giki.edu.pk",
-    "crumbs": [
-      "Home",
-      "About"
-    ]
-  },
-  {
-    "objectID": "D0quartoexamples/tikz_example.html",
-    "href": "D0quartoexamples/tikz_example.html",
-    "title": "How to add and cross reference tikz diagrams in quarto",
-    "section": "",
-    "text": "Add to quarto yaml:\nfilters:\n  - pandoc-ext/diagram\nSource\nExtension\n\n\n\n\n\n\nA Figure\n\n\n\n\nFigure 1: This is a caption\n\n\n\n\n\n\n\n\n\nA Stick Figure\n\n\n\n\nFigure 2: This is a caption\n\n\n\nSee Figure 2."
-  },
-  {
-    "objectID": "D0quartoexamples/leaderline/example1.html#section",
-    "href": "D0quartoexamples/leaderline/example1.html#section",
-    "title": "DRN Group",
-    "section": "",
-    "text": "Structure Generation\n\n\n\nBulk Pristine Supercell\nDefective Supercell\n\n\n\n\n\nCalculations\n\n\n\nRelaxation (Only Pristine)\nSCF (Pristine + Doped)\nRelaxation (Doped)\nPDOS\nSpin Density\n\n\n\n\n\n\nDefects Processing\n\n\n\nPhase Stability\nChemical Potential Diagrams\nDefect Formation Energies\nCharge State Transition Levels\n\n\n\n\n\nDistortions\n\n\n\nTM-I Bond length\nVan Vleck Modes\nBong length Distortion\nEffective Coordination Number\nJT Distortion Magnitude\n\n\n\nVan Vleck Calculator\n\n\n\n\nDefect-Structure Relationship"
-  },
-  {
-    "objectID": "D0quartoexamples/leaderline/example2reveal.html#section",
-    "href": "D0quartoexamples/leaderline/example2reveal.html#section",
-    "title": "DRN Group",
-    "section": "",
-    "text": "Transition Metals\n\n\n\n\n\nLigand (Iodine)\n\n\n\n\n\nAtomic Properties\n\n\n\nIonic Radii\nd-electron count\n\n\n\n\n\nTM and Ligand Bonding Factors\n\n\n\nOrbitals Energies and Overlap\nElectronegativity Difference\n\n\n\n\n\nCalculations\n\n\n\nEnergies\nCharge Distributions\n\n\n\n\n\nChemical Environment\n\n\n\nChemical Potentials (Including Pb and Cs)\nSynthesis Conditions\n\n\n\n\n\nTM-I Bondlength\n\n\n\n\nBond Nature\n\n\nIonic or Covalent\n\n\n\n\nStrain and Lattice Distortions\n\n\n\nTM Octahedra (Symmetric Distortion)\nAdjacent Pb Octahedra (Assymetric Distortion)\n\n\n\n\n\nTotal Energy Balance\n\n\n\n\nStability of Defect"
-  },
-  {
-    "objectID": "C0resources/QE/QE.html",
-    "href": "C0resources/QE/QE.html",
-    "title": "DRN Group",
-    "section": "",
-    "text": "Test",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Espresso"
-    ]
-  },
-  {
-    "objectID": "C0DFT/lectures/KS-states.html",
-    "href": "C0DFT/lectures/KS-states.html",
-    "title": "Kohn-Sham States and the Number of Electrons",
-    "section": "",
-    "text": "If you open the header of an espresso pw.x output file, you might see:\n     number of electrons       =        44.00\n     number of Kohn-Sham states=           26\nWell, what are these?\nIn understanding electronic structure calculations using density functional theory (DFT), it’s useful to imagine a familiar situation: a family going on a picnic.\n\n\n\nThe number of KS States is like the rows of seats on a bus and the number of electrons are akin to the people riding out to picnic.\n\n\nThe number of valence electrons in a material is like the number of family members who are actually going on the picnic. These are the people who will participate in activities, contribute to the experience, and need to be accounted for in the logistics. Similarly, valence electrons are those that participate in bonding and electronic behavior, and are the focus of most DFT calculations.\nHowever, in organizing a real trip, one often brings more than just the family. There may be a hired guide to navigate, porters to carry supplies, or someone skilled in negotiation for dealing with vendors. This expanded group represents the total number of electrons in a DFT calculation. It includes both the valence electrons and any additional electrons that the pseudopotential has chosen to treat explicitly—perhaps semicore states or shallow core levels that are important for accuracy in certain elements.\nTo transport this group, a bus is needed. The Kohn–Sham states correspond to the rows of seats on the bus. In a non-spin-polarized system, each row can seat two people: one with spin up and one with spin down. Therefore, the number of rows ideally needs to be at least half the number of electrons. But planning conservatively, we often include more rows than necessary—not everyone likes to share a seat, and we may want to observe what other passengers (electronic states) are doing even if they are not part of the initial group. These extra rows represent the unoccupied Kohn–Sham states, which are important for understanding conduction bands, optical transitions, and other excited-state properties.\nThis analogy helps clarify why the number of Kohn–Sham states is not the same as the number of electrons, and why pseudopotentials and spin considerations affect how many orbitals the DFT calculation must solve for.\nWhile the picnic bus analogy helps build intuition about valence electrons, total electrons, and Kohn–Sham states in DFT, it necessarily simplifies a number of important physical and computational subtleties and its limitations must always be at the back of our mind:\n\nFirst, the analogy treats Kohn–Sham states as fixed seats, suggesting a discrete, localized picture. In reality, Kohn–Sham orbitals are continuous wavefunctions—often delocalized over an entire crystal in the form of Bloch states. They are not static slots that electrons occupy, but mathematical solutions to a differential equation that describe how electron density is distributed in space.\nSecond, the analogy implies that electrons either fully occupy or do not occupy Kohn–Sham states, like passengers sitting in seats. This works for insulators and simple semiconductors, but breaks down in metals or finite-temperature systems where fractional occupations are common. In such cases, the occupancy of a state is not binary, but smoothly distributed around the Fermi level according to the Fermi–Dirac distribution.\nThird, unoccupied Kohn–Sham states are portrayed as empty rows included just in case they’re needed. However, these states are not merely optional extras—they are integral to predicting important physical properties, such as optical absorption spectra, band gaps, and excited-state behavior. They must be computed carefully and with the same rigor as occupied states.\nFourth, the treatment of spin in the analogy is simplified. While saying that “some people prefer not to share a row” illustrates the difference between spin-polarized and non-spin-polarized calculations, it glosses over more subtle aspects of spin, such as antiferromagnetic ordering, spin splitting, and spin–orbit coupling. These effects can lead to highly nontrivial behavior in the electronic structure, which cannot be captured by the seating metaphor.\nFinally, while the role of the pseudopotential is likened to choosing who goes on the trip, the analogy omits the fact that pseudopotentials also encode how valence electrons interact with the frozen core. This interaction affects transferability, scattering properties, and the accuracy of calculated forces—factors that are invisible in the analogy."
-  },
-  {
-    "objectID": "C0DFT/lectures/inputfiles/scfin.html",
-    "href": "C0DFT/lectures/inputfiles/scfin.html",
-    "title": "DRN Group",
-    "section": "",
-    "text": "&CONTROL\n  calculation = 'scf', !fe fn \n  prefix = 'si',\n  outdir = './tmp/',\n  pseudo_dir = './pseudo/',\n  verbosity = 'high',\n  tprnfor = .true.,\n  tstress = .true.,\n/\n\n&SYSTEM\n  ibrav = 2,\n  celldm(1) = 10.2,\n  nat = 2,\n  ntyp = 1,\n  ecutwfc = 40.0,\n  ecutrho = 320.0,\n/\n\n&ELECTRONS\n  conv_thr = 1.0d-8,\n  mixing_beta = 0.7,\n/\n\nATOMIC_SPECIES\n  Si  28.0855  Si.pz-vbc.UPF\n\nATOMIC_POSITIONS crystal\n  Si 0.00 0.00 0.00\n  Si 0.25 0.25 0.25\n\nK_POINTS automatic\n  6 6 6  1 1 1"
+    "text": "SCF\n\n\nblah blah"
   },
   {
     "objectID": "C0DFT/lectures/scf.html",
@@ -234,6 +218,27 @@
     "text": "Exercise Questions\n\nWrite the"
   },
   {
+    "objectID": "C0DFT/lectures/KS-states.html",
+    "href": "C0DFT/lectures/KS-states.html",
+    "title": "Kohn-Sham States and the Number of Electrons",
+    "section": "",
+    "text": "If you open the header of an espresso pw.x output file, you might see:\n     number of electrons       =        44.00\n     number of Kohn-Sham states=           26\nWell, what are these?\nIn understanding electronic structure calculations using density functional theory (DFT), it’s useful to imagine a familiar situation: a family going on a picnic.\n\n\n\nThe number of KS States is like the rows of seats on a bus and the number of electrons are akin to the people riding out to picnic.\n\n\nThe number of valence electrons in a material is like the number of family members who are actually going on the picnic. These are the people who will participate in activities, contribute to the experience, and need to be accounted for in the logistics. Similarly, valence electrons are those that participate in bonding and electronic behavior, and are the focus of most DFT calculations.\nHowever, in organizing a real trip, one often brings more than just the family. There may be a hired guide to navigate, porters to carry supplies, or someone skilled in negotiation for dealing with vendors. This expanded group represents the total number of electrons in a DFT calculation. It includes both the valence electrons and any additional electrons that the pseudopotential has chosen to treat explicitly—perhaps semicore states or shallow core levels that are important for accuracy in certain elements.\nTo transport this group, a bus is needed. The Kohn–Sham states correspond to the rows of seats on the bus. In a non-spin-polarized system, each row can seat two people: one with spin up and one with spin down. Therefore, the number of rows ideally needs to be at least half the number of electrons. But planning conservatively, we often include more rows than necessary—not everyone likes to share a seat, and we may want to observe what other passengers (electronic states) are doing even if they are not part of the initial group. These extra rows represent the unoccupied Kohn–Sham states, which are important for understanding conduction bands, optical transitions, and other excited-state properties.\nThis analogy helps clarify why the number of Kohn–Sham states is not the same as the number of electrons, and why pseudopotentials and spin considerations affect how many orbitals the DFT calculation must solve for.\nWhile the picnic bus analogy helps build intuition about valence electrons, total electrons, and Kohn–Sham states in DFT, it necessarily simplifies a number of important physical and computational subtleties and its limitations must always be at the back of our mind:\n\nFirst, the analogy treats Kohn–Sham states as fixed seats, suggesting a discrete, localized picture. In reality, Kohn–Sham orbitals are continuous wavefunctions—often delocalized over an entire crystal in the form of Bloch states. They are not static slots that electrons occupy, but mathematical solutions to a differential equation that describe how electron density is distributed in space.\nSecond, the analogy implies that electrons either fully occupy or do not occupy Kohn–Sham states, like passengers sitting in seats. This works for insulators and simple semiconductors, but breaks down in metals or finite-temperature systems where fractional occupations are common. In such cases, the occupancy of a state is not binary, but smoothly distributed around the Fermi level according to the Fermi–Dirac distribution.\nThird, unoccupied Kohn–Sham states are portrayed as empty rows included just in case they’re needed. However, these states are not merely optional extras—they are integral to predicting important physical properties, such as optical absorption spectra, band gaps, and excited-state behavior. They must be computed carefully and with the same rigor as occupied states.\nFourth, the treatment of spin in the analogy is simplified. While saying that “some people prefer not to share a row” illustrates the difference between spin-polarized and non-spin-polarized calculations, it glosses over more subtle aspects of spin, such as antiferromagnetic ordering, spin splitting, and spin–orbit coupling. These effects can lead to highly nontrivial behavior in the electronic structure, which cannot be captured by the seating metaphor.\nFinally, while the role of the pseudopotential is likened to choosing who goes on the trip, the analogy omits the fact that pseudopotentials also encode how valence electrons interact with the frozen core. This interaction affects transferability, scattering properties, and the accuracy of calculated forces—factors that are invisible in the analogy."
+  },
+  {
+    "objectID": "C0DFT/lectures/inputfiles/scfin.html",
+    "href": "C0DFT/lectures/inputfiles/scfin.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "&CONTROL\n  calculation = 'scf', !fe fn \n  prefix = 'si',\n  outdir = './tmp/',\n  pseudo_dir = './pseudo/',\n  verbosity = 'high',\n  tprnfor = .true.,\n  tstress = .true.,\n/\n\n&SYSTEM\n  ibrav = 2,\n  celldm(1) = 10.2,\n  nat = 2,\n  ntyp = 1,\n  ecutwfc = 40.0,\n  ecutrho = 320.0,\n/\n\n&ELECTRONS\n  conv_thr = 1.0d-8,\n  mixing_beta = 0.7,\n/\n\nATOMIC_SPECIES\n  Si  28.0855  Si.pz-vbc.UPF\n\nATOMIC_POSITIONS crystal\n  Si 0.00 0.00 0.00\n  Si 0.25 0.25 0.25\n\nK_POINTS automatic\n  6 6 6  1 1 1"
+  },
+  {
+    "objectID": "C0DFT/leaderlines/TB_workflow.html",
+    "href": "C0DFT/leaderlines/TB_workflow.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Quantum Espresso\n\n\n\n\n\nDFT Bands & DOS\n\n\nRelaxation\nConvergence\nSCF\nNSCF\nBands\nDOS\n\n\n\n\n\n\nWannier90\n\n\n\nWannier Bands & TB Parameters\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\nPythTB\n\n\n\nTight Binding Model\n\n\nTB\nredTB\n\n\n\n\n\nBoltzWann\n\n\n\nThermoelectric Properties\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
+  },
+  {
     "objectID": "C0DFT/home_DFT.html",
     "href": "C0DFT/home_DFT.html",
     "title": "DFT",
@@ -269,162 +274,11 @@
     "text": "DFT Lectures\n\nSelf-consistent Field (SCF) Calculation"
   },
   {
-    "objectID": "C0DFT/leaderlines/TB_workflow.html",
-    "href": "C0DFT/leaderlines/TB_workflow.html",
-    "title": "DRN Group",
+    "objectID": "C0atomism/lectures/experiments.html",
+    "href": "C0atomism/lectures/experiments.html",
+    "title": "Experimental Evidence of Atoms",
     "section": "",
-    "text": "Quantum Espresso\n\n\n\n\n\nDFT Bands & DOS\n\n\nRelaxation\nConvergence\nSCF\nNSCF\nBands\nDOS\n\n\n\n\n\n\nWannier90\n\n\n\nWannier Bands & TB Parameters\n\n\nwannier90 -pp\npw2wannier90\nwannier90\n\n\n\n\nPythTB\n\n\n\nTight Binding Model\n\n\nTB\nredTB\n\n\n\n\n\nBoltzWann\n\n\n\nThermoelectric Properties\n\n\nElectrical Conductivity\nThermal Conductivity\nSeebeck Coefficient"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DRN Group",
-    "section": "",
-    "text": "Lucretius\n\n\n\n\n\n\n\nNothing can be created out of nothing.\n\n\n\n\n\nDe Rerum Natura—Latin for On the Nature of Things  —takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nAt DRN we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nThus when the mood is less poetic, we explain DRN as being:  Data-driven Research in Nanomaterials.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "C0research/research.html#codes",
-    "href": "C0research/research.html#codes",
-    "title": "Research",
-    "section": "Codes",
-    "text": "Codes\n\nAsliGheo\nJHR"
-  },
-  {
-    "objectID": "C0research/meg.html",
-    "href": "C0research/meg.html",
-    "title": "Mutli-Exciton Generation",
-    "section": "",
-    "text": "Coming soon."
-  },
-  {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "DRN Group",
-    "section": "",
-    "text": "Sheharyar Pervez (Condensed Matter | Computational Materials)  Email: sheharyar [at] giki.edu.pk \n\n\nI am a computational materials scientist working at the intersection of materials modeling, condensed matter physics, and data-driven discovery. My research combines density functional theory (DFT), molecular dynamics, and high-throughput computational approaches to understand and design advanced materials, with a particular focus on defects, electronic structure, and functional materials such as metal–organic frameworks and halide perovskites. I am also interested in the growing role of artificial intelligence and machine learning in accelerating materials research and scientific discovery.\n\n\n\n\n\n\n\n\n\nNasir Javed (Optoelectronics | Energy materials)  Email: nasir.javed [at] giki.edu.pk \n\n\nDr. Nasir Javed’s current research interests include gaining a deeper understanding of the interaction between light and advanced functional optical materials at the nanoscale for implementation in optoelectronic devices, photonics, and organic optoelectronics. He conducts research into the optical and photophysical properties of nanostructured materials, with a particular emphasis on their applications in light-emitting devices and solar cells. His portfolio of materials is diverse and includes organic semiconductors, carbon nanostructures, nanocrystals, environmentally friendly materials, and piezoelectric materials. To achieve our research goals, we employ a range of experimental techniques for synthesizing, fabricating, and characterizing materials of interest alongside quantum chemistry simulation and machine learning algorithm for materials discovery.\n\n\n\n\n\n\n\n\n\nMisbah Shaheen (Computational Materials | Condensed Matter)  Email: misbah.shaheen [at] giki.edu.pk \n\n\nI am a PhD researcher in computational materials science specializing in first-principles simulations based on Density Functional Theory (DFT). My research focuses on anion-exchanged and defect-engineered halide perovskites for next-generation optoelectronic and energy applications. My experience includes computational materials modeling, quantum mechanical simulations, and the use of high-performance computing techniques for materials design and analysis. My research interests further extend to advanced theoretical concepts including electron–phonon coupling, polaron formation, and low-dimensional as well as topological materials, with a broader aim of understanding and designing functional materials for emerging technologies.\n\n\n\n\n\n\n\n\nRao Uzair (Computational Materials | Condensed Matter)  \n\n\n\n\n\n\n\n\n\n\n\nNaseeb Ullah (Computational Materials | Condensed Matter)",
-    "crumbs": [
-      "Home",
-      "People"
-    ]
-  },
-  {
-    "objectID": "C0research/defects.html",
-    "href": "C0research/defects.html",
-    "title": "Defects in Perovskites",
-    "section": "",
-    "text": "Perovskites are a fascinating class of materials known for their remarkable ability to convert sunlight into electricity and emit bright, tunable light. But like any material, they are not perfect—tiny imperfections, or defects, naturally appear in their crystal structure. The presence of transition metals adds another layer of complexity, as their multiple oxidation states and strong interactions with the lattice can create additional defect states or alter defect behavior. Some defects can improve performance, enhancing how electrons move or how light is absorbed, while others act as traps that reduce efficiency and stability. By studying these defects i.e. how they form, migrate, and interact, we can better understand perovskites and design materials that are more efficient, longer-lasting, and tailored for specific applications."
-  },
-  {
-    "objectID": "C0research/defects.html#background",
-    "href": "C0research/defects.html#background",
-    "title": "Defects in Perovskites",
-    "section": "",
-    "text": "Perovskites are a fascinating class of materials known for their remarkable ability to convert sunlight into electricity and emit bright, tunable light. But like any material, they are not perfect—tiny imperfections, or defects, naturally appear in their crystal structure. The presence of transition metals adds another layer of complexity, as their multiple oxidation states and strong interactions with the lattice can create additional defect states or alter defect behavior. Some defects can improve performance, enhancing how electrons move or how light is absorbed, while others act as traps that reduce efficiency and stability. By studying these defects i.e. how they form, migrate, and interact, we can better understand perovskites and design materials that are more efficient, longer-lasting, and tailored for specific applications."
-  },
-  {
-    "objectID": "C0research/defects.html#the-study",
-    "href": "C0research/defects.html#the-study",
-    "title": "Defects in Perovskites",
-    "section": "The Study",
-    "text": "The Study\nComing soon"
-  },
-  {
-    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html",
-    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html",
-    "title": "LAMMPS GPU Installation",
-    "section": "",
-    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
-  },
-  {
-    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
-    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#environment-setup",
-    "title": "LAMMPS GPU Installation",
-    "section": "",
-    "text": "Download Miniforge installer:\nwget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh\n\n\n\nRun the installer:\nbash Miniforge3-Linux-x86_64.sh\n\n\n\nActivate Miniforge:\nsource ~/miniforge3/bin/activate\n\n\n\nCreate a new conda environment:\nconda create -n md python=3.11\n\n\n\nActivate the environment:\nconda activate md"
-  },
-  {
-    "objectID": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
-    "href": "C0resources/Lammps/lammps_installation/LAMMPS_GPU.html#lammps-installation",
-    "title": "LAMMPS GPU Installation",
-    "section": "LAMMPS Installation",
-    "text": "LAMMPS Installation\n\nStep 1\nInstall required dependencies:\nsudo apt update\nsudo apt install cmake build-essential git libfftw3-dev libjpeg-dev libpng-dev libopenmpi-dev\nAlso install CUDA if it’s not installed. Check with:\nnvcc --version\nnvidia-smi\n\n\nStep 2\nClone and prepare the LAMMPS repository:\ngit clone https://github.com/lammps/lammps.git\ncd lammps\nmkdir build\ncd build\n\n\nStep 3 (Configure)\ncmake ../cmake \\\n  -D CMAKE_INSTALL_PREFIX=../lammps_gpu \\\n  -D BUILD_MPI=on \\\n  -D BUILD_OMP=on \\\n  -D PKG_KOKKOS=on \\\n  -D Kokkos_ENABLE_CUDA=on \\\n  -D Kokkos_ARCH_AMPERE80=on \\\n  -D CMAKE_C_COMPILER=mpicc \\\n  -D CMAKE_CXX_COMPILER=mpicxx\ncmake ../cmake   -D CMAKE_INSTALL_PREFIX=../lammps_gpu   -D CMAKE_BUILD_TYPE=Release   -D BUILD_MPI=on   -D BUILD_OMP=on   -D CMAKE_C_COMPILER=mpicc   -D CMAKE_CXX_COMPILER=mpicxx   -D PKG_Kokkos=on   -D Kokkos_ENABLE_CUDA=on   -D Kokkos_ARCH_AMPERE80=on   -D PKG_GPU=on   -D PKG_USER-API=on   -D PKG_KSPACE=on   -D PKG_MANYBODY=on   -D PKG_MOLECULE=on   -D PKG_MISC=on   -D PKG_USER-REAXC=on   -D PKG_MLIAP=on   -D PKG_ML-SNAP=on   -D PKG_KIM=on   -D BIN2C=/home/misbah/nvhpc/Linux_x86_64/24.3/cuda/12.3/bin/bin2c\n\n\nStep 4 (Build and Install)\nmake -j$(nproc)\nmake install"
-  },
-  {
-    "objectID": "C0resources/Lammps/lectures/tipsandtricks.html",
-    "href": "C0resources/Lammps/lectures/tipsandtricks.html",
-    "title": "DRN Group",
-    "section": "",
-    "text": "How to choose a timestep (dt)?\n\n\nThe timestep must be much smaller than the fastest vibrations in your system.\n\nIf timestep is too large → atoms “overshoot” → energy drift, instability, or bonds break.\nIf timestep is too small → simulation is safe but unnecessarily slow.\n\nTake the example of Halide Perovskite:\nThe fastest motions are bond stretching of Pb–Br / Pb–I / Cs–X and Br–Br / I–I interactions.\nTypical bond vibrations are on the order of 10–100 THz (period ≈ 0.01–0.1 ps = 10–100 fs).\nRule of thumb: timestep ≲ 1/10 to 1/20 of the shortest vibrational period.\nSo:\nIf vibrational period ≈ 10 fs, then timestep ≲ 1 fs.\nIf vibrational period ≈ 20 fs, then timestep ≲ 2 fs.\n\n\n\n\nHow to choose a dumping factors?\n\n\nFor Nose-Hoover thermostat, typical choice for temp is 100 x dt and for pressure is 1000 x dt.\n\n\n\n\nHow to choose run value?\n\n\nUse the formulas below:\n\\[simulated time required = \\frac{\\Delta T}{cooling rate}\\]\n\\[number of steps = \\frac{simulated time}{timestep}\\]"
-  },
-  {
-    "objectID": "C0resources/Lammps/home_lammps.html",
-    "href": "C0resources/Lammps/home_lammps.html",
-    "title": "LAMMPS",
-    "section": "",
-    "text": "LAMMPS is a code for Molecular Dynamics simulations.",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "LAMMPS"
-    ]
-  },
-  {
-    "objectID": "people.html#sheharyar-pervez",
-    "href": "people.html#sheharyar-pervez",
-    "title": "DRN Group",
-    "section": "",
-    "text": "Research Interests: Material modeling, computational materials, condensed matter\nemail: sheharyar [at] giki.edu.pk",
-    "crumbs": [
-      "Home",
-      "People"
-    ]
-  },
-  {
-    "objectID": "C0resources/ase/home_ase.html",
-    "href": "C0resources/ase/home_ase.html",
-    "title": "ASE (and pymatgen)",
-    "section": "",
-    "text": "ASE and pymatgen are both powerful libraries. Both offer interfaces for handling files generated by DFT codes such as VASP and Quantum ESPRESSO.\nOver here we will share useful routines that can be used to handle data.",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "ASE"
-    ]
-  },
-  {
-    "objectID": "people.html#dr.-john-doe",
-    "href": "people.html#dr.-john-doe",
-    "title": "DRN Group",
-    "section": "Dr. John Doe",
-    "text": "Dr. John Doe\nComputational Materials Scientist\n\nEmail: johndoe@email.com\nWebsite: example.com\nAffiliation: XYZ University",
-    "crumbs": [
-      "Home",
-      "People"
-    ]
-  },
-  {
-    "objectID": "people.html#sheharyar-pervez-1",
-    "href": "people.html#sheharyar-pervez-1",
-    "title": "DRN Group",
-    "section": "",
-    "text": "PhD Researcher / Computational Materials Scientist\nResearch Focus:\nElectronic properties of halide perovskites and defect tolerance in semiconductor materials.\nTechnical Stack:\nFortran Quantum Espresso HPC (CPU/GPU) Python\n{{&lt; fa brands github &gt;}} GitHub | {{&lt; fa graduation-cap &gt;}} Scholar",
-    "crumbs": [
-      "Home",
-      "People"
-    ]
-  },
-  {
-    "objectID": "index.html#when-the-mood-is-less-poetic-we-explain-drn-as-being-data-driven-research-in-nanomaterials.",
-    "href": "index.html#when-the-mood-is-less-poetic-we-explain-drn-as-being-data-driven-research-in-nanomaterials.",
-    "title": "DRN Group",
-    "section": "When the mood is less poetic, we explain DRN as being: Data-driven Research in Nanomaterials.",
-    "text": "When the mood is less poetic, we explain DRN as being: Data-driven Research in Nanomaterials.\nThe website is still under-development and new content will be added over time.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Coming soon"
   },
   {
     "objectID": "C0atomism/lectures/01epicurus.html",
@@ -432,6 +286,17 @@
     "title": "Epicurus and Greek Atomism",
     "section": "",
     "text": "Epicurus was a key figure in the history of atomism. He revived and transformed the atomism of Democritus into a comprehensive philosophy of nature grounded in materialism and natural causation. By introducing the concept of the atomic “swerve,” he softened strict determinism and connected atomism to human freedom and ethical life.\n\nEpicurus believed in an eternal universe, where anything that comes into being must come from something that exists, all that is destroyed does not cease to exist, but all that exists always will.He held that this universe consists of two things; matter and void.[11] Matter is made up of atoms, tiny bodies that are unable to be broken down into smaller parts, that only have the unchanging qualities of shape, size, and weight. There are an infinite number of these atoms, though only a finite number of types, and an infinite amount of void. Because of the infinite supply of atoms, there are an infinite number of worlds, each separated from each other by vast areas of void, some of which could be vastly different from our own.\n\n\nThe atoms are in constant motion through the void, moving in one of four different ways. They can collide with each other, either bouncing back, or joining together and vibrating to maintain the overall shape of the larger object.[14] When not prevented by other atoms, all atoms naturally move at the same speed downwards in relation to the rest of the world, though they must also occasionally “swerve” randomly out of their usual path; without the swerving motion, atoms would never collide with each other from their parallel trajectory downwards.[15] Epicurus argued that the swerve, which was absent in Democritus’ earlier atomic theory, was also what accounted for humanity’s free will; if it were not for the swerve, humans would be subject to a never-ending chain of cause and effect.\n\n\nEpicurus also believed that senses relied on atoms; which were constantly being emitted from every object. Atoms themselves, which only had size, shape, and weight, did not possess the qualities perceived by the senses, such as redness, but instead would cause the observer to experience them in their mind. Because atoms moved sufficiently quickly, this would be experienced as a continuous sensation of vision.\n\nSource: Wikipedia/Epicurus"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "DRN is a research group active at GIK Institute. As mentioned on the home page, the name is a nod to Lucretius’ poem on the same name, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nThe DRN group studies properties of matter in the computational realm. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nEmail: drn@giki.edu.pk",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
   },
   {
     "objectID": "C0atomism/atomism_home.html",
@@ -460,32 +325,18 @@
     "text": "Coming soon"
   },
   {
-    "objectID": "C0atomism/lectures/experiments.html",
-    "href": "C0atomism/lectures/experiments.html",
-    "title": "Experimental Evidence of Atoms",
+    "objectID": "C0DFT/leaderlines/defect_workflow.html",
+    "href": "C0DFT/leaderlines/defect_workflow.html",
+    "title": "DRN Group",
     "section": "",
-    "text": "Coming soon"
+    "text": "Structure Generation\n\n\n\n\n\n\nBulk Pristine Supercell\nDefective Supercells\n\n\n\nCalculations\n\n\n\n\n\n\nRelaxation\nSCF Calculation\n\n\n\n\n\nData Handling and Analysis\n\n\n\n\n\n\nPhase Diagrams\nChemical Potential Diagrams\nDefect Formation Energies\nCharge Transition Levels\n\n\n\n\n–&gt;"
   },
   {
-    "objectID": "C0events/01Workshop-DFT_ML/form.html",
-    "href": "C0events/01Workshop-DFT_ML/form.html",
-    "title": "Form",
+    "objectID": "C0DFT/lectures/tipsandtricks/scftips.html",
+    "href": "C0DFT/lectures/tipsandtricks/scftips.html",
+    "title": "DRN Group",
     "section": "",
-    "text": "Please fill out the form below:\n\nLoading…"
-  },
-  {
-    "objectID": "C0events/01Workshop-DFT_ML/Day01-DFT/Session1/01intro.html",
-    "href": "C0events/01Workshop-DFT_ML/Day01-DFT/Session1/01intro.html",
-    "title": "First lectures",
-    "section": "",
-    "text": "SCF\n\n\nblah blah"
-  },
-  {
-    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html",
-    "href": "C0events/01Workshop-DFT_ML-2026/overview.html",
-    "title": "Quantum Meets AI Workshop 2026",
-    "section": "",
-    "text": "Have you ever wondered how a computer actually “sees” a molecule?\nCan an algorithm predict the next breakthrough solar cell or smartphone battery faster than a scientist in a lab coat?\nWhat happens when we teach the laws of quantum physics to an Artificial Intelligence?\n\nIf you are a physicist or chemist looking to scale up your discoveries, or a data scientist looking for complex, real-world problems to solve, you are in the right place.\nIn what follows we give an insight into how these questions are answered in the world of matter modeling. We will go into greater depth during the workshop."
+    "text": "How to restart scf calculation?\n\n\ncan use restart option\n\n\n\n\nWhen to use relax and vc-relax?\n\n\nanswer\n\n\n\n\nUse space_group to employ symmetry and reduce computational cost\n\n\nanswer\n\n\n\n\nWhen to use k-points shifting?\n\n\nBook- page 40 onwards\n\n\n\n\nAny rule for selecting k-points?\n\n\nBook- page 40 onwards\n\n\n\n\nHow to check convergence?\n\n\nnswer\n\n\n\n\nHow to set convergence criteria for relax and vcrelax calculation?\n\n\n\netot_conv_thr\nforc_conv_thr\npress_conv_thr"
   },
   {
     "objectID": "C0events/01Workshop-DFT_ML-2026/form.html",
@@ -495,45 +346,109 @@
     "text": "Please fill out the form below:\n\nLoading…"
   },
   {
-    "objectID": "C0events/01Workshop-DFT_ML-2026/Day01-DFT/Session1/01intro.html",
-    "href": "C0events/01Workshop-DFT_ML-2026/Day01-DFT/Session1/01intro.html",
-    "title": "First lectures",
-    "section": "",
-    "text": "SCF\n\n\nblah blah"
-  },
-  {
-    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#welcome-to-the-frontier-where-science-meets-ai",
-    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#welcome-to-the-frontier-where-science-meets-ai",
-    "title": "Quantum Meets AI Workshop 2026",
-    "section": "",
-    "text": "Have you ever wondered how a computer actually “sees” a molecule?\nCan an algorithm predict the next breakthrough solar cell or smartphone battery faster than a scientist in a lab coat?\nWhat happens when we teach the laws of quantum physics to an Artificial Intelligence?\n\nIf you are a physicist or chemist looking to scale up your discoveries, or a data scientist looking for complex, real-world problems to solve, you are in the right place.\nIn what follows we give an insight into how these questions are answered in the world of matter modeling. We will go into greater depth during the workshop."
-  },
-  {
-    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#part-1-what-is-computational-materials-science",
-    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#part-1-what-is-computational-materials-science",
-    "title": "Quantum Meets AI Workshop 2026",
-    "section": "Part 1: What is Computational Materials Science?",
-    "text": "Part 1: What is Computational Materials Science?\nAt its core, computational materials science is about simulating reality.\nInstead of mixing chemicals in a traditional laboratory, researchers use powerful computers to build virtual models of atoms and molecules. By applying the laws of physics to these digital models, we can predict how a material will behave—how strong it is, how it conducts electricity, or how it reacts to light—before it is ever physically created.\n\nThe Traditional Bottleneck\nHistorically, discovering a new material takes about 10 to 20 years. It involves a lot of trial and error: cook a sample in a lab, test it, fail, tweak the recipe, and try again. Computational modeling shortens this loop by letting us screen thousands of virtual candidates first, picking only the absolute best ones to actually manufacture in the real world."
-  },
-  {
-    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#part-2-the-workshop-journey-day-by-day",
-    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#part-2-the-workshop-journey-day-by-day",
-    "title": "Quantum Meets AI Workshop 2026",
-    "section": "Part 2: The Workshop Journey (Day by Day)",
-    "text": "Part 2: The Workshop Journey (Day by Day)\nTo understand how we accelerate this science, our workshop is broken into three core pillars:\n\n🔬 Day 1: Zooming In with Quantum Mechanics (DFT)\nBefore we can use AI, we need high-quality data. That data comes from the fundamental laws of physics. On Day 1, we look at Density Functional Theory (DFT).\n\nThe Concept: Think of DFT as a super-powered, quantum-mechanical microscope. Everything in the universe is made of atoms, and how those atoms behave depends entirely on their electrons. DFT is a mathematical cleverness that lets computers calculate exactly where electrons want to go and how they hold atoms together.\nWhy it matters: It gives us the “ground truth” physics of a material. If you want to know if a crystal will be stable or what color light a semiconductor will absorb, DFT gives you the precise answer from first principles.\n\n\n\n🤖 Day 2: Scaling Up with Artificial Intelligence (AI)\nIf DFT is so accurate, why do we need AI? Because quantum mechanics is incredibly slow. Calculating the properties of just a few hundred atoms using DFT can take a supercomputer days or weeks.\n\nThe Concept: Instead of running a slow physics calculation for every single new material, we use Machine Learning. We take the results of thousands of previous DFT calculations and use them to train an AI.\nThe AI’s Job: The AI learns the underlying patterns—the “rules of thumb” of how atoms interact. Once trained, the AI can predict the properties of a brand-new material in milliseconds rather than days.\n\n\n\n🧬 Day 3: Talking to Computers (Cheminformatics & Graph Neural Networks)\nTo train an AI on materials, we have a unique challenge: How do you describe a molecule or a crystal to a computer? You can’t just type in “this looks like a shiny metal.”\n\nCheminformatics: This is the language interface. It converts chemical structures, formulas, and bonds into digital data strings (like code) that a computer can read, sort, and search.\nGraph Neural Networks (GNNs): This is where modern AI gets beautiful. In physics and chemistry, molecules and crystals are essentially networks of atoms connected by bonds. In computer science, this is called a Graph (nodes connected by lines). GNNs are a special type of AI designed specifically to look at these chemical networks, understanding how the arrangement and neighborhood of each atom dictate the ultimate property of the entire material."
-  },
-  {
-    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#part-3-why-this-interdisciplinary-mix-matters",
-    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#part-3-why-this-interdisciplinary-mix-matters",
-    "title": "Quantum Meets AI Workshop 2026",
-    "section": "Part 3: Why This Interdisciplinary Mix Matters",
-    "text": "Part 3: Why This Interdisciplinary Mix Matters\nThis workshop brings together two completely different ways of thinking, and that is where the magic happens:\n\nFor the Physicists, Chemists, and Materials Scientists: You bring the intuition, the domain expertise, and the fundamental laws of nature. AI gives you a digital superpower to scale your insights from a few molecules to millions of possibilities overnight.\nFor the Computer and Data Scientists: You bring the algorithms, the pattern-recognition tools, and the data architecture. Materials science gives you some of the richest, most complex, and physically meaningful datasets in the world to test and stretch your models.\n\nTogether, we aren’t just predicting the future of technology—we are computing the very matter it will be built from."
-  },
-  {
     "objectID": "C0events/01Workshop-DFT_ML-2026/registration.html",
     "href": "C0events/01Workshop-DFT_ML-2026/registration.html",
     "title": "Registration",
     "section": "",
     "text": "Registrations are not yet open. Please follow our LinkedIn page for receiving notifications."
+  },
+  {
+    "objectID": "C0research/defects.html",
+    "href": "C0research/defects.html",
+    "title": "Defects in Perovskites",
+    "section": "",
+    "text": "Perovskites are a fascinating class of materials known for their remarkable ability to convert sunlight into electricity and emit bright, tunable light. But like any material, they are not perfect—tiny imperfections, or defects, naturally appear in their crystal structure. The presence of transition metals adds another layer of complexity, as their multiple oxidation states and strong interactions with the lattice can create additional defect states or alter defect behavior. Some defects can improve performance, enhancing how electrons move or how light is absorbed, while others act as traps that reduce efficiency and stability. By studying these defects i.e. how they form, migrate, and interact, we can better understand perovskites and design materials that are more efficient, longer-lasting, and tailored for specific applications."
+  },
+  {
+    "objectID": "C0research/defects.html#background",
+    "href": "C0research/defects.html#background",
+    "title": "Defects in Perovskites",
+    "section": "",
+    "text": "Perovskites are a fascinating class of materials known for their remarkable ability to convert sunlight into electricity and emit bright, tunable light. But like any material, they are not perfect—tiny imperfections, or defects, naturally appear in their crystal structure. The presence of transition metals adds another layer of complexity, as their multiple oxidation states and strong interactions with the lattice can create additional defect states or alter defect behavior. Some defects can improve performance, enhancing how electrons move or how light is absorbed, while others act as traps that reduce efficiency and stability. By studying these defects i.e. how they form, migrate, and interact, we can better understand perovskites and design materials that are more efficient, longer-lasting, and tailored for specific applications."
+  },
+  {
+    "objectID": "C0research/defects.html#the-study",
+    "href": "C0research/defects.html#the-study",
+    "title": "Defects in Perovskites",
+    "section": "The Study",
+    "text": "The Study\nComing soon"
+  },
+  {
+    "objectID": "C0research/meg.html",
+    "href": "C0research/meg.html",
+    "title": "Mutli-Exciton Generation",
+    "section": "",
+    "text": "Coming soon."
+  },
+  {
+    "objectID": "C0resources/ase/home_ase.html",
+    "href": "C0resources/ase/home_ase.html",
+    "title": "ASE (and pymatgen)",
+    "section": "",
+    "text": "ASE and pymatgen are both powerful libraries. Both offer interfaces for handling files generated by DFT codes such as VASP and Quantum ESPRESSO.\nOver here we will share useful routines that can be used to handle data.",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "ASE"
+    ]
+  },
+  {
+    "objectID": "C0resources/Lammps/home_lammps.html",
+    "href": "C0resources/Lammps/home_lammps.html",
+    "title": "LAMMPS",
+    "section": "",
+    "text": "LAMMPS is a code for Molecular Dynamics simulations.",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "LAMMPS"
+    ]
+  },
+  {
+    "objectID": "C0resources/QE/QE.html",
+    "href": "C0resources/QE/QE.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Test",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Espresso"
+    ]
+  },
+  {
+    "objectID": "D0quartoexamples/leaderline/example2reveal.html#section",
+    "href": "D0quartoexamples/leaderline/example2reveal.html#section",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Transition Metals\n\n\n\n\n\nLigand (Iodine)\n\n\n\n\n\nAtomic Properties\n\n\n\nIonic Radii\nd-electron count\n\n\n\n\n\nTM and Ligand Bonding Factors\n\n\n\nOrbitals Energies and Overlap\nElectronegativity Difference\n\n\n\n\n\nCalculations\n\n\n\nEnergies\nCharge Distributions\n\n\n\n\n\nChemical Environment\n\n\n\nChemical Potentials (Including Pb and Cs)\nSynthesis Conditions\n\n\n\n\n\nTM-I Bondlength\n\n\n\n\nBond Nature\n\n\nIonic or Covalent\n\n\n\n\nStrain and Lattice Distortions\n\n\n\nTM Octahedra (Symmetric Distortion)\nAdjacent Pb Octahedra (Assymetric Distortion)\n\n\n\n\n\nTotal Energy Balance\n\n\n\n\nStability of Defect"
+  },
+  {
+    "objectID": "D0quartoexamples/pill_example.html",
+    "href": "D0quartoexamples/pill_example.html",
+    "title": "Pill Example",
+    "section": "",
+    "text": "This is content for tab one.\n\n\nThis is content for tab two.\n\n\nThis is content for tab three."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DRN Group",
+    "section": "",
+    "text": "Lucretius\n\n\n\n\n\n\n\nNothing can be created out of nothing.\n\n\n\n\n\nDe Rerum Natura—Latin for On the Nature of Things  —takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.\nAt DRN we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.\nThus when the mood is less poetic, we explain DRN as being:  Data-driven Research in Nanomaterials.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Publications\n\n\n1. Shaheen, M. & Pervez, S. Hopscotching perovskites: DFT leveraged tight-binding insights into inorganic lead halide perovskites. Phys. Chem. Chem. Phys. 27, 19950–19959 (2025).\n\n\n2. Pervez, S. & Iqbal, M. Z. Capacitive and diffusive contributions in supercapacitors and batteries: A critique of b-value and the ν–ν1/2 model. Small 19, 2305059 (2023).\n\n\n3. Pervez, S. & Iqbal, M. Z. Evaluation of battery-grade alkaline earth metal sulfide electrodes for energy storage applications. International Journal of Energy Research 46, 8093–8101 (2022).",
+    "crumbs": [
+      "Home",
+      "Publications"
+    ]
   }
 ]
