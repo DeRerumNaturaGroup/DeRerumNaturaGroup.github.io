@@ -124,14 +124,14 @@
     "href": "C0events/01Workshop-DFT_ML-2026/overview.html",
     "title": "Quantum Meets AI Workshop 2026",
     "section": "",
-    "text": "Have you ever wondered how a computer actually “sees” a molecule?\nCan an algorithm predict the next breakthrough solar cell or smartphone battery faster than a scientist in a lab coat?\nWhat happens when we teach the laws of quantum physics to an Artificial Intelligence?\n\nIf you are a physicist or chemist looking to scale up your discoveries, or a data scientist looking for complex, real-world problems to solve, you are in the right place.\nIn what follows we give an insight into how these questions are answered in the world of matter modeling. We will go into greater depth during the workshop."
+    "text": "Quantum materials AI/ML DFT Quantum Chemistry Cheminformatics"
   },
   {
     "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#welcome-to-the-frontier-where-science-meets-ai",
     "href": "C0events/01Workshop-DFT_ML-2026/overview.html#welcome-to-the-frontier-where-science-meets-ai",
     "title": "Quantum Meets AI Workshop 2026",
-    "section": "",
-    "text": "Have you ever wondered how a computer actually “sees” a molecule?\nCan an algorithm predict the next breakthrough solar cell or smartphone battery faster than a scientist in a lab coat?\nWhat happens when we teach the laws of quantum physics to an Artificial Intelligence?\n\nIf you are a physicist or chemist looking to scale up your discoveries, or a data scientist looking for complex, real-world problems to solve, you are in the right place.\nIn what follows we give an insight into how these questions are answered in the world of matter modeling. We will go into greater depth during the workshop."
+    "section": "Welcome to the Frontier: Where Science Meets AI",
+    "text": "Welcome to the Frontier: Where Science Meets AI\n\nHave you ever wondered how a computer actually “sees” a molecule?\nCan an algorithm predict the next breakthrough solar cell or smartphone battery faster than a scientist in a lab coat?\nWhat happens when we teach the laws of quantum physics to an Artificial Intelligence?\n\nIf you are a physicist or chemist looking to scale up your discoveries, or a data scientist looking for complex, real-world problems to solve, you are in the right place.\nIn what follows we give an insight into how these questions are answered in the world of matter modeling. We will go into greater depth during the workshop."
   },
   {
     "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#part-1-what-is-computational-materials-science",
@@ -450,5 +450,26 @@
       "Home",
       "Publications"
     ]
+  },
+  {
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#what-is-computational-materials-science",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#what-is-computational-materials-science",
+    "title": "Quantum Meets AI Workshop 2026",
+    "section": "What is Computational Materials Science?",
+    "text": "What is Computational Materials Science?\nAt its core, computational materials science is about simulating reality.\nInstead of mixing chemicals in a traditional laboratory, researchers use powerful computers to build virtual models of atoms and molecules. By applying the laws of physics to these digital models, we can predict how a material will behave—how strong it is, how it conducts electricity, or how it reacts to light—before it is ever physically created.\n\nThe Traditional Bottleneck\nHistorically, discovering a new material takes about 10 to 20 years. It involves a lot of trial and error: cook a sample in a lab, test it, fail, tweak the recipe, and try again. Computational modeling shortens this loop by letting us screen thousands of virtual candidates first, picking only the absolute best ones to actually manufacture in the real world."
+  },
+  {
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#the-workshop-journey-day-by-day",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#the-workshop-journey-day-by-day",
+    "title": "Quantum Meets AI Workshop 2026",
+    "section": "The Workshop Journey (Day by Day)",
+    "text": "The Workshop Journey (Day by Day)\nTo understand how we accelerate this science, our workshop is broken into three core pillars:\n\n🔬 Day 1: Zooming In with Quantum Mechanics (DFT)\nBefore we can use AI, we need high-quality data. That data comes from the fundamental laws of physics. On Day 1, we look at Density Functional Theory (DFT).\n\nThe Concept: Think of DFT as a super-powered, quantum-mechanical microscope. Everything in the universe is made of atoms, and how those atoms behave depends entirely on their electrons. DFT is a mathematical cleverness that lets computers calculate exactly where electrons want to go and how they hold atoms together.\nWhy it matters: It gives us the “ground truth” physics of a material. If you want to know if a crystal will be stable or what color light a semiconductor will absorb, DFT gives you the precise answer from first principles.\n\n\n\n🤖 Day 2: Scaling Up with Artificial Intelligence (AI)\nIf DFT is so accurate, why do we need AI? Because quantum mechanics is incredibly slow. Calculating the properties of just a few hundred atoms using DFT can take a supercomputer days or weeks.\n\nThe Concept: Instead of running a slow physics calculation for every single new material, we use Machine Learning. We take the results of thousands of previous DFT calculations and use them to train an AI.\nThe AI’s Job: The AI learns the underlying patterns—the “rules of thumb” of how atoms interact. Once trained, the AI can predict the properties of a brand-new material in milliseconds rather than days.\n\n\n\n🧬 Day 3: Talking to Computers (Cheminformatics & Graph Neural Networks)\nTo train an AI on materials, we have a unique challenge: How do you describe a molecule or a crystal to a computer? You can’t just type in “this looks like a shiny metal.”\n\nCheminformatics: This is the language interface. It converts chemical structures, formulas, and bonds into digital data strings (like code) that a computer can read, sort, and search.\nGraph Neural Networks (GNNs): This is where modern AI gets beautiful. In physics and chemistry, molecules and crystals are essentially networks of atoms connected by bonds. In computer science, this is called a Graph (nodes connected by lines). GNNs are a special type of AI designed specifically to look at these chemical networks, understanding how the arrangement and neighborhood of each atom dictate the ultimate property of the entire material."
+  },
+  {
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview.html#why-this-interdisciplinary-mix-matters",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview.html#why-this-interdisciplinary-mix-matters",
+    "title": "Quantum Meets AI Workshop 2026",
+    "section": "Why This Interdisciplinary Mix Matters",
+    "text": "Why This Interdisciplinary Mix Matters\nThis workshop brings together two completely different ways of thinking, and that is where the magic happens:\n\nFor the Physicists, Chemists, and Materials Scientists: You bring the intuition, the domain expertise, and the fundamental laws of nature. AI gives you a digital superpower to scale your insights from a few molecules to millions of possibilities overnight.\nFor the Computer and Data Scientists: You bring the algorithms, the pattern-recognition tools, and the data architecture. Materials science gives you some of the richest, most complex, and physically meaningful datasets in the world to test and stretch your models.\n\nTogether, we aren’t just predicting the future of technology—we are computing the very matter it will be built from."
   }
 ]

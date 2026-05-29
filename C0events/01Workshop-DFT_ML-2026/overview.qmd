@@ -2,6 +2,26 @@
 title: Quantum Meets AI Workshop 2026 
 ---
 
+<style>
+.keyword-pill {
+    background-color: #0f766e;  /* teal */
+    color: white;
+    font-weight: 500;
+    font-size: 0.85em;
+    padding: 0.4em 0.75em;
+    margin-right: 0.4em;
+    margin-bottom: 0.4em;
+    display: inline-block;
+    border-radius: 999px;
+}
+</style>
+
+<span class="badge rounded-pill keyword-pill">Quantum materials</span>
+<span class="badge rounded-pill keyword-pill">AI/ML</span>
+<span class="badge rounded-pill keyword-pill">DFT</span>
+<span class="badge rounded-pill keyword-pill">Quantum Chemistry</span>
+<span class="badge rounded-pill keyword-pill">Cheminformatics</span>
+
 
 ## Welcome to the Frontier: Where Science Meets AI
 
@@ -15,7 +35,7 @@ In what follows we give an insight into how these questions are answered in the 
 
 
 
-## Part 1: What is Computational Materials Science?
+## What is Computational Materials Science?
 
 At its core, computational materials science is about **simulating reality**.
 
@@ -27,7 +47,7 @@ Historically, discovering a new material takes about **10 to 20 years**. It invo
 
 
 
-## Part 2: The Workshop Journey (Day by Day)
+## The Workshop Journey (Day by Day)
 
 To understand how we accelerate this science, our workshop is broken into three core pillars:
 
@@ -54,7 +74,7 @@ To train an AI on materials, we have a unique challenge: **How do you describe a
 
 
 
-## Part 3: Why This Interdisciplinary Mix Matters
+## Why This Interdisciplinary Mix Matters
 
 This workshop brings together two completely different ways of thinking, and that is where the magic happens:
 
