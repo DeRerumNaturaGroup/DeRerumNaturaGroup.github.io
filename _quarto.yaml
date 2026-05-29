@@ -17,10 +17,16 @@ website:
         text: Home
       - href: research.qmd
         text: Research
-      - text: Guides
+      - text: "DFT+ML Workshop 2026"
         menu:
-        - href: C0DFT/home_DFT.qmd
-          text: DFT Tutorials
+        - href: C0events\01Workshop-DFT_ML-2026\overview.qmd
+          text: Overview
+        - href: C0events\01Workshop-DFT_ML-2026\registration.qmd
+          text: Registration
+      # - text: Guides
+      #   menu:
+      #   - href: C0DFT/home_DFT.qmd
+      #     text: DFT Tutorials
       - href: publications.qmd
         text: Publications
       - href: people.qmd
