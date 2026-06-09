@@ -476,7 +476,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Publications\n\n\n1. Shaheen, M. & Pervez, S. Hopscotching perovskites: DFT leveraged tight-binding insights into inorganic lead halide perovskites. Phys. Chem. Chem. Phys. 27, 19950–19959 (2025).\n\n\n2. Pervez, S. & Iqbal, M. Z. Capacitive and diffusive contributions in supercapacitors and batteries: A critique of b-value and the ν–ν1/2 model. Small 19, 2305059 (2023).\n\n\n3. Pervez, S. & Iqbal, M. Z. Evaluation of battery-grade alkaline earth metal sulfide electrodes for energy storage applications. International Journal of Energy Research 46, 8093–8101 (2022).",
+    "text": "Publications\nThis page is being updated. Okease stay tuned for more. \n\n\n1. Shaheen, M. & Pervez, S. Hopscotching perovskites: DFT leveraged tight-binding insights into inorganic lead halide perovskites. Phys. Chem. Chem. Phys. 27, 19950–19959 (2025).\n\n\n2. Pervez, S. & Iqbal, M. Z. Capacitive and diffusive contributions in supercapacitors and batteries: A critique of b-value and the ν–ν1/2 model. Small 19, 2305059 (2023).\n\n\n3. Pervez, S. & Iqbal, M. Z. Evaluation of battery-grade alkaline earth metal sulfide electrodes for energy storage applications. International Journal of Energy Research 46, 8093–8101 (2022).",
     "crumbs": [
       "Home",
       "Publications"
@@ -520,5 +520,12 @@
       "Home",
       "People"
     ]
+  },
+  {
+    "objectID": "C0events/01Workshop-DFT_ML-2026/overview-conference.html#speakers",
+    "href": "C0events/01Workshop-DFT_ML-2026/overview-conference.html#speakers",
+    "title": "Quantum Meets AI International Conference 2026",
+    "section": "Speakers",
+    "text": "Speakers\n\nDr. Muhammad Imran, Max Planck Insitute of Microstructure Physics, Germany\nDr. Nasir Javed, GIK Institute"
   }
 ]

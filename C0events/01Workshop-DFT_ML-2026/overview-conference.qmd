@@ -8,8 +8,10 @@ Venue: Ghulam Ishaq Khan Institute of Information Technology, Topi, Pakistan
 
 The conference will bring together students, researchers, academics, and professionals to explore recent advances in quantum computing and emerging quantum technologies. Participants will gain practical insight into how the field is moving from fundamental research toward real-world applications through expert talks, experimental perspectives, and selected insights from industry professionals. The event will also highlight current challenges, future opportunities, and provide a valuable platform for networking and collaboration within the quantum ecosystem.
 
-## Keynote Speakers
-To be decided.
+## Speakers
+
+- Dr. Muhammad Imran, Max Planck Insitute of Microstructure Physics, Germany
+- Dr. Nasir Javed, GIK Institute
 
 
 ## Registration
