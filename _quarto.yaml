@@ -21,7 +21,7 @@ website:
         menu:
         - href: C0events\01Workshop-DFT_ML-2026\overview.qmd
           text: Overview
-        - href: C0events\01Workshop-DFT_ML-2026\registration.qmd
+        - href: C0events\01Workshop-DFT_ML-2026\form.qmd
           text: Registration
       - href: publications.qmd
         text: Publications

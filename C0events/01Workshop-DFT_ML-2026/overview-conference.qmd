@@ -1,0 +1,17 @@
+---
+title: Quantum Meets AI International Conference 2026 
+---
+
+Workshop dates: <r> July 13, 2026</r>
+
+The conference will bring together students, researchers, academics, and professionals to explore recent advances in quantum computing and emerging quantum technologies. Participants will gain practical insight into how the field is moving from fundamental research toward real-world applications through expert talks, experimental perspectives, and selected insights from industry professionals. The event will also highlight current challenges, future opportunities, and provide a valuable platform for networking and collaboration within the quantum ecosystem.
+
+## Keynote Speakers
+
+## Registration
+Click here for the registration [form](form.qmd). Registrations close on June 25, 2026.
+
+
+## Contact Information
+
+For further information contact Dr. Tahir Naseem at `tahir.naseem@giki.edu.pk`

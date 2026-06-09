@@ -3,6 +3,6 @@ title: Form
 ---
 
 
-Please fill out the form below:
+Please fill out the form below (Click [here](https://forms.gle/X9MxoTPtx5mLnV2p6) to go directly to Google forms if you cannot see it below):
 
 <iframe src="https://forms.gle/X9MxoTPtx5mLnV2p6" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
