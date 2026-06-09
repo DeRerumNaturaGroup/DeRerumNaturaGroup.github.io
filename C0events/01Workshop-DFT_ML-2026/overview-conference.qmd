@@ -2,11 +2,15 @@
 title: Quantum Meets AI International Conference 2026 
 ---
 
-Workshop dates: <r> July 13, 2026</r>
+Conference dates: [July 13, 2026]{style="background-color:gold; padding:0.2em"}
+
+Venue: Ghulam Ishaq Khan Institute of Information Technology, Topi, Pakistan
 
 The conference will bring together students, researchers, academics, and professionals to explore recent advances in quantum computing and emerging quantum technologies. Participants will gain practical insight into how the field is moving from fundamental research toward real-world applications through expert talks, experimental perspectives, and selected insights from industry professionals. The event will also highlight current challenges, future opportunities, and provide a valuable platform for networking and collaboration within the quantum ecosystem.
 
 ## Keynote Speakers
+To be decided.
+
 
 ## Registration
 Click here for the registration [form](form.qmd). Registrations close on June 25, 2026.

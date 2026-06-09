@@ -14,7 +14,7 @@ This event will be held in person at the Ghulam Ishaq Khan Institute of Informat
 - July 14-16, 2026: Workshop on DFT and Machine Learning 
 
 ## Registration
-Click here for the registration [form](form.qmd). Registrations close on June 25, 2026.
+Click here for the registration [form](form.qmd). [Registrations close on June 25, 2026.]{style="background-color:gold; padding:0.2em"}
 
 You can register either for the full 4-day event (conference + workshop) or just for the 3-day workshop. The conference will be held on July 13, 2026, and the workshop will run from July 14-16, 2026.
 
