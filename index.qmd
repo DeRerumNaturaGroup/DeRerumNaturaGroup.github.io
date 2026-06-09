@@ -21,11 +21,11 @@ Nothing can be created out of nothing.
 :::
 :::
 
-De Rerum Natura—Latin for [**On the Nature of Things**]{style="color:white; background-color:#c83737; padding:0.2em"}
+De Rerum Natura—Latin for [On the Nature of Things]{style="color:white; background-color:#c83737; padding:0.2em"}
 <!-- <r>On the Nature of Things</r> -->
 —takes its name from Lucretius’ famous poem, which sought to explain the universe through the lens of atomism and reason, free from superstition.
 
 At DRN we are concerned with the nature of things as well, albeit in the computational realm. We explore matter and its methods, through the lens of simulations and data. Our work lies at the intersection of physics, chemistry, and data science—leveraging first-principles simulations, high-throughput workflows, and machine learning to advance materials discovery. Rooted in open science and guided by curiosity, we build tools, datasets, and models that make this understanding widely accessible.
 
-Thus when the mood is less poetic, we explain DRN as being: <br> [**Data-driven Research in Nanomaterials**]{style="color:white; background-color:#c83737; padding:0.2em"}.
+Thus when the mood is less poetic, we explain DRN as being: <br> [Data-driven Research in Nanomaterials]{style="color:white; background-color:#c83737; padding:0.2em"}.
 
