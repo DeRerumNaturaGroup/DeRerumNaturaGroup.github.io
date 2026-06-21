@@ -10,13 +10,28 @@ The conference will bring together students, researchers, academics, and profess
 
 ## Speakers
 
-- Dr. Onur Pusuluk, Kadir Has University, Turkiye
-- Dr. Muhammad Imran, Max Planck Insitute of Microstructure Physics, Germany
-- Dr. Nasir Javed, GIK Institute
+1. Dr. Muhammad Imran (Max Planck Institute, Germany;  Spin qubits for quantum computing )
+2. Dr. Onur Pusuluk (Kadir Has University; Thermodynamics to Information Processing and Computing)
+3. Dr. Madiha Khalid (NUST, Quantum Computing)
+4. Dr. Mubashar Khan (NED, Pakistan; Quantum Key Distributions)
+5. Dr. Abu Bakr (University of Manitoba, Canada;  Introduction to Quantum-based Deep Learning)
+6. Dr. Nasir Javed (GIKI; Experimental Realization of Qubits)
+7. Mr. Mazhar Javed (GIKI; Quantum Architectures)
 
+## Student Research Talks Introduced
+Selected students will deliver short research presentations (~10 minutes each) during the conference.
+
+Outstanding student presentations will be recognized with cash prizes:
+
+🥇 1st Prize: PKR 5,000
+🥈 2nd Prize: PKR 4,000
+🥉 3rd Prize: PKR 3,000
 
 ## Registration
-Click here for the registration [form](form.qmd). Registrations close on June 25, 2026.
+Click here for the registration [form](form.qmd). Registrations close on June 25, 2026. Registration fees:
+
+- For general audience: 2,000 PKR
+- MS/PhD. applicants to GIK (Fall 2026): 1,500 PKR
 
 ## Contact Information
 For queries related to the event, send your emails to `drn@giki.edu.pk`
