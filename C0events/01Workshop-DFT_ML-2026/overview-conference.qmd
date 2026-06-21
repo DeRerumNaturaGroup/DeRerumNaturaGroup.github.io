@@ -18,7 +18,7 @@ The conference will bring together students, researchers, academics, and profess
 6. Dr. Nasir Javed (GIKI; Experimental Realization of Qubits)
 7. Mr. Mazhar Javed (GIKI; Quantum Architectures)
 
-## Student Research Talks Introduced
+## Student Research Talks 
 Selected students will deliver short research presentations (~10 minutes each) during the conference.
 
 Outstanding student presentations will be recognized with cash prizes:
